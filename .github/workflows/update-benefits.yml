@@ -1,0 +1,39 @@
+name: Update membership benefits
+
+on:
+  schedule:
+    # 매일 04:00 KST (UTC 19:00 전날)
+    - cron: "0 19 * * *"
+  workflow_dispatch: {}   # 수동 실행 버튼
+
+permissions:
+  contents: write
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r crawler/requirements.txt
+
+      - name: Run crawler (실패해도 워크플로우는 계속 — 부분 데이터라도 반영)
+        working-directory: crawler
+        run: python run.py || true
+
+      - name: Commit updated data if changed
+        run: |
+          git config user.name "hyetaekmap-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add crawler/benefits.json site/data/places.json
+          if git diff --cached --quiet; then
+            echo "변경 사항 없음 — 커밋 생략"
+          else
+            git commit -m "chore: 통신사 멤버십 혜택 데이터 자동 갱신 ($(date -u +%Y-%m-%d))"
+            git push
+          fi

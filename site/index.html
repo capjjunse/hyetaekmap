@@ -1,0 +1,927 @@
+<meta charset="UTF-8">
+<title>혜택맵 — 통신사 멤버십 지도 프로토타입</title>
+<style>
+  :root {
+    --ink: #1c1b22;
+    --ink-soft: #4a4854;
+    --paper: #fbf8f2;
+    --parchment: #efe6d4;
+    --map-bg: #efe6d4;
+    --map-road: #fbf8f2;
+    --map-block: #e2d6ba;
+    --map-park: #b9c9a6;
+    --map-water: #a7c7c9;
+    --teal: #1f6f63;
+    --teal-ink: #16463d;
+    --skt: #e2183c;
+    --kt: #ff7a00;
+    --lgu: #e6007e;
+    --border: rgba(28, 27, 34, 0.1);
+    --chrome: #1c1b22;
+    --shadow: rgba(20, 18, 24, 0.28);
+    --sheet-bg: #fffdf8;
+    --muted: #857f70;
+    --disabled: #dcd5c4;
+    --disabled-ink: #a8a08d;
+    color-scheme: light;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #f1eee6;
+      --ink-soft: #b9b4a8;
+      --paper: #111015;
+      --parchment: #262b33;
+      --map-bg: #23272f;
+      --map-road: #2f353e;
+      --map-block: #2a2f38;
+      --map-park: #24402f;
+      --map-water: #1a3646;
+      --teal: #4fb3a2;
+      --teal-ink: #bdeee3;
+      --skt: #ff5674;
+      --kt: #ffa64d;
+      --lgu: #ff5fb0;
+      --border: rgba(241, 238, 230, 0.16);
+      --chrome: #242229;
+      --shadow: rgba(0, 0, 0, 0.6);
+      --sheet-bg: #2c2a33;
+      --muted: #9a9488;
+      --disabled: #2a2822;
+      --disabled-ink: #6b6659;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #f1eee6; --ink-soft: #b9b4a8; --paper: #111015; --parchment: #262b33;
+    --map-bg: #23272f; --map-road: #2f353e; --map-block: #2a2f38; --map-park: #24402f; --map-water: #1a3646;
+    --teal: #4fb3a2; --teal-ink: #bdeee3; --skt: #ff5674; --kt: #ffa64d; --lgu: #ff5fb0;
+    --border: rgba(241, 238, 230, 0.16); --chrome: #242229; --shadow: rgba(0, 0, 0, 0.6);
+    --sheet-bg: #2c2a33; --muted: #9a9488; --disabled: #2a2822; --disabled-ink: #6b6659;
+    color-scheme: dark;
+  }
+  :root[data-theme="light"] {
+    --ink: #1c1b22; --ink-soft: #4a4854; --paper: #fbf8f2; --parchment: #efe6d4;
+    --map-bg: #efe6d4; --map-road: #fbf8f2; --map-block: #e2d6ba; --map-park: #b9c9a6; --map-water: #a7c7c9;
+    --teal: #1f6f63; --teal-ink: #16463d; --skt: #e2183c; --kt: #ff7a00; --lgu: #e6007e;
+    --border: rgba(28, 27, 34, 0.1); --chrome: #1c1b22; --shadow: rgba(20, 18, 24, 0.28);
+    --sheet-bg: #fffdf8; --muted: #857f70; --disabled: #dcd5c4; --disabled-ink: #a8a08d;
+    color-scheme: light;
+  }
+
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    min-height: 100%;
+    background: var(--paper);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, Malgun Gothic, sans-serif;
+    color: var(--ink);
+  }
+
+  .stage { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .stage-label { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+
+  /* ---------- phone frame ---------- */
+  .phone {
+    width: 375px; height: 812px; max-width: 92vw; max-height: 88vh;
+    aspect-ratio: 375 / 812;
+    background: var(--chrome);
+    border-radius: 52px; padding: 14px;
+    box-shadow: 0 40px 80px -24px var(--shadow), 0 2px 0 var(--border) inset;
+    position: relative;
+  }
+
+  .screen {
+    position: relative; width: 100%; height: 100%;
+    background: var(--map-bg);
+    border-radius: 38px; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+
+  .notch {
+    position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 120px; height: 26px; background: var(--chrome);
+    border-radius: 0 0 16px 16px; z-index: 40;
+  }
+
+  /* ---------- status bar ---------- */
+  .statusbar {
+    height: 44px; flex: 0 0 auto;
+    display: flex; align-items: flex-end; justify-content: space-between;
+    padding: 0 26px 6px; font-size: 13px; font-weight: 600;
+    font-variant-numeric: tabular-nums; color: var(--ink);
+    z-index: 30; position: relative;
+  }
+  .statusbar .icons { display: flex; gap: 5px; align-items: center; }
+  .statusbar svg { display: block; }
+
+  /* ---------- app body: swappable views ---------- */
+  .appbody { position: relative; flex: 1 1 auto; min-height: 0; }
+  .view { position: absolute; inset: 0; display: none; flex-direction: column; min-height: 0; }
+  .view.active { display: flex; }
+
+  /* ---------- header: search + filters (map view) ---------- */
+  .header {
+    flex: 0 0 auto; padding: 6px 14px 10px;
+    display: flex; flex-direction: column; gap: 10px;
+    background: linear-gradient(to bottom, var(--paper) 0%, var(--paper) 60%, transparent 100%);
+    position: relative; z-index: 20;
+  }
+
+  .searchrow { display: flex; align-items: center; gap: 8px; }
+  .searchbox {
+    flex: 1; display: flex; align-items: center; gap: 8px;
+    background: var(--sheet-bg); border: 1px solid var(--border);
+    border-radius: 999px; padding: 9px 14px; box-shadow: 0 4px 14px var(--shadow);
+  }
+  .searchbox svg { flex: 0 0 auto; color: var(--muted); }
+  .searchbox input {
+    border: none; outline: none; background: transparent;
+    font-size: 14px; color: var(--ink); width: 100%; font-family: inherit;
+  }
+  .searchbox input::placeholder { color: var(--muted); }
+
+  .iconbtn {
+    flex: 0 0 auto; width: 38px; height: 38px; border-radius: 50%;
+    background: var(--sheet-bg); border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--ink); box-shadow: 0 4px 14px var(--shadow);
+  }
+
+  .chips { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-bottom: 1px; }
+  .chips::-webkit-scrollbar { display: none; }
+
+  .chip {
+    flex: 0 0 auto; font-size: 12.5px; font-weight: 700;
+    padding: 7px 14px; border-radius: 999px;
+    border: 1.4px solid var(--border); background: var(--sheet-bg); color: var(--ink-soft);
+    cursor: pointer; display: flex; align-items: center; gap: 6px;
+    transition: transform 120ms ease, background 120ms ease, color 120ms ease, border-color 120ms ease;
+  }
+  .chip:active { transform: scale(0.96); }
+  .chip .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+  .chip[data-carrier="ALL"].active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .chip[data-carrier="SKT"].active { background: var(--skt); color: #fff; border-color: var(--skt); }
+  .chip[data-carrier="KT"].active { background: var(--kt); color: #241300; border-color: var(--kt); }
+  .chip[data-carrier="LGU"].active { background: var(--lgu); color: #fff; border-color: var(--lgu); }
+  .chip.chip-active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+  /* ---------- map ---------- */
+  .map { position: relative; flex: 1 1 auto; overflow: hidden; }
+  .map svg.terrain { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .map.list-mode svg.terrain,
+  .map.list-mode .pin,
+  .map.list-mode .fabs,
+  .map.list-mode .resultpill { display: none; }
+
+  .pin {
+    position: absolute; transform: translate(-50%, -100%);
+    display: flex; flex-direction: column; align-items: center;
+    cursor: pointer; background: none; border: none; padding: 0;
+    transition: opacity 160ms ease, filter 160ms ease;
+  }
+  .pin .bubble {
+    width: 34px; height: 34px; border-radius: 50% 50% 50% 4px;
+    background: var(--teal); transform: rotate(45deg);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 14px var(--shadow); border: 2px solid var(--sheet-bg);
+  }
+  .pin .glyph { transform: rotate(-45deg); font-size: 15px; line-height: 1; }
+  .pin .badges {
+    display: flex; gap: 3px; margin-top: 4px;
+    background: var(--sheet-bg); border-radius: 999px; padding: 2px 4px;
+    box-shadow: 0 2px 6px var(--shadow);
+  }
+  .pin .badges span { width: 6px; height: 6px; border-radius: 50%; display: block; }
+  .pin.selected .bubble { background: var(--ink); box-shadow: 0 0 0 5px color-mix(in srgb, var(--ink) 18%, transparent); }
+  .pin.dim { opacity: 0.28; filter: grayscale(0.5); }
+
+  .viewToggle {
+    position: absolute; top: 12px; left: 50%; transform: translateX(-50%); z-index: 16;
+    display: flex; align-items: center; gap: 6px;
+    background: var(--ink); color: var(--paper);
+    padding: 9px 16px; border-radius: 999px; font-size: 12.5px; font-weight: 700;
+    cursor: pointer; box-shadow: 0 6px 16px var(--shadow); border: none;
+  }
+
+  .listpanel { position: absolute; inset: 0; background: var(--paper); overflow-y: auto; padding: 60px 14px 90px; display: none; z-index: 10; }
+  .map.list-mode .listpanel { display: block; }
+
+  .listrow, .fav-row {
+    display: flex; align-items: center; gap: 12px; padding: 12px 8px;
+    border-bottom: 1px solid var(--border); cursor: pointer;
+  }
+  .listrow:last-child, .fav-row:last-child { border-bottom: none; }
+  .lr-icon {
+    width: 40px; height: 40px; border-radius: 12px; background: var(--parchment);
+    display: flex; align-items: center; justify-content: center; font-size: 19px; flex: 0 0 auto;
+  }
+  .lr-text { flex: 1; min-width: 0; }
+  .lr-name { font-size: 13.5px; font-weight: 700; }
+  .lr-meta { font-size: 11.5px; color: var(--muted); margin-top: 2px; }
+  .lr-dots { display: flex; gap: 3px; flex: 0 0 auto; }
+  .lr-dots span { width: 6px; height: 6px; border-radius: 50%; display: block; }
+  .lr-chevron { flex: 0 0 auto; color: var(--muted); }
+
+  .fabs { position: absolute; right: 14px; bottom: 18px; display: flex; flex-direction: column; gap: 10px; z-index: 15; }
+  .fab {
+    width: 42px; height: 42px; border-radius: 50%; background: var(--sheet-bg);
+    border: 1px solid var(--border); box-shadow: 0 6px 16px var(--shadow);
+    display: flex; align-items: center; justify-content: center; color: var(--ink);
+  }
+  .fab.locate { color: var(--teal); }
+
+  .resultpill {
+    position: absolute; left: 14px; bottom: 18px;
+    background: var(--sheet-bg); border: 1px solid var(--border); border-radius: 999px;
+    padding: 8px 14px; font-size: 12px; font-weight: 700; color: var(--ink-soft);
+    box-shadow: 0 6px 16px var(--shadow); z-index: 15;
+  }
+  .resultpill b { color: var(--teal-ink); font-variant-numeric: tabular-nums; }
+
+  /* ---------- 혜택 / MY screen shared bits ---------- */
+  .subheader { flex: 0 0 auto; padding: 16px 18px 6px; }
+  .screen-title { font-size: 21px; font-weight: 800; letter-spacing: -0.01em; }
+  .screen-sub { font-size: 12.5px; color: var(--muted); margin-top: 3px; }
+
+  .view-benefits .chips { flex: 0 0 auto; padding: 10px 18px; }
+  .benefit-list, .my-scroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
+  .benefit-list { padding: 4px 14px 90px; display: flex; flex-direction: column; gap: 10px; }
+  .my-scroll { padding: 6px 18px 90px; display: flex; flex-direction: column; gap: 22px; }
+
+  .benefit-card {
+    display: flex; gap: 12px; padding: 12px; border: 1px solid var(--border);
+    border-radius: 16px; background: var(--sheet-bg); cursor: pointer;
+  }
+  .bc-icon {
+    width: 42px; height: 42px; border-radius: 12px; background: var(--parchment);
+    display: flex; align-items: center; justify-content: center; font-size: 20px; flex: 0 0 auto;
+  }
+  .bc-body { flex: 1; min-width: 0; }
+  .bc-name { font-size: 13.5px; font-weight: 700; }
+  .bc-meta { font-size: 11.5px; color: var(--muted); margin-top: 1px; }
+  .bc-carriers { display: flex; gap: 5px; margin-top: 8px; flex-wrap: wrap; }
+  .bc-tag { font-size: 10.5px; font-weight: 700; padding: 3px 8px; border-radius: 999px; background: var(--disabled); color: var(--disabled-ink); }
+  .bc-tag.mine { color: #fff; }
+
+  .fav-empty {
+    font-size: 12.5px; color: var(--muted); padding: 20px 14px; text-align: center;
+    background: var(--sheet-bg); border: 1.4px dashed var(--border); border-radius: 14px; line-height: 1.6;
+  }
+  .fav-remove {
+    margin-left: auto; width: 26px; height: 26px; border-radius: 50%; border: none;
+    background: var(--disabled); color: var(--disabled-ink); font-size: 15px;
+    display: flex; align-items: center; justify-content: center; cursor: pointer; flex: 0 0 auto;
+  }
+
+  .my-section .section-label { padding: 0 2px; }
+
+  /* ---------- carrier picker (onboarding + MY) ---------- */
+  .carrier-cards { display: flex; flex-direction: column; gap: 10px; }
+  .carrier-card {
+    display: flex; align-items: center; gap: 12px; padding: 12px 14px;
+    border-radius: 16px; border: 1.6px solid var(--border); background: var(--sheet-bg);
+    cursor: pointer; text-align: left; width: 100%; font: inherit; color: var(--ink);
+    transition: border-color 140ms ease, background 140ms ease;
+  }
+  .carrier-card.selected { border-color: var(--c); background: color-mix(in srgb, var(--c) 12%, var(--sheet-bg)); }
+  .cc-badge {
+    flex: 0 0 auto; width: 38px; height: 38px; border-radius: 11px;
+    display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 11px; color: #fff;
+  }
+  .cc-name { font-size: 14px; font-weight: 700; flex: 1; }
+  .cc-check {
+    flex: 0 0 auto; width: 22px; height: 22px; border-radius: 50%;
+    border: 1.6px solid var(--border); display: flex; align-items: center; justify-content: center; color: #fff;
+  }
+  .carrier-card.selected .cc-check { background: var(--c); border-color: var(--c); }
+
+  /* ---------- bottom tab bar ---------- */
+  .tabbar {
+    flex: 0 0 auto; display: flex; border-top: 1px solid var(--border);
+    background: var(--paper); padding: 8px 6px 12px; z-index: 25; position: relative;
+  }
+  .tabitem {
+    flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px;
+    font-size: 10.5px; font-weight: 600; color: var(--muted); background: none; border: none; font-family: inherit; cursor: pointer;
+  }
+  .tabitem.active { color: var(--teal-ink); }
+
+  /* ---------- bottom sheet (overlays every tab) ---------- */
+  .sheet-backdrop {
+    position: absolute; inset: 0; background: color-mix(in srgb, var(--ink) 40%, transparent);
+    opacity: 0; pointer-events: none; transition: opacity 220ms ease; z-index: 45;
+  }
+  .sheet-backdrop.show { opacity: 1; pointer-events: auto; }
+
+  .sheet {
+    position: absolute; left: 0; right: 0; bottom: 0; background: var(--sheet-bg);
+    border-radius: 24px 24px 0 0; box-shadow: 0 -12px 30px var(--shadow);
+    transform: translateY(100%); transition: transform 260ms cubic-bezier(.2,.8,.3,1);
+    z-index: 50; max-height: 74%; display: flex; flex-direction: column;
+  }
+  .sheet.open { transform: translateY(0); }
+  .sheet-handle { display: flex; justify-content: center; padding: 10px 0 4px; flex: 0 0 auto; }
+  .sheet-handle span { width: 36px; height: 4px; border-radius: 4px; background: var(--border); }
+  .sheet-scroll { overflow-y: auto; padding: 4px 20px 24px; }
+
+  .place-head { display: flex; gap: 12px; align-items: flex-start; padding: 6px 0 14px; }
+  .place-icon {
+    flex: 0 0 auto; width: 46px; height: 46px; border-radius: 14px; background: var(--parchment);
+    display: flex; align-items: center; justify-content: center; font-size: 22px;
+  }
+  .place-titlewrap { flex: 1; min-width: 0; }
+  .place-name { font-size: 17px; font-weight: 800; letter-spacing: -0.01em; }
+  .place-meta { font-size: 12.5px; color: var(--muted); margin-top: 3px; }
+  .fav-btn {
+    flex: 0 0 auto; width: 36px; height: 36px; border-radius: 50%;
+    border: 1.4px solid var(--border); background: var(--sheet-bg); color: var(--muted);
+    display: flex; align-items: center; justify-content: center; cursor: pointer;
+  }
+  .fav-btn.active { color: #fff; background: var(--teal); border-color: var(--teal); }
+
+  .section-label {
+    font-size: 11.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--muted); margin: 4px 0 8px;
+  }
+
+  .benefit-row { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-top: 1px solid var(--border); }
+  .benefit-row:first-of-type { border-top: none; }
+  .carrier-badge {
+    flex: 0 0 auto; width: 44px; height: 44px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 11.5px; color: #fff; letter-spacing: -0.02em;
+  }
+  .benefit-row.disabled .carrier-badge { background: var(--disabled) !important; color: var(--disabled-ink); }
+  .benefit-info { flex: 1; min-width: 0; }
+  .benefit-title { font-size: 13.5px; font-weight: 700; }
+  .benefit-desc { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+  .benefit-row.disabled .benefit-title, .benefit-row.disabled .benefit-desc { color: var(--disabled-ink); }
+
+  .go-btn {
+    flex: 0 0 auto; border: none; border-radius: 999px; padding: 9px 14px;
+    font-size: 12.5px; font-weight: 700; color: #fff; cursor: pointer; white-space: nowrap;
+    transition: transform 120ms ease;
+  }
+  .go-btn:active { transform: scale(0.95); }
+  .benefit-row.disabled .go-btn { background: var(--disabled); color: var(--disabled-ink); cursor: default; }
+
+  .toast {
+    position: absolute; left: 50%; bottom: 100px; transform: translate(-50%, 8px);
+    background: var(--ink); color: var(--paper); padding: 10px 18px; border-radius: 999px;
+    font-size: 12.5px; font-weight: 600; opacity: 0; pointer-events: none;
+    transition: opacity 200ms ease, transform 200ms ease; z-index: 60; white-space: nowrap;
+  }
+  .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+  /* ---------- onboarding overlay ---------- */
+  .onboarding {
+    position: absolute; top: 44px; left: 0; right: 0; bottom: 0;
+    background: var(--paper); z-index: 80;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 28px 26px; transition: opacity 240ms ease, visibility 240ms ease;
+  }
+  .onboarding.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+  .ob-hero { font-size: 40px; margin-bottom: 8px; }
+  .ob-title { font-size: 21px; font-weight: 800; margin: 0 0 8px; letter-spacing: -0.01em; text-wrap: balance; }
+  .ob-sub { font-size: 13px; color: var(--muted); line-height: 1.55; margin: 0 0 22px; }
+  .ob-cta {
+    border: none; background: var(--teal); color: #fff; font-weight: 800; font-size: 14.5px;
+    padding: 14px; border-radius: 16px; cursor: pointer; margin-top: 20px; width: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sheet, .sheet-backdrop, .toast, .chip, .go-btn, .pin, .onboarding, .carrier-card { transition: none !important; }
+  }
+</style>
+
+<div class="stage">
+  <div class="stage-label">혜택맵 · 프로토타입</div>
+  <div class="phone">
+    <div class="screen">
+      <div class="notch"></div>
+
+      <div class="statusbar">
+        <span>9:41</span>
+        <div class="icons">
+          <svg width="18" height="12" viewBox="0 0 18 12" fill="none"><rect x="0" y="7" width="3" height="5" rx="0.5" fill="currentColor"/><rect x="5" y="5" width="3" height="7" rx="0.5" fill="currentColor"/><rect x="10" y="3" width="3" height="9" rx="0.5" fill="currentColor"/><rect x="15" y="0" width="3" height="12" rx="0.5" fill="currentColor"/></svg>
+          <svg width="22" height="12" viewBox="0 0 24 12" fill="none"><rect x="1" y="1" width="19" height="10" rx="2.5" stroke="currentColor" stroke-width="1"/><rect x="2.5" y="2.5" width="14" height="7" rx="1.2" fill="currentColor"/><rect x="21" y="4" width="1.6" height="4" rx="0.8" fill="currentColor"/></svg>
+        </div>
+      </div>
+
+      <div class="appbody">
+        <!-- ===== 지도 뷰 ===== -->
+        <div class="view view-map active" id="view-map">
+          <div class="header">
+            <div class="searchrow">
+              <div class="searchbox">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.6" y2="16.6"/></svg>
+                <input id="search" type="text" placeholder="제휴사 · 카테고리 검색" autocomplete="off">
+              </div>
+              <div class="iconbtn" aria-hidden="true">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="7" x2="20" y2="7"/><circle cx="9" cy="7" r="2.2" fill="var(--sheet-bg)"/><line x1="4" y1="17" x2="20" y2="17"/><circle cx="16" cy="17" r="2.2" fill="var(--sheet-bg)"/></svg>
+              </div>
+            </div>
+            <div class="chips" id="chips">
+              <button class="chip active" data-carrier="ALL"><span class="dot"></span>전체</button>
+              <button class="chip" data-carrier="SKT" style="color:var(--skt)"><span class="dot"></span>SKT</button>
+              <button class="chip" data-carrier="KT" style="color:var(--kt)"><span class="dot"></span>KT</button>
+              <button class="chip" data-carrier="LGU" style="color:var(--lgu)"><span class="dot"></span>LG U+</button>
+            </div>
+          </div>
+
+          <div class="map" id="map">
+            <svg class="terrain" viewBox="0 0 375 620" preserveAspectRatio="none">
+              <rect x="0" y="0" width="375" height="620" fill="var(--map-bg)"/>
+              <polygon points="0,120 130,90 150,230 0,260" fill="var(--map-water)"/>
+              <polygon points="230,60 375,40 375,190 250,200" fill="var(--map-park)"/>
+              <polygon points="40,380 170,360 190,480 30,500" fill="var(--map-park)"/>
+              <rect x="60" y="40" width="46" height="30" fill="var(--map-block)"/>
+              <rect x="180" y="250" width="60" height="42" fill="var(--map-block)"/>
+              <rect x="270" y="320" width="50" height="60" fill="var(--map-block)"/>
+              <rect x="90" y="470" width="70" height="34" fill="var(--map-block)"/>
+              <rect x="220" y="440" width="40" height="80" fill="var(--map-block)"/>
+              <rect x="20" y="300" width="34" height="50" fill="var(--map-block)"/>
+              <g stroke="var(--map-road)" stroke-width="14" fill="none">
+                <path d="M -10 210 L 385 180"/>
+                <path d="M -10 330 L 385 300"/>
+                <path d="M -10 450 L 385 470"/>
+                <path d="M 120 -10 L 100 630"/>
+                <path d="M 250 -10 L 270 630"/>
+              </g>
+              <g stroke="color-mix(in srgb, var(--map-road) 60%, var(--map-bg))" stroke-width="3" stroke-dasharray="10 10" fill="none">
+                <path d="M -10 210 L 385 180"/>
+                <path d="M -10 330 L 385 300"/>
+                <path d="M -10 450 L 385 470"/>
+                <path d="M 120 -10 L 100 630"/>
+                <path d="M 250 -10 L 270 630"/>
+              </g>
+            </svg>
+
+            <!-- pins injected by JS -->
+
+            <button class="viewToggle" id="viewToggle">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+              <span id="viewToggleLabel">목록 보기</span>
+            </button>
+
+            <div class="listpanel" id="listpanel"></div>
+
+            <div class="resultpill" id="resultpill"><b id="resultcount">9</b>개 제휴사 표시 중</div>
+
+            <div class="fabs">
+              <div class="fab locate">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke-linecap="round"/></svg>
+              </div>
+              <div class="fab zoomin"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="4" x2="12" y2="20"/><line x1="4" y1="12" x2="20" y2="12"/></svg></div>
+              <div class="fab zoomout"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="4" y1="12" x2="20" y2="12"/></svg></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== 혜택 뷰 ===== -->
+        <div class="view view-benefits" id="view-benefits">
+          <div class="subheader">
+            <div class="screen-title">혜택</div>
+            <div class="screen-sub" id="benefitSub">주변 제휴사 혜택을 카테고리별로 모아봤어요</div>
+          </div>
+          <div class="chips" id="benefitCatChips"></div>
+          <div class="benefit-list" id="benefitList"></div>
+        </div>
+
+        <!-- ===== MY 뷰 ===== -->
+        <div class="view view-my" id="view-my">
+          <div class="subheader">
+            <div class="screen-title">MY</div>
+            <div class="screen-sub">내 통신사와 즐겨찾기를 관리하세요</div>
+          </div>
+          <div class="my-scroll">
+            <div class="my-section">
+              <div class="section-label">내 통신사 (복수 선택 가능)</div>
+              <div class="carrier-cards" id="myCarrierCards"></div>
+            </div>
+            <div class="my-section">
+              <div class="section-label">즐겨찾기 <span id="favCount"></span></div>
+              <div id="favList"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabbar" id="tabbar">
+        <button class="tabitem active" data-view="map">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 20l-6-2V4l6 2 6-2 6 2v16l-6-2-6 2z"/><line x1="9" y1="6" x2="9" y2="20"/><line x1="15" y1="6" x2="15" y2="20"/></svg>
+          지도
+        </button>
+        <button class="tabitem" data-view="benefits">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M8 6V4h8v2"/></svg>
+          혜택
+        </button>
+        <button class="tabitem" data-view="search">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.6" y2="16.6"/></svg>
+          검색
+        </button>
+        <button class="tabitem" data-view="my">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+          MY
+        </button>
+      </div>
+
+      <div class="sheet-backdrop" id="backdrop"></div>
+      <div class="sheet" id="sheet">
+        <div class="sheet-handle"><span></span></div>
+        <div class="sheet-scroll" id="sheetContent"></div>
+      </div>
+
+      <div class="toast" id="toast"></div>
+
+      <div class="onboarding" id="onboarding">
+        <div class="ob-hero">🗺️</div>
+        <h1 class="ob-title">내 통신사를 선택해주세요</h1>
+        <p class="ob-sub">선택한 통신사의 혜택을 지도와 혜택 탭에서 우선적으로 보여드릴게요. 여러 개 선택할 수 있어요.</p>
+        <div class="carrier-cards" id="obCards"></div>
+        <button class="ob-cta" id="obConfirm">시작하기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const CARRIER_META = {
+    SKT: { label: 'SKT', full: 'T멤버십', color: 'var(--skt)' },
+    KT:  { label: 'KT',  full: 'KT 멤버십', color: 'var(--kt)' },
+    LGU: { label: 'U+',  full: 'U+멤버십', color: 'var(--lgu)' },
+  };
+  const CARRIER_KEYS = ['SKT', 'KT', 'LGU'];
+  const CHECK_SVG = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+
+  const PLACES = [
+    { id: 1, name: '스타벅스 강남대로점', cat: '카페', glyph: '☕', top: 17, left: 30, dist: '120m',
+      benefits: { SKT: '사이즈 업그레이드 무료', KT: '아메리카노 10% 할인', LGU: null } },
+    { id: 2, name: 'CGV 강남', cat: '영화관', glyph: '🎬', top: 30, left: 70, dist: '340m',
+      benefits: { SKT: '2,000원 할인', KT: '1,000원 할인', LGU: '4,000원 할인 (VIP 등급)' } },
+    { id: 3, name: 'GS25 역삼점', cat: '편의점', glyph: '🏪', top: 46, left: 18, dist: '80m',
+      benefits: { SKT: '5% 할인', KT: '5% 할인', LGU: '10% 할인' } },
+    { id: 4, name: '파리바게뜨 테헤란로점', cat: '베이커리', glyph: '🥐', top: 56, left: 55, dist: '260m',
+      benefits: { SKT: null, KT: '1,000원 할인', LGU: '15% 할인' } },
+    { id: 5, name: '맥도날드 삼성점', cat: '패스트푸드', glyph: '🍔', top: 66, left: 78, dist: '410m',
+      benefits: { SKT: '세트 500원 할인', KT: null, LGU: null } },
+    { id: 6, name: '이디야커피 선릉점', cat: '카페', glyph: '☕', top: 22, left: 80, dist: '190m',
+      benefits: { SKT: '음료 1잔 무료 (첫 구매)', KT: '10% 할인', LGU: '10% 할인' } },
+    { id: 7, name: '올리브영 강남점', cat: '헬스&뷰티', glyph: '💄', top: 74, left: 34, dist: '300m',
+      benefits: { SKT: null, KT: '5% 할인', LGU: '5% 할인' } },
+    { id: 8, name: '교보문고 강남점', cat: '서점', glyph: '📚', top: 39, left: 45, dist: '150m',
+      benefits: { SKT: '5% 할인', KT: '5% 할인', LGU: null } },
+    { id: 9, name: '이마트24 논현점', cat: '편의점', glyph: '🏪', top: 84, left: 60, dist: '520m',
+      benefits: { SKT: '3% 적립', KT: '3% 적립', LGU: '3% 적립' } },
+  ];
+  // 혜택 탭은 지도 탭과 달리 좌표가 필요 없어서, 크롤러가 갱신하는
+  // site/data/places.json 이 로드되면 이 배열이 그 실데이터로 교체된다.
+  // (지도 핀은 좌표 정보가 없는 실데이터를 아직 못 쓰므로 데모용 PLACES 유지)
+  let BENEFIT_DATA = PLACES;
+  let BENEFIT_DATA_IS_LIVE = false;
+  let LIVE_ID_SEQ = 10000;
+
+  function getCategories() { return ['전체', ...new Set(BENEFIT_DATA.map(p => p.cat).filter(Boolean))]; }
+
+  async function loadLiveBenefitData() {
+    try {
+      const res = await fetch('./data/places.json', { cache: 'no-store' });
+      if (!res.ok) return;
+      const raw = await res.json();
+      if (!Array.isArray(raw) || !raw.length) return;
+      BENEFIT_DATA = raw.map(entry => ({
+        id: LIVE_ID_SEQ++,
+        name: entry.brand,
+        cat: entry.category_group || '기타',
+        glyph: '🏷️',
+        dist: '',
+        benefits: {
+          SKT: entry.benefits.SKT ? entry.benefits.SKT.summary : null,
+          KT: entry.benefits.KT ? entry.benefits.KT.summary : null,
+          LGU: entry.benefits.LGU ? entry.benefits.LGU.summary : null,
+        },
+      }));
+      BENEFIT_DATA_IS_LIVE = true;
+      benefitCategory = '전체';
+      if (currentView === 'benefits') renderBenefitTab();
+    } catch (e) {
+      console.warn('실데이터 로드 실패, 데모 데이터를 계속 사용합니다.', e);
+    }
+  }
+
+  function findAnyPlace(id) {
+    return PLACES.find(p => p.id === id) || BENEFIT_DATA.find(p => p.id === id);
+  }
+
+  // ---- state ----
+  let activeCarrier = 'ALL';
+  let selectedId = null;
+  let query = '';
+  let mapMode = 'map';
+  let currentView = 'map';
+  let benefitCategory = '전체';
+  const myCarriers = new Set();
+  const favorites = new Set();
+
+  // ---- element refs ----
+  const mapEl = document.getElementById('map');
+  const chipsEl = document.getElementById('chips');
+  const sheetEl = document.getElementById('sheet');
+  const backdropEl = document.getElementById('backdrop');
+  const sheetContentEl = document.getElementById('sheetContent');
+  const searchEl = document.getElementById('search');
+  const resultCountEl = document.getElementById('resultcount');
+  const toastEl = document.getElementById('toast');
+  const viewToggleEl = document.getElementById('viewToggle');
+  const viewToggleLabelEl = document.getElementById('viewToggleLabel');
+  const listpanelEl = document.getElementById('listpanel');
+  const tabbarEl = document.getElementById('tabbar');
+  const benefitCatChipsEl = document.getElementById('benefitCatChips');
+  const benefitListEl = document.getElementById('benefitList');
+  const myCarrierCardsEl = document.getElementById('myCarrierCards');
+  const favCountEl = document.getElementById('favCount');
+  const favListEl = document.getElementById('favList');
+  const obCardsEl = document.getElementById('obCards');
+  const obConfirmEl = document.getElementById('obConfirm');
+  const onboardingEl = document.getElementById('onboarding');
+
+  // ---- helpers ----
+  function matchesFilter(place) {
+    const carrierOk = activeCarrier === 'ALL' || !!place.benefits[activeCarrier];
+    const q = query.trim().toLowerCase();
+    const queryOk = !q || place.name.toLowerCase().includes(q) || place.cat.toLowerCase().includes(q);
+    return carrierOk && queryOk;
+  }
+  function placeMatchesMine(place) { return [...myCarriers].some(k => place.benefits[k]); }
+  function sortedPlaces(list) {
+    if (myCarriers.size === 0) return list;
+    return [...list].sort((a, b) => (placeMatchesMine(a) ? 0 : 1) - (placeMatchesMine(b) ? 0 : 1));
+  }
+  function carrierCardHtml(key, selected) {
+    const m = CARRIER_META[key];
+    return `<button class="carrier-card ${selected ? 'selected' : ''}" data-carrier="${key}" style="--c:${m.color}">
+      <span class="cc-badge" style="background:${m.color}">${m.label}</span>
+      <span class="cc-name">${m.full}</span>
+      <span class="cc-check">${selected ? CHECK_SVG : ''}</span>
+    </button>`;
+  }
+
+  // ---- 지도 핀 ----
+  function makePin(place) {
+    const btn = document.createElement('button');
+    btn.className = 'pin';
+    btn.style.top = place.top + '%';
+    btn.style.left = place.left + '%';
+    btn.dataset.id = place.id;
+    btn.setAttribute('aria-label', place.name);
+    const badgeDots = Object.entries(place.benefits)
+      .filter(([, v]) => v)
+      .map(([k]) => `<span style="background:${CARRIER_META[k].color}"></span>`)
+      .join('');
+    btn.innerHTML = `<div class="bubble"><span class="glyph">${place.glyph}</span></div><div class="badges">${badgeDots}</div>`;
+    btn.addEventListener('click', () => selectPlace(place.id));
+    return btn;
+  }
+  function renderPins() {
+    mapEl.querySelectorAll('.pin').forEach(p => p.remove());
+    PLACES.forEach(place => mapEl.appendChild(makePin(place)));
+    applyFilter();
+  }
+  function applyFilter() {
+    let visible = 0;
+    PLACES.forEach(place => {
+      const pin = mapEl.querySelector(`.pin[data-id="${place.id}"]`);
+      const ok = matchesFilter(place);
+      pin.classList.toggle('dim', !ok);
+      pin.classList.toggle('selected', place.id === selectedId);
+      if (ok) visible++;
+    });
+    resultCountEl.textContent = visible;
+    if (mapMode === 'list') renderListPanel();
+  }
+
+  chipsEl.addEventListener('click', (e) => {
+    const chip = e.target.closest('.chip');
+    if (!chip) return;
+    chipsEl.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    activeCarrier = chip.dataset.carrier;
+    applyFilter();
+  });
+  searchEl.addEventListener('input', (e) => { query = e.target.value; applyFilter(); });
+
+  // ---- 지도 <-> 리스트 토글 ----
+  function setMapMode(mode) {
+    mapMode = mode;
+    mapEl.classList.toggle('list-mode', mode === 'list');
+    viewToggleLabelEl.textContent = mode === 'list' ? '지도 보기' : '목록 보기';
+    if (mode === 'list') renderListPanel();
+  }
+  viewToggleEl.addEventListener('click', () => setMapMode(mapMode === 'map' ? 'list' : 'map'));
+
+  function listRowHtml(p) {
+    const dots = CARRIER_KEYS.filter(k => p.benefits[k]).map(k => `<span style="background:${CARRIER_META[k].color}"></span>`).join('');
+    return `<div class="listrow" data-id="${p.id}">
+      <div class="lr-icon">${p.glyph}</div>
+      <div class="lr-text"><div class="lr-name">${p.name}</div><div class="lr-meta">${p.cat} · ${p.dist}</div></div>
+      <div class="lr-dots">${dots}</div>
+      <svg class="lr-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+    </div>`;
+  }
+  function renderListPanel() {
+    const list = sortedPlaces(PLACES.filter(matchesFilter));
+    listpanelEl.innerHTML = list.length ? list.map(listRowHtml).join('') : `<div class="fav-empty">조건에 맞는 제휴사가 없어요</div>`;
+  }
+  listpanelEl.addEventListener('click', (e) => {
+    const row = e.target.closest('.listrow');
+    if (row) selectPlace(Number(row.dataset.id));
+  });
+
+  // ---- 바텀시트 ----
+  function benefitRowHtml(carrierKey, place) {
+    const meta = CARRIER_META[carrierKey];
+    const desc = place.benefits[carrierKey];
+    const disabled = !desc;
+    return `
+      <div class="benefit-row ${disabled ? 'disabled' : ''}">
+        <div class="carrier-badge" style="${disabled ? '' : `background:${meta.color}`}">${meta.label}</div>
+        <div class="benefit-info">
+          <div class="benefit-title">${meta.full}</div>
+          <div class="benefit-desc">${disabled ? '이 제휴사에는 제공되는 혜택이 없어요' : desc}</div>
+        </div>
+        <button class="go-btn" style="${disabled ? '' : `background:${meta.color}`}"
+          ${disabled ? 'disabled' : `data-carrier="${carrierKey}" data-place="${place.name}"`}>
+          ${disabled ? '미제공' : '앱 열기'}
+        </button>
+      </div>
+    `;
+  }
+  function selectPlace(id) {
+    selectedId = id;
+    const place = findAnyPlace(id);
+    if (!place) return;
+    if (PLACES.some(p => p.id === id)) applyFilter();
+    const isFav = favorites.has(id);
+    const metaLine = place.dist ? `${place.cat} · 현재 위치에서 ${place.dist}` : place.cat;
+    sheetContentEl.innerHTML = `
+      <div class="place-head">
+        <div class="place-icon">${place.glyph}</div>
+        <div class="place-titlewrap">
+          <div class="place-name">${place.name}</div>
+          <div class="place-meta">${metaLine}</div>
+        </div>
+        <button class="fav-btn ${isFav ? 'active' : ''}" data-id="${place.id}" aria-label="즐겨찾기">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </button>
+      </div>
+      <div class="section-label">통신사 멤버십 혜택</div>
+      ${benefitRowHtml('SKT', place)}
+      ${benefitRowHtml('KT', place)}
+      ${benefitRowHtml('LGU', place)}
+    `;
+    sheetEl.classList.add('open');
+    backdropEl.classList.add('show');
+  }
+  function closeSheet() {
+    sheetEl.classList.remove('open');
+    backdropEl.classList.remove('show');
+    selectedId = null;
+    applyFilter();
+  }
+  backdropEl.addEventListener('click', closeSheet);
+
+  let toastTimer = null;
+  sheetContentEl.addEventListener('click', (e) => {
+    const favBtn = e.target.closest('.fav-btn');
+    if (favBtn) {
+      const id = Number(favBtn.dataset.id);
+      if (favorites.has(id)) favorites.delete(id); else favorites.add(id);
+      favBtn.classList.toggle('active');
+      renderMyTab();
+      return;
+    }
+    const btn = e.target.closest('.go-btn');
+    if (!btn || btn.disabled) return;
+    const meta = CARRIER_META[btn.dataset.carrier];
+    toastEl.textContent = `${meta.full} 앱으로 이동합니다`;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toastEl.classList.remove('show'), 1600);
+  });
+
+  // ---- 혜택 탭 ----
+  function benefitCardHtml(p) {
+    const tags = CARRIER_KEYS.filter(k => p.benefits[k]).map(k => {
+      const m = CARRIER_META[k];
+      const mine = myCarriers.has(k);
+      return `<span class="bc-tag ${mine ? 'mine' : ''}" style="${mine ? `background:${m.color}` : ''}">${m.label} · ${p.benefits[k]}</span>`;
+    }).join('');
+    return `<div class="benefit-card" data-id="${p.id}">
+      <div class="bc-icon">${p.glyph}</div>
+      <div class="bc-body">
+        <div class="bc-name">${p.name}</div>
+        <div class="bc-meta">${p.dist ? `${p.cat} · ${p.dist}` : p.cat}</div>
+        <div class="bc-carriers">${tags}</div>
+      </div>
+    </div>`;
+  }
+  function renderBenefitTab() {
+    const categories = getCategories();
+    benefitCatChipsEl.innerHTML = categories.map(c => `<button class="chip ${c === benefitCategory ? 'chip-active' : ''}" data-cat="${c}">${c}</button>`).join('');
+    const filtered = benefitCategory === '전체' ? BENEFIT_DATA : BENEFIT_DATA.filter(p => p.cat === benefitCategory);
+    const list = sortedPlaces(filtered);
+    benefitListEl.innerHTML = list.length ? list.map(benefitCardHtml).join('') : `<div class="fav-empty">해당 카테고리의 제휴사가 없어요</div>`;
+    document.getElementById('benefitSub').textContent = (myCarriers.size
+      ? '내 통신사 혜택이 있는 제휴사를 우선으로 모아봤어요'
+      : '주변 제휴사 혜택을 카테고리별로 모아봤어요')
+      + (BENEFIT_DATA_IS_LIVE ? ' · 통신사 공식 홈페이지 기준 실데이터' : ' · 데모 데이터');
+  }
+  benefitCatChipsEl.addEventListener('click', (e) => {
+    const chip = e.target.closest('.chip');
+    if (!chip) return;
+    benefitCategory = chip.dataset.cat;
+    renderBenefitTab();
+  });
+  benefitListEl.addEventListener('click', (e) => {
+    const card = e.target.closest('.benefit-card');
+    if (card) selectPlace(Number(card.dataset.id));
+  });
+
+  // ---- MY 탭 ----
+  function favRowHtml(p) {
+    return `<div class="fav-row" data-id="${p.id}">
+      <div class="lr-icon">${p.glyph}</div>
+      <div class="lr-text"><div class="lr-name">${p.name}</div><div class="lr-meta">${p.cat} · ${p.dist}</div></div>
+      <button class="fav-remove" data-remove="${p.id}" aria-label="즐겨찾기 삭제">×</button>
+    </div>`;
+  }
+  function renderMyTab() {
+    myCarrierCardsEl.innerHTML = CARRIER_KEYS.map(k => carrierCardHtml(k, myCarriers.has(k))).join('');
+    const favPlaces = PLACES.concat(BENEFIT_DATA_IS_LIVE ? BENEFIT_DATA : []).filter(p => favorites.has(p.id));
+    favCountEl.textContent = favPlaces.length ? `${favPlaces.length}개` : '';
+    favListEl.innerHTML = favPlaces.length
+      ? favPlaces.map(favRowHtml).join('')
+      : `<div class="fav-empty">아직 즐겨찾기한 제휴사가 없어요.<br>지도나 혜택 탭에서 별표를 눌러 저장해보세요.</div>`;
+  }
+  favListEl.addEventListener('click', (e) => {
+    const removeBtn = e.target.closest('.fav-remove');
+    if (removeBtn) { favorites.delete(Number(removeBtn.dataset.remove)); renderMyTab(); return; }
+    const row = e.target.closest('.fav-row');
+    if (row) selectPlace(Number(row.dataset.id));
+  });
+
+  // ---- 통신사 선택 (온보딩 + MY 공용) ----
+  function toggleCarrier(key) {
+    if (myCarriers.has(key)) myCarriers.delete(key); else myCarriers.add(key);
+    obCardsEl.innerHTML = CARRIER_KEYS.map(k => carrierCardHtml(k, myCarriers.has(k))).join('');
+    renderMyTab();
+    renderBenefitTab();
+    if (mapMode === 'list') renderListPanel();
+  }
+  obCardsEl.addEventListener('click', (e) => {
+    const card = e.target.closest('.carrier-card');
+    if (card) toggleCarrier(card.dataset.carrier);
+  });
+  myCarrierCardsEl.addEventListener('click', (e) => {
+    const card = e.target.closest('.carrier-card');
+    if (card) toggleCarrier(card.dataset.carrier);
+  });
+  obConfirmEl.addEventListener('click', () => onboardingEl.classList.add('hidden'));
+
+  // ---- 탭바 ----
+  function showView(view) {
+    currentView = view;
+    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    document.getElementById('view-' + view).classList.add('active');
+  }
+  tabbarEl.addEventListener('click', (e) => {
+    const item = e.target.closest('.tabitem');
+    if (!item) return;
+    tabbarEl.querySelectorAll('.tabitem').forEach(t => t.classList.remove('active'));
+    item.classList.add('active');
+    const view = item.dataset.view;
+    if (view === 'search') {
+      showView('map');
+      setMapMode('list');
+      setTimeout(() => searchEl.focus(), 60);
+    } else if (view === 'map') {
+      showView('map');
+    } else {
+      showView(view);
+      if (view === 'benefits') renderBenefitTab();
+      if (view === 'my') renderMyTab();
+    }
+  });
+
+  // ---- 초기화 ----
+  obCardsEl.innerHTML = CARRIER_KEYS.map(k => carrierCardHtml(k, false)).join('');
+  renderPins();
+  renderBenefitTab();
+  renderMyTab();
+  loadLiveBenefitData();
+</script>
