@@ -1,6 +1,6 @@
 """
 run.py 가 만든 benefits.json(통신사별 원본 레코드)을
-프론트(site/data/places.json)가 바로 소비할 수 있는 '브랜드 단위' 구조로 변환한다.
+프론트(docs/data/places.json)가 바로 소비할 수 있는 '브랜드 단위' 구조로 변환한다.
 
 ⚠️ 중요한 한계: 이 데이터는 '어떤 브랜드가 어떤 혜택을 주는지'는 정확하지만,
    '그 브랜드의 매장이 지도 위 정확히 어디 있는지(위도/경도)'는 포함하지 않는다.
@@ -8,7 +8,7 @@ run.py 가 만든 benefits.json(통신사별 원본 레코드)을
    때문. 실제 지도 핀을 찍으려면 카카오맵 Local API(키워드 장소검색)로 브랜드명별
    지점 좌표를 별도로 조회해서 이 파일과 브랜드명 기준으로 매칭해야 한다 (TODO).
 
-출력 스키마 (site/data/places.json):
+출력 스키마 (docs/data/places.json):
 [
   {
     "brand": "CGV",
@@ -74,7 +74,7 @@ def transform(records):
 
 def main():
     src = sys.argv[1] if len(sys.argv) > 1 else "benefits.json"
-    dst = sys.argv[2] if len(sys.argv) > 2 else "../site/data/places.json"
+    dst = sys.argv[2] if len(sys.argv) > 2 else "../docs/data/places.json"
 
     with open(src, encoding="utf-8") as f:
         records = json.load(f)

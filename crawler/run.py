@@ -16,7 +16,7 @@ import lguplus
 import kt
 import transform
 
-SITE_DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "site", "data", "places.json")
+SITE_DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "docs", "data", "places.json")
 
 CRAWLERS = {
     "skt": skt.crawl,
