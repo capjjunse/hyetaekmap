@@ -163,12 +163,22 @@
     transition: transform 120ms ease, background 120ms ease, color 120ms ease, border-color 120ms ease;
   }
   .chip:active { transform: scale(0.96); }
-  .chip .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+  .chip .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--ink-soft); }
+  .chip[data-carrier="SKT"] .dot { background: var(--skt); }
+  .chip[data-carrier="KT"] .dot { background: var(--kt); }
+  .chip[data-carrier="LGU"] .dot { background: var(--lgu); }
   .chip[data-carrier="ALL"].active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
   .chip[data-carrier="SKT"].active { background: var(--skt); color: #fff; border-color: var(--skt); }
   .chip[data-carrier="KT"].active { background: var(--kt); color: #241300; border-color: var(--kt); }
   .chip[data-carrier="LGU"].active { background: var(--lgu); color: #fff; border-color: var(--lgu); }
+  .chip.active .dot { background: currentColor; }
   .chip.chip-active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .benefit-tier { font-size: 10.5px; font-weight: 600; color: var(--muted); margin-left: 5px; }
+  .bc-cat-label {
+    font-size: 10px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase;
+    color: var(--muted); margin-top: 8px;
+  }
+  .bc-cat-label:first-of-type { margin-top: 8px; }
 
   /* ---------- map (카카오맵) ---------- */
   .map { position: relative; flex: 1 1 auto; overflow: hidden; }
@@ -432,9 +442,9 @@
             </div>
             <div class="chips" id="chips">
               <button class="chip active" data-carrier="ALL"><span class="dot"></span>전체</button>
-              <button class="chip" data-carrier="SKT" style="color:var(--skt)"><span class="dot"></span>SKT</button>
-              <button class="chip" data-carrier="KT" style="color:var(--kt)"><span class="dot"></span>KT</button>
-              <button class="chip" data-carrier="LGU" style="color:var(--lgu)"><span class="dot"></span>LG U+</button>
+              <button class="chip" data-carrier="SKT"><span class="dot"></span>SKT</button>
+              <button class="chip" data-carrier="KT"><span class="dot"></span>KT</button>
+              <button class="chip" data-carrier="LGU"><span class="dot"></span>LG U+</button>
             </div>
           </div>
 
@@ -546,6 +556,24 @@
 
   function getCategories() { return ['전체', ...new Set(BENEFIT_DATA.map(p => p.cat).filter(Boolean))]; }
 
+  const CATEGORY_ORDER = ['상시혜택', '월간혜택', 'VIP특화혜택'];
+
+  function groupByCategory(rawBenefits) {
+    // {SKT:{category,tier,summary,all:[...]}|null, KT:..., LGU:...} -> {상시혜택:{SKT:[{tier,summary}],...}, ...}
+    const groups = {};
+    CATEGORY_ORDER.forEach(c => { groups[c] = {}; });
+    CARRIER_KEYS.forEach((carrier) => {
+      const c = rawBenefits[carrier];
+      if (!c) return;
+      const lines = (c.all && c.all.length) ? c.all : [c];
+      lines.forEach((line) => {
+        if (!groups[line.category]) return;
+        (groups[line.category][carrier] = groups[line.category][carrier] || []).push({ tier: line.tier, summary: line.summary });
+      });
+    });
+    return groups;
+  }
+
   async function loadLiveBenefitData() {
     try {
       const res = await fetch('./data/places.json', { cache: 'no-store' });
@@ -558,11 +586,8 @@
         cat: entry.category_group || '기타',
         glyph: '🏷️',
         dist: '',
-        benefits: {
-          SKT: entry.benefits.SKT ? entry.benefits.SKT.summary : null,
-          KT: entry.benefits.KT ? entry.benefits.KT.summary : null,
-          LGU: entry.benefits.LGU ? entry.benefits.LGU.summary : null,
-        },
+        benefits: { SKT: !!entry.benefits.SKT, KT: !!entry.benefits.KT, LGU: !!entry.benefits.LGU },
+        byCategory: groupByCategory(entry.benefits),
       }));
       BENEFIT_DATA_IS_LIVE = true;
       benefitCategory = '전체';
@@ -587,7 +612,7 @@
   }
 
   // ---- state ----
-  let activeCarrier = 'ALL';
+  let activeCarriers = new Set(); // 비어있으면 "전체"(필터 없음)
   let selectedId = null;
   let query = '';
   let mapMode = 'map';
@@ -619,8 +644,11 @@
   const onboardingEl = document.getElementById('onboarding');
 
   // ---- helpers ----
+  function visibleCarrierKeys() {
+    return activeCarriers.size === 0 ? CARRIER_KEYS : CARRIER_KEYS.filter(k => activeCarriers.has(k));
+  }
   function matchesFilter(place) {
-    const carrierOk = activeCarrier === 'ALL' || !!place.benefits[activeCarrier];
+    const carrierOk = visibleCarrierKeys().some(k => place.benefits[k]);
     const q = query.trim().toLowerCase();
     const queryOk = !q || place.name.toLowerCase().includes(q) || place.cat.toLowerCase().includes(q);
     return carrierOk && queryOk;
@@ -720,6 +748,7 @@
         dist: distM != null ? formatDistance(distM) : '',
         _distM: distM,
         benefits: m.brand.benefits,
+        byCategory: m.brand.byCategory,
         _lat: m.lat, _lng: m.lng,
       };
     }).sort((a, b) => (a._distM ?? Infinity) - (b._distM ?? Infinity));
@@ -733,7 +762,7 @@
     visible.forEach((p) => {
       const el = document.createElement('div');
       el.className = 'map-pin' + (p.id === selectedId ? ' selected' : '');
-      const dots = CARRIER_KEYS.filter((k) => p.benefits[k]).map((k) => `<span style="background:${CARRIER_META[k].color}"></span>`).join('');
+      const dots = visibleCarrierKeys().filter((k) => p.benefits[k]).map((k) => `<span style="background:${CARRIER_META[k].color}"></span>`).join('');
       el.innerHTML = `<div class="chip"><span class="chip-dots">${dots}</span><span>${p.brandName}</span></div><div class="pointer"></div>`;
       el.addEventListener('click', () => selectPlace(p.id));
       const overlay = new kakao.maps.CustomOverlay({
@@ -748,13 +777,23 @@
     if (mapMode === 'list') renderListPanel();
   }
 
+  function renderCarrierChips() {
+    chipsEl.querySelectorAll('.chip').forEach((c) => {
+      const carrier = c.dataset.carrier;
+      const isActive = carrier === 'ALL' ? activeCarriers.size === 0 : activeCarriers.has(carrier);
+      c.classList.toggle('active', isActive);
+    });
+  }
   chipsEl.addEventListener('click', (e) => {
     const chip = e.target.closest('.chip');
     if (!chip) return;
-    chipsEl.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
-    chip.classList.add('active');
-    activeCarrier = chip.dataset.carrier;
+    const carrier = chip.dataset.carrier;
+    if (carrier === 'ALL') activeCarriers.clear();
+    else if (activeCarriers.has(carrier)) activeCarriers.delete(carrier);
+    else activeCarriers.add(carrier);
+    renderCarrierChips();
     applyFilter();
+    if (currentView === 'benefits') renderBenefitTab();
   });
   searchEl.addEventListener('input', (e) => { query = e.target.value; applyFilter(); });
 
@@ -768,7 +807,7 @@
   viewToggleEl.addEventListener('click', () => setMapMode(mapMode === 'map' ? 'list' : 'map'));
 
   function listRowHtml(p) {
-    const dots = CARRIER_KEYS.filter(k => p.benefits[k]).map(k => `<span style="background:${CARRIER_META[k].color}"></span>`).join('');
+    const dots = visibleCarrierKeys().filter(k => p.benefits[k]).map(k => `<span style="background:${CARRIER_META[k].color}"></span>`).join('');
     return `<div class="listrow" data-id="${p.id}">
       <div class="lr-icon">${p.glyph}</div>
       <div class="lr-text"><div class="lr-name">${p.name}</div><div class="lr-meta">${p.cat}${p.dist ? ' · ' + p.dist : ''}</div></div>
@@ -786,23 +825,37 @@
   });
 
   // ---- 바텀시트 ----
-  function benefitRowHtml(carrierKey, place) {
-    const meta = CARRIER_META[carrierKey];
-    const desc = place.benefits[carrierKey];
-    const disabled = !desc;
-    return `
-      <div class="benefit-row ${disabled ? 'disabled' : ''}">
-        <div class="carrier-badge" style="${disabled ? '' : `background:${meta.color}`}">${meta.label}</div>
-        <div class="benefit-info">
-          <div class="benefit-title">${meta.full}</div>
-          <div class="benefit-desc">${disabled ? '이 제휴사에는 제공되는 혜택이 없어요' : desc}</div>
-        </div>
-        <button class="go-btn" style="${disabled ? '' : `background:${meta.color}`}"
-          ${disabled ? 'disabled' : `data-carrier="${carrierKey}" data-place="${place.name}"`}>
-          ${disabled ? '미제공' : '앱 열기'}
-        </button>
-      </div>
-    `;
+  function benefitSectionsHtml(place) {
+    const visible = visibleCarrierKeys();
+    const byCategory = place.byCategory || {};
+    let html = '';
+    let any = false;
+    CATEGORY_ORDER.forEach((cat) => {
+      const rows = visible
+        .filter((k) => byCategory[cat] && byCategory[cat][k] && byCategory[cat][k].length)
+        .map((k) => ({ k, lines: byCategory[cat][k] }));
+      if (!rows.length) return;
+      any = true;
+      html += `<div class="section-label">${cat}</div>`;
+      rows.forEach(({ k, lines }) => {
+        const meta = CARRIER_META[k];
+        const summary = lines.map((l) => l.summary).join(' · ');
+        const tier = lines[0].tier;
+        html += `
+          <div class="benefit-row">
+            <div class="carrier-badge" style="background:${meta.color}">${meta.label}</div>
+            <div class="benefit-info">
+              <div class="benefit-title">${meta.full}<span class="benefit-tier">${tier}</span></div>
+              <div class="benefit-desc">${summary}</div>
+            </div>
+            <button class="go-btn" style="background:${meta.color}" data-carrier="${k}" data-place="${place.name}">앱 열기</button>
+          </div>`;
+      });
+    });
+    if (!any) {
+      html = `<div class="fav-empty">${visible.length < CARRIER_KEYS.length ? '선택하신 통신사의 혜택 정보가 없어요' : '제공되는 혜택 정보가 없어요'}</div>`;
+    }
+    return html;
   }
   function selectPlace(id) {
     selectedId = id;
@@ -822,10 +875,7 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         </button>
       </div>
-      <div class="section-label">통신사 멤버십 혜택</div>
-      ${benefitRowHtml('SKT', place)}
-      ${benefitRowHtml('KT', place)}
-      ${benefitRowHtml('LGU', place)}
+      ${benefitSectionsHtml(place)}
     `;
     sheetEl.classList.add('open');
     backdropEl.classList.add('show');
@@ -859,24 +909,35 @@
 
   // ---- 혜택 탭 ----
   function benefitCardHtml(p) {
-    const tags = CARRIER_KEYS.filter(k => p.benefits[k]).map(k => {
-      const m = CARRIER_META[k];
-      const mine = myCarriers.has(k);
-      return `<span class="bc-tag ${mine ? 'mine' : ''}" style="${mine ? `background:${m.color}` : ''}">${m.label} · ${p.benefits[k]}</span>`;
-    }).join('');
+    const visible = visibleCarrierKeys();
+    const byCategory = p.byCategory || {};
+    let sections = '';
+    CATEGORY_ORDER.forEach((cat) => {
+      const tags = visible
+        .filter((k) => byCategory[cat] && byCategory[cat][k] && byCategory[cat][k].length)
+        .map((k) => {
+          const m = CARRIER_META[k];
+          const mine = myCarriers.has(k);
+          const summary = byCategory[cat][k].map((l) => l.summary).join(' · ');
+          return `<span class="bc-tag ${mine ? 'mine' : ''}" style="${mine ? `background:${m.color}` : ''}">${m.label} · ${summary}</span>`;
+        }).join('');
+      if (tags) sections += `<div class="bc-cat-label">${cat}</div><div class="bc-carriers">${tags}</div>`;
+    });
     return `<div class="benefit-card" data-id="${p.id}">
       <div class="bc-icon">${p.glyph}</div>
       <div class="bc-body">
         <div class="bc-name">${p.name}</div>
         <div class="bc-meta">${p.dist ? `${p.cat} · ${p.dist}` : p.cat}</div>
-        <div class="bc-carriers">${tags}</div>
+        ${sections}
       </div>
     </div>`;
   }
   function renderBenefitTab() {
     const categories = getCategories();
     benefitCatChipsEl.innerHTML = categories.map(c => `<button class="chip ${c === benefitCategory ? 'chip-active' : ''}" data-cat="${c}">${c}</button>`).join('');
-    const filtered = benefitCategory === '전체' ? BENEFIT_DATA : BENEFIT_DATA.filter(p => p.cat === benefitCategory);
+    const filtered = BENEFIT_DATA
+      .filter(p => benefitCategory === '전체' || p.cat === benefitCategory)
+      .filter(p => visibleCarrierKeys().some(k => p.benefits[k]));
     const list = sortedPlaces(filtered);
     benefitListEl.innerHTML = list.length ? list.map(benefitCardHtml).join('') : `<div class="fav-empty">해당 카테고리의 제휴사가 없어요</div>`;
     document.getElementById('benefitSub').textContent = (myCarriers.size
@@ -921,10 +982,12 @@
   // ---- 통신사 선택 (온보딩 + MY 공용) ----
   function toggleCarrier(key) {
     if (myCarriers.has(key)) myCarriers.delete(key); else myCarriers.add(key);
+    activeCarriers = new Set(myCarriers); // 내 통신사 = 기본 활성 필터
     obCardsEl.innerHTML = CARRIER_KEYS.map(k => carrierCardHtml(k, myCarriers.has(k))).join('');
+    renderCarrierChips();
     renderMyTab();
     renderBenefitTab();
-    if (mapMode === 'list') renderListPanel();
+    applyFilter();
   }
   obCardsEl.addEventListener('click', (e) => {
     const card = e.target.closest('.carrier-card');
@@ -963,8 +1026,10 @@
 
   // ---- 초기화 ----
   obCardsEl.innerHTML = CARRIER_KEYS.map(k => carrierCardHtml(k, false)).join('');
-  renderBenefitTab();
+  renderCarrierChips();
   renderMyTab();
-  loadLiveBenefitData().then(initKakaoMap);
-  loadLiveBenefitData();
+  loadLiveBenefitData().then(() => {
+    renderBenefitTab();
+    initKakaoMap();
+  });
 </script>
