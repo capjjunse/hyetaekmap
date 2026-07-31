@@ -186,20 +186,23 @@
     display: flex; flex-direction: column; align-items: center;
     cursor: pointer; transition: opacity 160ms ease, filter 160ms ease;
   }
-  .map-pin .bubble {
-    width: 34px; height: 34px; border-radius: 50% 50% 50% 4px;
-    background: var(--teal); transform: rotate(45deg);
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 6px 14px var(--shadow); border: 2px solid var(--sheet-bg);
+  .map-pin .chip {
+    display: flex; align-items: center; gap: 5px;
+    background: var(--sheet-bg); border: 1.5px solid var(--border);
+    border-radius: 999px; padding: 5px 11px 5px 7px;
+    box-shadow: 0 5px 12px var(--shadow);
+    font-size: 11.5px; font-weight: 800; color: var(--ink); white-space: nowrap;
   }
-  .map-pin .glyph { transform: rotate(-45deg); font-size: 15px; line-height: 1; }
-  .map-pin .badges {
-    display: flex; gap: 3px; margin-top: 4px;
-    background: var(--sheet-bg); border-radius: 999px; padding: 2px 4px;
-    box-shadow: 0 2px 6px var(--shadow);
+  .map-pin .chip-dots { display: flex; gap: 2px; flex: 0 0 auto; }
+  .map-pin .chip-dots span { width: 6px; height: 6px; border-radius: 50%; display: block; }
+  .map-pin .pointer {
+    width: 0; height: 0; margin-top: -1px;
+    border-left: 6px solid transparent; border-right: 6px solid transparent;
+    border-top: 7px solid var(--sheet-bg);
+    filter: drop-shadow(0 3px 2px var(--shadow));
   }
-  .map-pin .badges span { width: 6px; height: 6px; border-radius: 50%; display: block; }
-  .map-pin.selected .bubble { background: var(--ink); box-shadow: 0 0 0 5px color-mix(in srgb, var(--ink) 18%, transparent); }
+  .map-pin.selected .chip { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .map-pin.selected .pointer { border-top-color: var(--ink); }
 
   .viewToggle {
     position: absolute; top: 12px; left: 50%; transform: translateX(-50%); z-index: 16;
@@ -711,6 +714,7 @@
       return {
         id: 'kko-' + m.brand.id + '-' + Math.round(m.lat * 1e5) + '-' + Math.round(m.lng * 1e5),
         name: m.placeName,
+        brandName: m.brand.name,
         cat: m.brand.cat,
         glyph: m.brand.glyph,
         dist: distM != null ? formatDistance(distM) : '',
@@ -729,8 +733,8 @@
     visible.forEach((p) => {
       const el = document.createElement('div');
       el.className = 'map-pin' + (p.id === selectedId ? ' selected' : '');
-      const badgeDots = CARRIER_KEYS.filter((k) => p.benefits[k]).map((k) => `<span style="background:${CARRIER_META[k].color}"></span>`).join('');
-      el.innerHTML = `<div class="bubble"><span class="glyph">${p.glyph}</span></div><div class="badges">${badgeDots}</div>`;
+      const dots = CARRIER_KEYS.filter((k) => p.benefits[k]).map((k) => `<span style="background:${CARRIER_META[k].color}"></span>`).join('');
+      el.innerHTML = `<div class="chip"><span class="chip-dots">${dots}</span><span>${p.brandName}</span></div><div class="pointer"></div>`;
       el.addEventListener('click', () => selectPlace(p.id));
       const overlay = new kakao.maps.CustomOverlay({
         position: new kakao.maps.LatLng(p._lat, p._lng),
