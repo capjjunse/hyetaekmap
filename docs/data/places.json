@@ -186,7 +186,7 @@
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "(선착순) 프리미엄 광택시공 30% 할인(장마철관리할인)"
+            "summary": "(선착순) 세차 이용 시 유막제 거/발수코팅 20%, 추가혜택"
           }
         ]
       },
@@ -293,7 +293,7 @@
   },
   {
     "brand": "CU",
-    "category_group": "2026 7월 유쁠투쁠 혜택",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -332,18 +332,6 @@
           }
         ]
       },
-      "LGU": {
-        "category": "월간혜택",
-        "tier": "전체",
-        "summary": "(선착순) 불닭볶음면 1,200원 할인",
-        "all": [
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "(선착순) 불닭볶음면 1,200원 할인"
-          }
-        ]
-      },
       "KT": {
         "category": "상시혜택",
         "tier": "전등급",
@@ -355,7 +343,8 @@
             "summary": "아침 간편식류 1,000원당 200원 할인"
           }
         ]
-      }
+      },
+      "LGU": null
     }
   },
   {
@@ -698,17 +687,17 @@
   },
   {
     "brand": "LG생활건강",
-    "category_group": "2026 7월 유쁠투쁠 혜택",
+    "category_group": "2026 8월 유쁠투쁠 혜택",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
         "tier": "전체",
-        "summary": "(선착순) 오가니스트 체리블 라썸 증정(1.5만 원이상 구매)",
+        "summary": "(선착순) 최대 발을씻자 385ml 증정(1.5만 원 이상)",
         "all": [
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "(선착순) 오가니스트 체리블 라썸 증정(1.5만 원이상 구매)"
+            "summary": "(선착순) 최대 발을씻자 385ml 증정(1.5만 원 이상)"
           }
         ]
       },
@@ -734,26 +723,6 @@
             "category": "VIP특화혜택",
             "tier": "VVIP/VIP",
             "summary": "5천원 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "KT": null
-    }
-  },
-  {
-    "brand": "LG아트센터",
-    "category_group": "2026 7월 유쁠투쁠 혜택",
-    "benefits": {
-      "LGU": {
-        "category": "월간혜택",
-        "tier": "전체",
-        "summary": "(유플투쁠_컬쳐) 전석 35% 할인(최대 1인 4매)",
-        "all": [
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "(유플투쁠_컬쳐) 전석 35% 할인(최대 1인 4매)"
           }
         ]
       },
@@ -828,12 +797,12 @@
       "KT": {
         "category": "상시혜택",
         "tier": "전등급",
-        "summary": "KTX결합상품 최대 18%할인(15%할인＋KT멤버십 3% 추가 할인＋무브 마일리지 3% 추가 적립) / 인천공항 프라이빗밴 서울 전지역 99,000원 특가",
+        "summary": "KTX결합상품 최대 18%할인(15%할인+KT멤버십 3% 추가 할인) / 인천공항 프라이빗밴 서울 전지역 99,000원 특가",
         "all": [
           {
             "category": "상시혜택",
             "tier": "전등급",
-            "summary": "KTX결합상품 최대 18%할인(15%할인＋KT멤버십 3% 추가 할인＋무브 마일리지 3% 추가 적립) / 인천공항 프라이빗밴 서울 전지역 99,000원 특가"
+            "summary": "KTX결합상품 최대 18%할인(15%할인+KT멤버십 3% 추가 할인) / 인천공항 프라이빗밴 서울 전지역 99,000원 특가"
           }
         ]
       },
@@ -843,22 +812,22 @@
   },
   {
     "brand": "NOL티켓",
-    "category_group": "2026 7월 유쁠투쁠 혜택",
+    "category_group": "2026 8월 유쁠투쁠 혜택",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
         "tier": "전체",
-        "summary": "(유플투쁠_컬처) 맥스 시덴토 프 개인전 최대 35% 할인",
+        "summary": "(유플투쁠_컬쳐) 성률 기획전 최대 35% 할인",
         "all": [
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "(유플투쁠_컬처) 맥스 시덴토 프 개인전 최대 35% 할인"
+            "summary": "(유플투쁠_컬쳐) 성률 기획전 최대 35% 할인"
           },
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "(장기고객) 뮤지컬 &lt;그날들&gt; 35% 할인(1인 최대 4매)"
+            "summary": "(장기고객) &lt;죽은 시인의 사 회&gt; 최대 30% 할인"
           }
         ]
       },
@@ -1508,17 +1477,17 @@
   },
   {
     "brand": "WHIPPED",
-    "category_group": "2026 7월 유쁠투쁠 혜택",
+    "category_group": "2026 8월 유쁠투쁠 혜택",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
         "tier": "전체",
-        "summary": "(선착순) 팩클렌저 기획세트 최대 50% 할인",
+        "summary": "(선착순) 기획세트 2종 최대 50% 할인",
         "all": [
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "(선착순) 팩클렌저 기획세트 최대 50% 할인"
+            "summary": "(선착순) 기획세트 2종 최대 50% 할인"
           }
         ]
       },
@@ -1713,7 +1682,7 @@
   },
   {
     "brand": "공차",
-    "category_group": "2026 7월 유쁠투쁠 혜택",
+    "category_group": "2026 8월 유쁠투쁠 혜택",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -1751,11 +1720,6 @@
             "category": "월간혜택",
             "tier": "전체",
             "summary": "(선착순) 최대 50% 할인(1만 원이상 구매, 최대 5천 원)"
-          },
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "(유쓰) 최대 50% 할인(1만 원이상 구매, 최대 5천 원)"
           }
         ]
       },
@@ -1838,26 +1802,6 @@
           }
         ]
       }
-    }
-  },
-  {
-    "brand": "교보문고",
-    "category_group": "2026 7월 유쁠투쁠 혜택",
-    "benefits": {
-      "LGU": {
-        "category": "월간혜택",
-        "tier": "전체",
-        "summary": "(선착순) e교환권 1천 원 (1만 원 이상 구매 시)",
-        "all": [
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "(선착순) e교환권 1천 원 (1만 원 이상 구매 시)"
-          }
-        ]
-      },
-      "SKT": null,
-      "KT": null
     }
   },
   {
@@ -2204,17 +2148,17 @@
   },
   {
     "brand": "노브랜드",
-    "category_group": "2026 7월 유쁠투쁠 혜택",
+    "category_group": "2026 8월 유쁠투쁠 혜택",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
         "tier": "전체",
-        "summary": "(선착순) 노브랜드 명태회 비빔냉면 무료 증정",
+        "summary": "(선착순) 치즈쫄볶이 무료 증정",
         "all": [
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "(선착순) 노브랜드 명태회 비빔냉면 무료 증정"
+            "summary": "(선착순) 치즈쫄볶이 무료 증정"
           }
         ]
       },
@@ -2340,22 +2284,22 @@
   },
   {
     "brand": "다이소",
-    "category_group": "2026 7월 유쁠투쁠 혜택",
+    "category_group": "2026 8월 유쁠투쁠 혜택",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
         "tier": "전체",
-        "summary": "(선착순) 최대 2천 원 금액권",
+        "summary": "(유쓰) 다이소 최대 2천 원 금액권",
         "all": [
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "(선착순) 최대 2천 원 금액권"
+            "summary": "(유쓰) 다이소 최대 2천 원 금액권"
           },
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "(장기고객) 최대 3천 원 금액권 증정"
+            "summary": "(선착순) 최대 2천 원 금액권"
           }
         ]
       },
@@ -2472,26 +2416,6 @@
         ]
       },
       "KT": null
-    }
-  },
-  {
-    "brand": "더 키친 일뽀르노",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[달.달.혜택] 1만원 할인 (5만원 이상 주문 시)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[달.달.혜택] 1만원 할인 (5만원 이상 주문 시)"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
     }
   },
   {
@@ -2756,6 +2680,11 @@
             "category": "상시혜택",
             "tier": "VVIP/VIP/우수",
             "summary": "VVIP/VIP : 20% 할인(최대 4만원 할인) 우수 : 15% 할인(최대 3만원 할인)"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "(선착순) 피자 최대 50% 할 인 (온라인주문 후 방문포장)"
           }
         ]
       },
@@ -3297,7 +3226,7 @@
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "(선착순) G car 대여료 60% 할인(4시간 이상 대여 시)"
+            "summary": "(선착순) G car 대여료 60% 할인(1.5만 원 구매 시)"
           }
         ]
       },
@@ -3713,6 +3642,26 @@
           }
         ]
       },
+      "KT": null
+    }
+  },
+  {
+    "brand": "롱블랙",
+    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "benefits": {
+      "LGU": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "(선착순) 2개월 무료 구독권 제공(무제한 노트 플랜)",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "(선착순) 2개월 무료 구독권 제공(무제한 노트 플랜)"
+          }
+        ]
+      },
+      "SKT": null,
       "KT": null
     }
   },
@@ -4152,7 +4101,7 @@
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "(선착순) 30% 할인쿠폰 + 20% 장바구니 쿠폰"
+            "summary": "(선착순) 최대 30% 할인쿠폰 2종"
           }
         ]
       },
@@ -4323,26 +4272,6 @@
     }
   },
   {
-    "brand": "미셸 앙리:위대한 컬러리스트",
-    "category_group": "2026 7월 유쁠투쁠 혜택",
-    "benefits": {
-      "LGU": {
-        "category": "월간혜택",
-        "tier": "전체",
-        "summary": "(유플투쁠_컬처) 미셸 앙리 - 부산 전시 입장권 30% 할인",
-        "all": [
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "(유플투쁠_컬처) 미셸 앙리 - 부산 전시 입장권 30% 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "KT": null
-    }
-  },
-  {
     "brand": "미스터피자",
     "category_group": "푸드",
     "benefits": {
@@ -4472,17 +4401,17 @@
   },
   {
     "brand": "밀리의서재",
-    "category_group": "2026 7월 유쁠투쁠 혜택",
+    "category_group": "2026 8월 유쁠투쁠 혜택",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
         "tier": "전체",
-        "summary": "(유쓰) 밀리의서재 1개월 무료이용권",
+        "summary": "(유쓰) 1개월 무료이용권",
         "all": [
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "(유쓰) 밀리의서재 1개월 무료이용권"
+            "summary": "(유쓰) 1개월 무료이용권"
           }
         ]
       },
@@ -4519,11 +4448,6 @@
             "category": "상시혜택",
             "tier": "VVIP/VIP/우수",
             "summary": "①무료 체험 ②네이버페이 2만원 ③초중고 학습전략서"
-          },
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "(선착순) 최대 7만 원 혜택 증정 (무료체험 및 결제 시)"
           }
         ]
       },
@@ -4540,6 +4464,31 @@
         ]
       },
       "SKT": null
+    }
+  },
+  {
+    "brand": "밀킨",
+    "category_group": "뷰티/건강",
+    "benefits": {
+      "LGU": {
+        "category": "상시혜택",
+        "tier": "VVIP/VIP/우수",
+        "summary": "전 제품 10% 할인(최대 2만원 할인)",
+        "all": [
+          {
+            "category": "상시혜택",
+            "tier": "VVIP/VIP/우수",
+            "summary": "전 제품 10% 할인(최대 2만원 할인)"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "(선착순) 전 제품 35% 할인 (최대 10만 원 할인)"
+          }
+        ]
+      },
+      "SKT": null,
+      "KT": null
     }
   },
   {
@@ -4628,11 +4577,6 @@
             "category": "상시혜택",
             "tier": "VVIP/VIP/우수",
             "summary": "전 등급 20% 할인"
-          },
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "(선착순) 전메뉴 라지사이즈 7천 원 할인(1+1, 세트 제외)"
           }
         ]
       },
@@ -4651,18 +4595,18 @@
     }
   },
   {
-    "brand": "배달의민족XKFC",
-    "category_group": "2026 7월 유쁠투쁠 혜택",
+    "brand": "배민X명랑핫도그",
+    "category_group": "2026 8월 유쁠투쁠 혜택",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
         "tier": "전체",
-        "summary": "(선착순) 8.5천 원 할인 (2.2만 원 이상 주문시)",
+        "summary": "(선착순) 최대 8,500원 할인 (1.8만 원 이상 주문 시)",
         "all": [
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "(선착순) 8.5천 원 할인 (2.2만 원 이상 주문시)"
+            "summary": "(선착순) 최대 8,500원 할인 (1.8만 원 이상 주문 시)"
           }
         ]
       },
@@ -4729,7 +4673,7 @@
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "(선착순) 패밀리 사이즈 최대 9천 원 할인"
+            "summary": "(선착순) 패밀리 최대 9천 원 할인"
           }
         ]
       },
@@ -4787,9 +4731,34 @@
             "category": "상시혜택",
             "tier": "VVIP/VIP/우수",
             "summary": "전 메뉴 10% 할인"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "(선착순) 아이스크림 40% +미니 아이스크림 컵 증정"
           }
         ]
       },
+      "KT": null
+    }
+  },
+  {
+    "brand": "백억커피",
+    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "benefits": {
+      "LGU": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "(선착순) 아메리카노 1잔+ 서비스 팝콘 무료 증정",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "(선착순) 아메리카노 1잔+ 서비스 팝콘 무료 증정"
+          }
+        ]
+      },
+      "SKT": null,
       "KT": null
     }
   },
@@ -4806,6 +4775,11 @@
             "category": "상시혜택",
             "tier": "VVIP/VIP/우수",
             "summary": "할인 혜택 3종, VIP이상 5천원 할인"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "(선착순) 유아식품 30% 할인 쿠폰 (최대 5만 원)"
           }
         ]
       },
@@ -5255,6 +5229,26 @@
     }
   },
   {
+    "brand": "사조몰",
+    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "benefits": {
+      "LGU": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "(선착순) 1.5만 원 할인 (4만 원 이상 구매 시)",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "(선착순) 1.5만 원 할인 (4만 원 이상 구매 시)"
+          }
+        ]
+      },
+      "SKT": null,
+      "KT": null
+    }
+  },
+  {
     "brand": "삼산회관",
     "category_group": "푸드",
     "benefits": {
@@ -5338,7 +5332,7 @@
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "(선착순) 파크이용권 55% 할인(동반 1인 45% 할인)"
+            "summary": "(선착순) 파크 이용권 55% 할인(동반 1인 45% 할인)"
           }
         ]
       },
@@ -5459,17 +5453,17 @@
   },
   {
     "brand": "설성목장",
-    "category_group": "2026 7월 유쁠투쁠 혜택",
+    "category_group": "2026 8월 유쁠투쁠 혜택",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
         "tier": "전체",
-        "summary": "(선착순) 1만 원 할인+바베큐 폭립 450g 무료(7만 원 이상)",
+        "summary": "(선착순) 1만 원 할인, 바베큐 폭립 증정(7만 원 이상 구매)",
         "all": [
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "(선착순) 1만 원 할인+바베큐 폭립 450g 무료(7만 원 이상)"
+            "summary": "(선착순) 1만 원 할인, 바베큐 폭립 증정(7만 원 이상 구매)"
           }
         ]
       },
@@ -5664,26 +5658,6 @@
     }
   },
   {
-    "brand": "쇼핑라운지(고객 보답)",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[고객 보답] 쇼핑라운지 5천원 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[고객 보답] 쇼핑라운지 5천원 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "수공당",
     "category_group": "문화/여가",
     "benefits": {
@@ -5785,7 +5759,7 @@
   },
   {
     "brand": "스마트홈",
-    "category_group": "2026 7월 유쁠투쁠 혜택",
+    "category_group": "2026 8월 유쁠투쁠 혜택",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -5999,7 +5973,7 @@
   },
   {
     "brand": "스파오",
-    "category_group": "2026 7월 유쁠투쁠 혜택",
+    "category_group": "2026 8월 유쁠투쁠 혜택",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -6374,7 +6348,7 @@
   },
   {
     "brand": "씨네Q",
-    "category_group": "2026 7월 유쁠투쁠 혜택",
+    "category_group": "2026 8월 유쁠투쁠 혜택",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -6396,12 +6370,12 @@
       "LGU": {
         "category": "월간혜택",
         "tier": "전체",
-        "summary": "(선착순) 일반/리클라이너관 8천 원 관람권 증정",
+        "summary": "(선착순) 8천 원 관람권",
         "all": [
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "(선착순) 일반/리클라이너관 8천 원 관람권 증정"
+            "summary": "(선착순) 8천 원 관람권"
           }
         ]
       },
@@ -6481,11 +6455,6 @@
             "category": "상시혜택",
             "tier": "VVIP/VIP/우수",
             "summary": "입장권 25% 할인(동반 1인까지)"
-          },
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "(선착순) 30% 할인 (동반 1인까지)"
           }
         ]
       },
@@ -6635,34 +6604,21 @@
     }
   },
   {
-    "brand": "아시아나 인터넷 면세점",
-    "category_group": "",
+    "brand": "아웃백",
+    "category_group": "2026 8월 유쁠투쁠 혜택",
     "benefits": {
-      "SKT": {
-        "category": "상시혜택",
-        "tier": "VIP/GOLD/SILVER",
-        "summary": "인터넷 면세점 10% 할인 쿠폰 제공(월 1회, 최대 10만 원 할인)",
+      "LGU": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "(선착순) 최대 25%할인 (최대 5만 원까지)",
         "all": [
           {
-            "category": "상시혜택",
-            "tier": "VIP/GOLD/SILVER",
-            "summary": "인터넷 면세점 10% 할인 쿠폰 제공(월 1회, 최대 10만 원 할인)"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP/GOLD/SILVER",
-            "summary": "인터넷 면세점 10% 할인 쿠폰 제공(월 1회, 최대 10만 원 할인)"
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "(선착순) 최대 25%할인 (최대 5만 원까지)"
           }
         ]
       },
-      "KT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "아웃백",
-    "category_group": "",
-    "benefits": {
       "KT": {
         "category": "상시혜택",
         "tier": "VVIP",
@@ -6690,8 +6646,7 @@
           }
         ]
       },
-      "SKT": null,
-      "LGU": null
+      "SKT": null
     }
   },
   {
@@ -6785,6 +6740,31 @@
     }
   },
   {
+    "brand": "아이콘골프",
+    "category_group": "문화/여가",
+    "benefits": {
+      "LGU": {
+        "category": "상시혜택",
+        "tier": "VVIP/VIP/우수",
+        "summary": "골프백 배송 편도 2천원 / 왕복 1천원 할인",
+        "all": [
+          {
+            "category": "상시혜택",
+            "tier": "VVIP/VIP/우수",
+            "summary": "골프백 배송 편도 2천원 / 왕복 1천원 할인"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "(선착순) 왕복 4,000원 / 편도 4,000원 할인"
+          }
+        ]
+      },
+      "SKT": null,
+      "KT": null
+    }
+  },
+  {
     "brand": "아이피아",
     "category_group": "",
     "benefits": {
@@ -6849,11 +6829,6 @@
             "category": "상시혜택",
             "tier": "VVIP/VIP/우수",
             "summary": "①일산점, 광교점 20% 할인 ②여수점, 제주점 15% 할인"
-          },
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "(선착순) 입장권 최대 40% 할인(지점별상이/동반3인)"
           }
         ]
       },
@@ -7525,11 +7500,6 @@
             "category": "상시혜택",
             "tier": "VVIP/VIP/우수",
             "summary": "전 제품 10% 할인 쿠폰 제공(최대 1만원 할인)"
-          },
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "(선착순) 전 제품 최대 30% 할인 (최대 2만 원)"
           }
         ]
       },
@@ -7575,17 +7545,17 @@
   },
   {
     "brand": "오션월드",
-    "category_group": "2026 7월 유쁠투쁠 혜택",
+    "category_group": "2026 8월 유쁠투쁠 혜택",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
         "tier": "전체",
-        "summary": "(선착순) 워터파크 50% 할인",
+        "summary": "(선착순) 워터파크 최대 50% 할인",
         "all": [
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "(선착순) 워터파크 50% 할인"
+            "summary": "(선착순) 워터파크 최대 50% 할인"
           }
         ]
       },
@@ -7859,7 +7829,7 @@
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "(선착순) 워터파크&amp;온천스파 1인 종일 41% 할인(동반3인)"
+            "summary": "(선착순) 워터파크&amp;온천스파 종일권 49% 할인(동반 3인)"
           }
         ]
       },
@@ -7924,6 +7894,11 @@
             "category": "상시혜택",
             "tier": "VVIP/VIP/우수",
             "summary": "원더빌리지 입장권 25% 할인 (최대 4인)"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "(유플투쁠_컬쳐) 입장권 or 패키지 40% 할인 (최대 4인)"
           }
         ]
       },
@@ -8182,17 +8157,37 @@
   },
   {
     "brand": "윌라",
-    "category_group": "2026 7월 유쁠투쁠 혜택",
+    "category_group": "2026 8월 유쁠투쁠 혜택",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
         "tier": "전체",
-        "summary": "(장기고객) 1개월 무료이용권",
+        "summary": "(장기고객) 최대 무료 1개월 이용권",
         "all": [
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "(장기고객) 1개월 무료이용권"
+            "summary": "(장기고객) 최대 무료 1개월 이용권"
+          }
+        ]
+      },
+      "SKT": null,
+      "KT": null
+    }
+  },
+  {
+    "brand": "윌라스토리",
+    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "benefits": {
+      "LGU": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "(선착순) 윌라 스토리 300젤리 제공",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "(선착순) 윌라 스토리 300젤리 제공"
           }
         ]
       },
@@ -8440,7 +8435,7 @@
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "(선착순) 5천 원 할인 (1.2만 원 이상 구매시)"
+            "summary": "(장기고객) 최대 5천 원 할인 (1.2만 원 이상 구매 시)"
           }
         ]
       },
@@ -9078,6 +9073,11 @@
             "category": "상시혜택",
             "tier": "VVIP/VIP/우수",
             "summary": "VVIP/VIP : 5천원 할인(1회 서비스), 2천원 할인(정기 서비스) 전 등급 : 3천원 할인(1회 서비스)"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "(선착순) 청소 신규/기존 고객 최대 2만 원 쿠폰"
           }
         ]
       },
@@ -9239,7 +9239,7 @@
   },
   {
     "brand": "카카오웹툰",
-    "category_group": "2026 7월 유쁠투쁠 혜택",
+    "category_group": "2026 8월 유쁠투쁠 혜택",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -9259,17 +9259,17 @@
   },
   {
     "brand": "카카오페이지",
-    "category_group": "2026 7월 유쁠투쁠 혜택",
+    "category_group": "2026 8월 유쁠투쁠 혜택",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
         "tier": "전체",
-        "summary": "(선착순) 카카오페이지 최대 5천 캐시 증정",
+        "summary": "(선착순) 최대 5,000 캐시 증정",
         "all": [
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "(선착순) 카카오페이지 최대 5천 캐시 증정"
+            "summary": "(선착순) 최대 5,000 캐시 증정"
           }
         ]
       },
@@ -9399,7 +9399,7 @@
   },
   {
     "brand": "컬리",
-    "category_group": "2026 7월 유쁠투쁠 혜택",
+    "category_group": "2026 8월 유쁠투쁠 혜택",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -9509,17 +9509,17 @@
   },
   {
     "brand": "쿠캣",
-    "category_group": "2026 7월 유쁠투쁠 혜택",
+    "category_group": "2026 8월 유쁠투쁠 혜택",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
         "tier": "전체",
-        "summary": "(선착순) 20% 할인(5만 원 이상 구매 시 최대 3만 원)",
+        "summary": "(선착순) 20% 할인(5만 원 이 상 구매 시, 최대 3만 원 할인)",
         "all": [
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "(선착순) 20% 할인(5만 원 이상 구매 시 최대 3만 원)"
+            "summary": "(선착순) 20% 할인(5만 원 이 상 구매 시, 최대 3만 원 할인)"
           }
         ]
       },
@@ -9604,26 +9604,6 @@
         ]
       },
       "KT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "크리스탈 제이드",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[달.달.혜택] 딴딴면 1개 무료 (2만원 이상 주문 시)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[달.달.혜택] 딴딴면 1개 무료 (2만원 이상 주문 시)"
-          }
-        ]
-      },
-      "SKT": null,
       "LGU": null
     }
   },
@@ -9978,11 +9958,6 @@
             "category": "상시혜택",
             "tier": "VVIP/VIP/우수",
             "summary": "리턴프리 30% 할인"
-          },
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "(선착순) 카셰어링 최대 1.6만 원 할인(6시간이상렌트시)"
           }
         ]
       },
@@ -9992,7 +9967,7 @@
   },
   {
     "brand": "투썸플레이스",
-    "category_group": "2026 7월 유쁠투쁠 혜택",
+    "category_group": "2026 8월 유쁠투쁠 혜택",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -10068,6 +10043,31 @@
             "category": "상시혜택",
             "tier": "VVIP/VIP/우수",
             "summary": "VVIP/VIP : 5천원 할인우수 : 1천원 할인"
+          }
+        ]
+      },
+      "SKT": null,
+      "KT": null
+    }
+  },
+  {
+    "brand": "트래블버킷X네이버",
+    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "benefits": {
+      "LGU": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "(선착순) 최대 국제선 1만 원 / 국내선 3천 원 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "(선착순) 최대 국제선 1만 원 / 국내선 3천 원 할인"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "(장기고객) 최대 국제선 1만 원 / 국내선 3천 원 할인"
           }
         ]
       },
@@ -10199,17 +10199,17 @@
       "SKT": {
         "category": "상시혜택",
         "tier": "VIP/GOLD/SILVER",
-        "summary": "① 파고다어학원 20% 할인 ② 파고다토쿨 10,000원 할인 ③ 파고다인강 10% 할인 ④ 파고다원 5% 할인",
+        "summary": "① 파고다어학원 20% 할인 ② 파고다인강 10% 할인 ③ 파고다원 5% 할인 ④ 파고다토쿨 10,000원 할인",
         "all": [
           {
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
-            "summary": "① 파고다어학원 20% 할인 ② 파고다토쿨 10,000원 할인 ③ 파고다인강 10% 할인 ④ 파고다원 5% 할인"
+            "summary": "① 파고다어학원 20% 할인 ② 파고다인강 10% 할인 ③ 파고다원 5% 할인 ④ 파고다토쿨 10,000원 할인"
           },
           {
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
-            "summary": "① 파고다어학원 20% 할인 ② 파고다토쿨 10,000원 할인 ③ 파고다인강 10% 할인 ④ 파고다원 5% 할인"
+            "summary": "① 파고다어학원 20% 할인 ② 파고다인강 10% 할인 ③ 파고다원 5% 할인 ④ 파고다토쿨 10,000원 할인"
           }
         ]
       },
@@ -10255,24 +10255,24 @@
       "LGU": {
         "category": "상시혜택",
         "tier": "VVIP/VIP/우수",
-        "summary": "①1:1 회화 전과목 5% 할인 ②1:1 화상 전과목 1만원 할인",
+        "summary": "1:1 회화 전과목 5% 할인(대면)",
         "all": [
           {
             "category": "상시혜택",
             "tier": "VVIP/VIP/우수",
-            "summary": "①1:1 회화 전과목 5% 할인 ②1:1 화상 전과목 1만원 할인"
+            "summary": "1:1 회화 전과목 5% 할인(대면)"
           }
         ]
       },
       "KT": {
         "category": "상시혜택",
         "tier": "전등급",
-        "summary": "1:1 회화 전과목 5% 할인 (대면 수업에 한함)＋1:1 화상 전과목 1만원 할인 (화상 수업에 한함)",
+        "summary": "1:1 회화 전과목 5% 할인 (대면 수업에 한함)",
         "all": [
           {
             "category": "상시혜택",
             "tier": "전등급",
-            "summary": "1:1 회화 전과목 5% 할인 (대면 수업에 한함)＋1:1 화상 전과목 1만원 할인 (화상 수업에 한함)"
+            "summary": "1:1 회화 전과목 5% 할인 (대면 수업에 한함)"
           }
         ]
       },
@@ -10317,24 +10317,24 @@
       "LGU": {
         "category": "상시혜택",
         "tier": "VVIP/VIP/우수",
-        "summary": "전화 영어 1만원 할인",
+        "summary": "전화 영어 또는화상 영어 1만원 할인",
         "all": [
           {
             "category": "상시혜택",
             "tier": "VVIP/VIP/우수",
-            "summary": "전화 영어 1만원 할인"
+            "summary": "전화 영어 또는화상 영어 1만원 할인"
           }
         ]
       },
       "KT": {
         "category": "상시혜택",
         "tier": "전등급",
-        "summary": "전화영어 1만원 할인",
+        "summary": "전화/화상영어 1만원 할인",
         "all": [
           {
             "category": "상시혜택",
             "tier": "전등급",
-            "summary": "전화영어 1만원 할인"
+            "summary": "전화/화상영어 1만원 할인"
           }
         ]
       },
@@ -10496,26 +10496,6 @@
           }
         ]
       }
-    }
-  },
-  {
-    "brand": "파리바게뜨(고객 보답)",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[고객 보답] 최대 50% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[고객 보답] 최대 50% 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
     }
   },
   {
@@ -10727,6 +10707,26 @@
     }
   },
   {
+    "brand": "패스트캠퍼스",
+    "category_group": "",
+    "benefits": {
+      "KT": {
+        "category": "상시혜택",
+        "tier": "전등급",
+        "summary": "AICE Associate 실전 완성 과정 30% 특별 할인",
+        "all": [
+          {
+            "category": "상시혜택",
+            "tier": "전등급",
+            "summary": "AICE Associate 실전 완성 과정 30% 특별 할인"
+          }
+        ]
+      },
+      "SKT": null,
+      "LGU": null
+    }
+  },
+  {
     "brand": "퍼블로그",
     "category_group": "",
     "benefits": {
@@ -10778,7 +10778,7 @@
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "(유플투쁠_컬처) &lt;페인터즈&gt; 공연 50% 할인"
+            "summary": "(유플투쁠_컬처) 티켓 50% 할인"
           }
         ]
       },
@@ -10827,6 +10827,26 @@
     }
   },
   {
+    "brand": "포케올데이",
+    "category_group": "",
+    "benefits": {
+      "KT": {
+        "category": "상시혜택",
+        "tier": "전등급",
+        "summary": "10% 할인",
+        "all": [
+          {
+            "category": "상시혜택",
+            "tier": "전등급",
+            "summary": "10% 할인"
+          }
+        ]
+      },
+      "SKT": null,
+      "LGU": null
+    }
+  },
+  {
     "brand": "포텔리어",
     "category_group": "생활/편의",
     "benefits": {
@@ -10839,11 +10859,6 @@
             "category": "상시혜택",
             "tier": "VVIP/VIP/우수",
             "summary": "무료 2주 구독권"
-          },
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "(선착순) 1개월 구독권 제공"
           }
         ]
       },
@@ -10907,26 +10922,6 @@
     }
   },
   {
-    "brand": "폴라리스 오피스",
-    "category_group": "2026 7월 유쁠투쁠 혜택",
-    "benefits": {
-      "LGU": {
-        "category": "월간혜택",
-        "tier": "전체",
-        "summary": "(유쓰) AI 요금제 70% 할인권(월간)",
-        "all": [
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "(유쓰) AI 요금제 70% 할인권(월간)"
-          }
-        ]
-      },
-      "SKT": null,
-      "KT": null
-    }
-  },
-  {
     "brand": "폴라리스오피스",
     "category_group": "생활/편의",
     "benefits": {
@@ -10944,26 +10939,6 @@
       },
       "SKT": null,
       "KT": null
-    }
-  },
-  {
-    "brand": "폴바셋",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[달.달.혜택] 룽고(S) 또는 라떼(S) 50% 할인 (2장)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[달.달.혜택] 룽고(S) 또는 라떼(S) 50% 할인 (2장)"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
     }
   },
   {
@@ -11055,7 +11030,7 @@
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "(유플투쁠_컬처) 15% 할인"
+            "summary": "(유플투쁠_컬쳐) (온라인) 프린트베이커리 15%할인"
           }
         ]
       },
@@ -11218,7 +11193,7 @@
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "(선착순) 프리미엄피자 55% 할인 + 리치치즈파스타 증정"
+            "summary": "(선착순) 프리미엄피자 최대 55% 할인 + 파스타 증정"
           }
         ]
       },
