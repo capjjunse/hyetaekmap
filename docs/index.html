@@ -175,10 +175,12 @@
   .chip.chip-active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
   .benefit-tier { font-size: 10.5px; font-weight: 600; color: var(--muted); margin-left: 5px; }
   .bc-cat-label {
-    font-size: 10px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase;
-    color: var(--muted); margin-top: 8px;
+    font-size: 10.5px; font-weight: 800; letter-spacing: 0.02em;
+    color: var(--ink); margin-top: 10px; margin-bottom: 3px;
+    display: flex; align-items: center; gap: 6px;
   }
-  .bc-cat-label:first-of-type { margin-top: 8px; }
+  .bc-cat-label:first-of-type { margin-top: 2px; }
+  .bc-cat-label::before { content: ''; width: 3px; height: 11px; border-radius: 2px; background: var(--teal); display: inline-block; }
 
   /* ---------- map (카카오맵) ---------- */
   .map { position: relative; flex: 1 1 auto; overflow: hidden; }
@@ -278,9 +280,24 @@
   .bc-body { flex: 1; min-width: 0; }
   .bc-name { font-size: 13.5px; font-weight: 700; }
   .bc-meta { font-size: 11.5px; color: var(--muted); margin-top: 1px; }
-  .bc-carriers { display: flex; gap: 5px; margin-top: 8px; flex-wrap: wrap; }
-  .bc-tag { font-size: 10.5px; font-weight: 700; padding: 3px 8px; border-radius: 999px; background: var(--disabled); color: var(--disabled-ink); }
-  .bc-tag.mine { color: #fff; }
+  .bc-carriers { display: flex; flex-direction: column; gap: 4px; margin-top: 4px; }
+  .bc-tag {
+    font-size: 11px; font-weight: 600; padding: 5px 9px; border-radius: 10px; line-height: 1.4;
+    background: var(--parchment); color: var(--ink-soft); border: 1px solid transparent;
+  }
+  .bc-tag b { font-weight: 800; }
+  .bc-tag.c-SKT { background: color-mix(in srgb, var(--skt) 13%, var(--sheet-bg)); border-color: color-mix(in srgb, var(--skt) 35%, transparent); }
+  .bc-tag.c-SKT b { color: var(--skt); }
+  .bc-tag.c-KT  { background: color-mix(in srgb, var(--kt) 15%, var(--sheet-bg));  border-color: color-mix(in srgb, var(--kt) 35%, transparent); }
+  .bc-tag.c-KT b  { color: color-mix(in srgb, var(--kt) 70%, black); }
+  .bc-tag.c-LGU { background: color-mix(in srgb, var(--lgu) 13%, var(--sheet-bg)); border-color: color-mix(in srgb, var(--lgu) 35%, transparent); }
+  .bc-tag.c-LGU b { color: var(--lgu); }
+  .bc-tag.mine.c-SKT { background: var(--skt); border-color: var(--skt); color: #fff; }
+  .bc-tag.mine.c-SKT b { color: #fff; }
+  .bc-tag.mine.c-KT { background: var(--kt); border-color: var(--kt); color: #241300; }
+  .bc-tag.mine.c-KT b { color: #241300; }
+  .bc-tag.mine.c-LGU { background: var(--lgu); border-color: var(--lgu); color: #fff; }
+  .bc-tag.mine.c-LGU b { color: #fff; }
 
   .fav-empty {
     font-size: 12.5px; color: var(--muted); padding: 20px 14px; text-align: center;
@@ -359,9 +376,12 @@
   .fav-btn.active { color: #fff; background: var(--teal); border-color: var(--teal); }
 
   .section-label {
-    font-size: 11.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
-    color: var(--muted); margin: 4px 0 8px;
+    font-size: 12px; font-weight: 800; letter-spacing: 0.02em;
+    color: var(--ink); margin: 14px 0 8px;
+    display: flex; align-items: center; gap: 6px;
   }
+  .section-label:first-child { margin-top: 4px; }
+  .section-label::before { content: ''; width: 3px; height: 12px; border-radius: 2px; background: var(--teal); display: inline-block; }
 
   .benefit-row { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-top: 1px solid var(--border); }
   .benefit-row:first-of-type { border-top: none; }
@@ -825,6 +845,14 @@
   });
 
   // ---- 바텀시트 ----
+  function joinSummaries(lines) {
+    const seen = new Set();
+    return lines.map((l) => l.summary).filter((s) => {
+      if (seen.has(s)) return false;
+      seen.add(s);
+      return true;
+    }).join('<br>');
+  }
   function benefitSectionsHtml(place) {
     const visible = visibleCarrierKeys();
     const byCategory = place.byCategory || {};
@@ -839,7 +867,7 @@
       html += `<div class="section-label">${cat}</div>`;
       rows.forEach(({ k, lines }) => {
         const meta = CARRIER_META[k];
-        const summary = lines.map((l) => l.summary).join(' · ');
+        const summary = joinSummaries(lines);
         const tier = lines[0].tier;
         html += `
           <div class="benefit-row">
@@ -918,8 +946,8 @@
         .map((k) => {
           const m = CARRIER_META[k];
           const mine = myCarriers.has(k);
-          const summary = byCategory[cat][k].map((l) => l.summary).join(' · ');
-          return `<span class="bc-tag ${mine ? 'mine' : ''}" style="${mine ? `background:${m.color}` : ''}">${m.label} · ${summary}</span>`;
+          const summary = joinSummaries(byCategory[cat][k]);
+          return `<span class="bc-tag c-${k} ${mine ? 'mine' : ''}"><b>${m.label}</b> · ${summary}</span>`;
         }).join('');
       if (tags) sections += `<div class="bc-cat-label">${cat}</div><div class="bc-carriers">${tags}</div>`;
     });
