@@ -170,35 +170,36 @@
   .chip[data-carrier="LGU"].active { background: var(--lgu); color: #fff; border-color: var(--lgu); }
   .chip.chip-active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 
-  /* ---------- map ---------- */
+  /* ---------- map (카카오맵) ---------- */
   .map { position: relative; flex: 1 1 auto; overflow: hidden; }
-  .map svg.terrain { position: absolute; inset: 0; width: 100%; height: 100%; }
-  .map.list-mode svg.terrain,
-  .map.list-mode .pin,
+  #kakaoMap { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .map-loading {
+    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    background: var(--map-bg); color: var(--muted); font-size: 13px; font-weight: 600; z-index: 5;
+  }
+  .map-loading.hidden { display: none; }
+  .map.list-mode #kakaoMap,
   .map.list-mode .fabs,
   .map.list-mode .resultpill { display: none; }
 
-  .pin {
-    position: absolute; transform: translate(-50%, -100%);
+  .map-pin {
     display: flex; flex-direction: column; align-items: center;
-    cursor: pointer; background: none; border: none; padding: 0;
-    transition: opacity 160ms ease, filter 160ms ease;
+    cursor: pointer; transition: opacity 160ms ease, filter 160ms ease;
   }
-  .pin .bubble {
+  .map-pin .bubble {
     width: 34px; height: 34px; border-radius: 50% 50% 50% 4px;
     background: var(--teal); transform: rotate(45deg);
     display: flex; align-items: center; justify-content: center;
     box-shadow: 0 6px 14px var(--shadow); border: 2px solid var(--sheet-bg);
   }
-  .pin .glyph { transform: rotate(-45deg); font-size: 15px; line-height: 1; }
-  .pin .badges {
+  .map-pin .glyph { transform: rotate(-45deg); font-size: 15px; line-height: 1; }
+  .map-pin .badges {
     display: flex; gap: 3px; margin-top: 4px;
     background: var(--sheet-bg); border-radius: 999px; padding: 2px 4px;
     box-shadow: 0 2px 6px var(--shadow);
   }
-  .pin .badges span { width: 6px; height: 6px; border-radius: 50%; display: block; }
-  .pin.selected .bubble { background: var(--ink); box-shadow: 0 0 0 5px color-mix(in srgb, var(--ink) 18%, transparent); }
-  .pin.dim { opacity: 0.28; filter: grayscale(0.5); }
+  .map-pin .badges span { width: 6px; height: 6px; border-radius: 50%; display: block; }
+  .map-pin.selected .bubble { background: var(--ink); box-shadow: 0 0 0 5px color-mix(in srgb, var(--ink) 18%, transparent); }
 
   .viewToggle {
     position: absolute; top: 12px; left: 50%; transform: translateX(-50%); z-index: 16;
@@ -435,34 +436,8 @@
           </div>
 
           <div class="map" id="map">
-            <svg class="terrain" viewBox="0 0 375 620" preserveAspectRatio="none">
-              <rect x="0" y="0" width="375" height="620" fill="var(--map-bg)"/>
-              <polygon points="0,120 130,90 150,230 0,260" fill="var(--map-water)"/>
-              <polygon points="230,60 375,40 375,190 250,200" fill="var(--map-park)"/>
-              <polygon points="40,380 170,360 190,480 30,500" fill="var(--map-park)"/>
-              <rect x="60" y="40" width="46" height="30" fill="var(--map-block)"/>
-              <rect x="180" y="250" width="60" height="42" fill="var(--map-block)"/>
-              <rect x="270" y="320" width="50" height="60" fill="var(--map-block)"/>
-              <rect x="90" y="470" width="70" height="34" fill="var(--map-block)"/>
-              <rect x="220" y="440" width="40" height="80" fill="var(--map-block)"/>
-              <rect x="20" y="300" width="34" height="50" fill="var(--map-block)"/>
-              <g stroke="var(--map-road)" stroke-width="14" fill="none">
-                <path d="M -10 210 L 385 180"/>
-                <path d="M -10 330 L 385 300"/>
-                <path d="M -10 450 L 385 470"/>
-                <path d="M 120 -10 L 100 630"/>
-                <path d="M 250 -10 L 270 630"/>
-              </g>
-              <g stroke="color-mix(in srgb, var(--map-road) 60%, var(--map-bg))" stroke-width="3" stroke-dasharray="10 10" fill="none">
-                <path d="M -10 210 L 385 180"/>
-                <path d="M -10 330 L 385 300"/>
-                <path d="M -10 450 L 385 470"/>
-                <path d="M 120 -10 L 100 630"/>
-                <path d="M 250 -10 L 270 630"/>
-              </g>
-            </svg>
-
-            <!-- pins injected by JS -->
+            <div id="kakaoMap"></div>
+            <div class="map-loading" id="mapLoading">지도를 불러오는 중...</div>
 
             <button class="viewToggle" id="viewToggle">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
@@ -471,7 +446,7 @@
 
             <div class="listpanel" id="listpanel"></div>
 
-            <div class="resultpill" id="resultpill"><b id="resultcount">9</b>개 제휴사 표시 중</div>
+            <div class="resultpill" id="resultpill"><b id="resultcount">-</b>개 제휴사 표시 중</div>
 
             <div class="fabs">
               <div class="fab locate">
@@ -550,6 +525,7 @@
   </div>
 </div>
 
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a8fa826efdbe07a5692444a610414c10&libraries=services&autoload=false"></script>
 <script>
   const CARRIER_META = {
     SKT: { label: 'SKT', full: 'T멤버십', color: 'var(--skt)' },
@@ -559,32 +535,11 @@
   const CARRIER_KEYS = ['SKT', 'KT', 'LGU'];
   const CHECK_SVG = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
 
-  const PLACES = [
-    { id: 1, name: '스타벅스 강남대로점', cat: '카페', glyph: '☕', top: 17, left: 30, dist: '120m',
-      benefits: { SKT: '사이즈 업그레이드 무료', KT: '아메리카노 10% 할인', LGU: null } },
-    { id: 2, name: 'CGV 강남', cat: '영화관', glyph: '🎬', top: 30, left: 70, dist: '340m',
-      benefits: { SKT: '2,000원 할인', KT: '1,000원 할인', LGU: '4,000원 할인 (VIP 등급)' } },
-    { id: 3, name: 'GS25 역삼점', cat: '편의점', glyph: '🏪', top: 46, left: 18, dist: '80m',
-      benefits: { SKT: '5% 할인', KT: '5% 할인', LGU: '10% 할인' } },
-    { id: 4, name: '파리바게뜨 테헤란로점', cat: '베이커리', glyph: '🥐', top: 56, left: 55, dist: '260m',
-      benefits: { SKT: null, KT: '1,000원 할인', LGU: '15% 할인' } },
-    { id: 5, name: '맥도날드 삼성점', cat: '패스트푸드', glyph: '🍔', top: 66, left: 78, dist: '410m',
-      benefits: { SKT: '세트 500원 할인', KT: null, LGU: null } },
-    { id: 6, name: '이디야커피 선릉점', cat: '카페', glyph: '☕', top: 22, left: 80, dist: '190m',
-      benefits: { SKT: '음료 1잔 무료 (첫 구매)', KT: '10% 할인', LGU: '10% 할인' } },
-    { id: 7, name: '올리브영 강남점', cat: '헬스&뷰티', glyph: '💄', top: 74, left: 34, dist: '300m',
-      benefits: { SKT: null, KT: '5% 할인', LGU: '5% 할인' } },
-    { id: 8, name: '교보문고 강남점', cat: '서점', glyph: '📚', top: 39, left: 45, dist: '150m',
-      benefits: { SKT: '5% 할인', KT: '5% 할인', LGU: null } },
-    { id: 9, name: '이마트24 논현점', cat: '편의점', glyph: '🏪', top: 84, left: 60, dist: '520m',
-      benefits: { SKT: '3% 적립', KT: '3% 적립', LGU: '3% 적립' } },
-  ];
-  // 혜택 탭은 지도 탭과 달리 좌표가 필요 없어서, 크롤러가 갱신하는
-  // site/data/places.json 이 로드되면 이 배열이 그 실데이터로 교체된다.
-  // (지도 핀은 좌표 정보가 없는 실데이터를 아직 못 쓰므로 데모용 PLACES 유지)
-  let BENEFIT_DATA = PLACES;
+  // 혜택 탭(리스트) 데이터 — 좌표가 필요 없어서 크롤러가 갱신하는
+  // docs/data/places.json 을 fetch로 그대로 불러와 쓴다.
+  let BENEFIT_DATA = [];
   let BENEFIT_DATA_IS_LIVE = false;
-  let LIVE_ID_SEQ = 10000;
+  let LIVE_ID_SEQ = 0;
 
   function getCategories() { return ['전체', ...new Set(BENEFIT_DATA.map(p => p.cat).filter(Boolean))]; }
 
@@ -595,7 +550,7 @@
       const raw = await res.json();
       if (!Array.isArray(raw) || !raw.length) return;
       BENEFIT_DATA = raw.map(entry => ({
-        id: LIVE_ID_SEQ++,
+        id: 'brand-' + (LIVE_ID_SEQ++),
         name: entry.brand,
         cat: entry.category_group || '기타',
         glyph: '🏷️',
@@ -610,12 +565,22 @@
       benefitCategory = '전체';
       if (currentView === 'benefits') renderBenefitTab();
     } catch (e) {
-      console.warn('실데이터 로드 실패, 데모 데이터를 계속 사용합니다.', e);
+      console.warn('실데이터 로드 실패', e);
     }
   }
 
+  function findBrandByName(placeName) {
+    // 카카오맵 검색결과 place_name(예: "스타벅스 강남역점") 안에 브랜드명이 포함되는지로 매칭.
+    // 가장 긴 브랜드명이 우선(예: "GS THE FRESH"가 "GS25"보다 먼저 매칭되도록).
+    let best = null;
+    for (const b of BENEFIT_DATA) {
+      if (b.name && placeName.includes(b.name) && (!best || b.name.length > best.name.length)) best = b;
+    }
+    return best;
+  }
+
   function findAnyPlace(id) {
-    return PLACES.find(p => p.id === id) || BENEFIT_DATA.find(p => p.id === id);
+    return RAW_MATCHES.find(p => p.id === id) || BENEFIT_DATA.find(p => p.id === id);
   }
 
   // ---- state ----
@@ -671,37 +636,111 @@
     </button>`;
   }
 
-  // ---- 지도 핀 ----
-  function makePin(place) {
-    const btn = document.createElement('button');
-    btn.className = 'pin';
-    btn.style.top = place.top + '%';
-    btn.style.left = place.left + '%';
-    btn.dataset.id = place.id;
-    btn.setAttribute('aria-label', place.name);
-    const badgeDots = Object.entries(place.benefits)
-      .filter(([, v]) => v)
-      .map(([k]) => `<span style="background:${CARRIER_META[k].color}"></span>`)
-      .join('');
-    btn.innerHTML = `<div class="bubble"><span class="glyph">${place.glyph}</span></div><div class="badges">${badgeDots}</div>`;
-    btn.addEventListener('click', () => selectPlace(place.id));
-    return btn;
+  // ---- 카카오맵: 실제 지도 + 화면 범위 내 카테고리 검색으로 제휴 매장 찾기 ----
+  const CATEGORY_CODES = ['FD6', 'CE7', 'CS2', 'CT1', 'MT1']; // 음식점/카페/편의점/문화시설/대형마트
+  let kakaoMap = null;
+  let userLatLng = null;
+  let RAW_MATCHES = [];       // 화면에 필터 적용 전, 마지막 검색 결과 전체
+  let currentOverlays = [];   // 현재 지도에 올려진 CustomOverlay들
+  let searchSeq = 0;
+
+  function haversineM(lat1, lon1, lat2, lon2) {
+    const R = 6371000, toRad = d => d * Math.PI / 180;
+    const dLat = toRad(lat2 - lat1), dLon = toRad(lon2 - lon1);
+    const a = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
+    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
   }
-  function renderPins() {
-    mapEl.querySelectorAll('.pin').forEach(p => p.remove());
-    PLACES.forEach(place => mapEl.appendChild(makePin(place)));
+  function formatDistance(m) { return m < 1000 ? `${Math.round(m)}m` : `${(m / 1000).toFixed(1)}km`; }
+
+  function initKakaoMap() {
+    if (typeof kakao === 'undefined' || !kakao.maps) {
+      document.getElementById('mapLoading').textContent = '지도를 불러오지 못했어요 (카카오맵 SDK 로드 실패)';
+      return;
+    }
+    kakao.maps.load(() => {
+      const defaultCenter = new kakao.maps.LatLng(37.4979, 127.0276); // 강남역 (위치 권한 거부 시 기본값)
+      kakaoMap = new kakao.maps.Map(document.getElementById('kakaoMap'), { center: defaultCenter, level: 4 });
+      document.getElementById('mapLoading').classList.add('hidden');
+
+      kakao.maps.event.addListener(kakaoMap, 'idle', searchNearbyMatches);
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((pos) => {
+          userLatLng = new kakao.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+          kakaoMap.setCenter(userLatLng);
+        }, () => {}, { timeout: 6000 });
+      }
+
+      document.querySelector('.fab.locate').addEventListener('click', () => {
+        if (userLatLng) kakaoMap.setCenter(userLatLng);
+      });
+      document.querySelector('.fab.zoomin').addEventListener('click', () => kakaoMap.setLevel(kakaoMap.getLevel() - 1));
+      document.querySelector('.fab.zoomout').addEventListener('click', () => kakaoMap.setLevel(kakaoMap.getLevel() + 1));
+
+      searchNearbyMatches();
+    });
+  }
+
+  function searchNearbyMatches() {
+    if (!kakaoMap || BENEFIT_DATA.length === 0) return;
+    const mySeq = ++searchSeq;
+    const places = new kakao.maps.services.Places();
+    const bounds = kakaoMap.getBounds();
+    const found = new Map();
+    let pending = CATEGORY_CODES.length;
+
+    CATEGORY_CODES.forEach((code) => {
+      places.categorySearch(code, (data, status) => {
+        if (mySeq !== searchSeq) return; // 그 사이 지도가 또 움직였으면 낡은 응답 무시
+        if (status === kakao.maps.services.Status.OK) {
+          data.forEach((item) => {
+            const brand = findBrandByName(item.place_name);
+            if (!brand || found.has(item.id)) return;
+            found.set(item.id, { brand, placeName: item.place_name, lat: parseFloat(item.y), lng: parseFloat(item.x) });
+          });
+        }
+        pending--;
+        if (pending === 0) renderMatchedMarkers([...found.values()]);
+      }, { bounds });
+    });
+  }
+
+  function renderMatchedMarkers(rawList) {
+    RAW_MATCHES = rawList.map((m) => {
+      const distM = userLatLng ? haversineM(userLatLng.getLat(), userLatLng.getLng(), m.lat, m.lng) : null;
+      return {
+        id: 'kko-' + m.brand.id + '-' + Math.round(m.lat * 1e5) + '-' + Math.round(m.lng * 1e5),
+        name: m.placeName,
+        cat: m.brand.cat,
+        glyph: m.brand.glyph,
+        dist: distM != null ? formatDistance(distM) : '',
+        _distM: distM,
+        benefits: m.brand.benefits,
+        _lat: m.lat, _lng: m.lng,
+      };
+    }).sort((a, b) => (a._distM ?? Infinity) - (b._distM ?? Infinity));
     applyFilter();
   }
+
   function applyFilter() {
-    let visible = 0;
-    PLACES.forEach(place => {
-      const pin = mapEl.querySelector(`.pin[data-id="${place.id}"]`);
-      const ok = matchesFilter(place);
-      pin.classList.toggle('dim', !ok);
-      pin.classList.toggle('selected', place.id === selectedId);
-      if (ok) visible++;
+    currentOverlays.forEach((o) => o.setMap(null));
+    currentOverlays = [];
+    const visible = RAW_MATCHES.filter(matchesFilter);
+    visible.forEach((p) => {
+      const el = document.createElement('div');
+      el.className = 'map-pin' + (p.id === selectedId ? ' selected' : '');
+      const badgeDots = CARRIER_KEYS.filter((k) => p.benefits[k]).map((k) => `<span style="background:${CARRIER_META[k].color}"></span>`).join('');
+      el.innerHTML = `<div class="bubble"><span class="glyph">${p.glyph}</span></div><div class="badges">${badgeDots}</div>`;
+      el.addEventListener('click', () => selectPlace(p.id));
+      const overlay = new kakao.maps.CustomOverlay({
+        position: new kakao.maps.LatLng(p._lat, p._lng),
+        content: el,
+        yAnchor: 1,
+      });
+      overlay.setMap(kakaoMap);
+      currentOverlays.push(overlay);
     });
-    resultCountEl.textContent = visible;
+    resultCountEl.textContent = visible.length;
     if (mapMode === 'list') renderListPanel();
   }
 
@@ -728,18 +767,18 @@
     const dots = CARRIER_KEYS.filter(k => p.benefits[k]).map(k => `<span style="background:${CARRIER_META[k].color}"></span>`).join('');
     return `<div class="listrow" data-id="${p.id}">
       <div class="lr-icon">${p.glyph}</div>
-      <div class="lr-text"><div class="lr-name">${p.name}</div><div class="lr-meta">${p.cat} · ${p.dist}</div></div>
+      <div class="lr-text"><div class="lr-name">${p.name}</div><div class="lr-meta">${p.cat}${p.dist ? ' · ' + p.dist : ''}</div></div>
       <div class="lr-dots">${dots}</div>
       <svg class="lr-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
     </div>`;
   }
   function renderListPanel() {
-    const list = sortedPlaces(PLACES.filter(matchesFilter));
-    listpanelEl.innerHTML = list.length ? list.map(listRowHtml).join('') : `<div class="fav-empty">조건에 맞는 제휴사가 없어요</div>`;
+    const list = sortedPlaces(RAW_MATCHES.filter(matchesFilter));
+    listpanelEl.innerHTML = list.length ? list.map(listRowHtml).join('') : `<div class="fav-empty">이 화면 범위에서 조건에 맞는 제휴사가 없어요.<br>지도를 움직이거나 축소해보세요.</div>`;
   }
   listpanelEl.addEventListener('click', (e) => {
     const row = e.target.closest('.listrow');
-    if (row) selectPlace(Number(row.dataset.id));
+    if (row) selectPlace(row.dataset.id);
   });
 
   // ---- 바텀시트 ----
@@ -765,7 +804,7 @@
     selectedId = id;
     const place = findAnyPlace(id);
     if (!place) return;
-    if (PLACES.some(p => p.id === id)) applyFilter();
+    if (RAW_MATCHES.some(p => p.id === id)) applyFilter();
     const isFav = favorites.has(id);
     const metaLine = place.dist ? `${place.cat} · 현재 위치에서 ${place.dist}` : place.cat;
     sheetContentEl.innerHTML = `
@@ -799,7 +838,7 @@
   sheetContentEl.addEventListener('click', (e) => {
     const favBtn = e.target.closest('.fav-btn');
     if (favBtn) {
-      const id = Number(favBtn.dataset.id);
+      const id = favBtn.dataset.id;
       if (favorites.has(id)) favorites.delete(id); else favorites.add(id);
       favBtn.classList.toggle('active');
       renderMyTab();
@@ -849,20 +888,20 @@
   });
   benefitListEl.addEventListener('click', (e) => {
     const card = e.target.closest('.benefit-card');
-    if (card) selectPlace(Number(card.dataset.id));
+    if (card) selectPlace(card.dataset.id);
   });
 
   // ---- MY 탭 ----
   function favRowHtml(p) {
     return `<div class="fav-row" data-id="${p.id}">
       <div class="lr-icon">${p.glyph}</div>
-      <div class="lr-text"><div class="lr-name">${p.name}</div><div class="lr-meta">${p.cat} · ${p.dist}</div></div>
+      <div class="lr-text"><div class="lr-name">${p.name}</div><div class="lr-meta">${p.cat}${p.dist ? ' · ' + p.dist : ''}</div></div>
       <button class="fav-remove" data-remove="${p.id}" aria-label="즐겨찾기 삭제">×</button>
     </div>`;
   }
   function renderMyTab() {
     myCarrierCardsEl.innerHTML = CARRIER_KEYS.map(k => carrierCardHtml(k, myCarriers.has(k))).join('');
-    const favPlaces = PLACES.concat(BENEFIT_DATA_IS_LIVE ? BENEFIT_DATA : []).filter(p => favorites.has(p.id));
+    const favPlaces = RAW_MATCHES.concat(BENEFIT_DATA).filter(p => favorites.has(p.id));
     favCountEl.textContent = favPlaces.length ? `${favPlaces.length}개` : '';
     favListEl.innerHTML = favPlaces.length
       ? favPlaces.map(favRowHtml).join('')
@@ -870,9 +909,9 @@
   }
   favListEl.addEventListener('click', (e) => {
     const removeBtn = e.target.closest('.fav-remove');
-    if (removeBtn) { favorites.delete(Number(removeBtn.dataset.remove)); renderMyTab(); return; }
+    if (removeBtn) { favorites.delete(removeBtn.dataset.remove); renderMyTab(); return; }
     const row = e.target.closest('.fav-row');
-    if (row) selectPlace(Number(row.dataset.id));
+    if (row) selectPlace(row.dataset.id);
   });
 
   // ---- 통신사 선택 (온보딩 + MY 공용) ----
@@ -920,8 +959,8 @@
 
   // ---- 초기화 ----
   obCardsEl.innerHTML = CARRIER_KEYS.map(k => carrierCardHtml(k, false)).join('');
-  renderPins();
   renderBenefitTab();
   renderMyTab();
+  loadLiveBenefitData().then(initKakaoMap);
   loadLiveBenefitData();
 </script>
