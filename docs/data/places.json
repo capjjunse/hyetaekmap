@@ -60,66 +60,6 @@
     }
   },
   {
-    "brand": "5G 데이터충전",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "5G 데이터충전 금액 80% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "5G 데이터충전 금액 80% 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "A/S수리비 할인",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "A/S 비용의 최대 20% 할인 결제 (최대 5만원)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "A/S 비용의 최대 20% 할인 결제 (최대 5만원)"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "AICE",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "AICE 시험 응시료 20% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "AICE 시험 응시료 20% 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "B tv cable",
     "category_group": "",
     "benefits": {
@@ -247,48 +187,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[상시] 최대 5천원 할인(동반 4인 추가할인) [현장할인]매점콤보 3천원 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[상시] 최대 5천원 할인(동반 4인 추가할인) [현장할인]매점콤보 3천원 할인"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "brand": "CJ더마켓",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[상시] 35% 할인 쿠폰",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[상시] 35% 할인 쿠폰"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "[V/VIP 초이스] 45% 할인 쿠폰 적립금 5천원"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "[V/VIP 초이스] 45% 할인 쿠폰 적립금 5천원"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
+      "KT": null
     }
   },
   {
@@ -332,18 +231,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "아침 간편식류 1,000원당 200원 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "아침 간편식류 1,000원당 200원 할인"
-          }
-        ]
-      },
+      "KT": null,
       "LGU": null
     }
   },
@@ -453,19 +341,8 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[상시혜택]3천원 할인(5만원 이상 구매 시) [생일혜택] 5천원 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[상시혜택]3천원 할인(5만원 이상 구매 시) [생일혜택] 5천원 할인"
-          }
-        ]
-      },
-      "SKT": null
+      "SKT": null,
+      "KT": null
     }
   },
   {
@@ -501,53 +378,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "VVIP",
-        "summary": "1,000원당 100원 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "1,000원당 100원 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "1,000원당 100원 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "GOLD",
-            "summary": "1,000원당 100원 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "일반",
-            "summary": "1,000원당 50원 할인"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "brand": "GS25편의점택배",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "GS25편의점 국내택배 10% 할인 신규가입 3천원 쿠폰",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "GS25편의점 국내택배 10% 할인 신규가입 3천원 쿠폰"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
+      "KT": null
     }
   },
   {
@@ -588,101 +419,6 @@
       },
       "SKT": null,
       "KT": null
-    }
-  },
-  {
-    "brand": "KKday",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "전 상품 10%할인＋투어상품 1만원 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "전 상품 10%할인＋투어상품 1만원 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "KT 다이렉트샵",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "기본 5% 할인, 일부 품목만 10% 할인 (최대 5만원 한도)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "기본 5% 할인, 일부 품목만 10% 할인 (최대 5만원 한도)"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "KT멤버십 공연예매",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "VVIP",
-        "summary": "뮤지컬/전시 최대 50% 할인 및 공연무료초대",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "뮤지컬/전시 최대 50% 할인 및 공연무료초대"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "뮤지컬/전시 최대 50% 할인 및 공연무료초대"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "GOLD",
-            "summary": "뮤지컬/전시 최대 50% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "일반",
-            "summary": "뮤지컬/전시 최대 50% 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "KT알파 쇼핑(구. K쇼핑)",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[상시] 최대 1만 2천원 할인 쿠폰 [생일혜택] 1만원 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[상시] 최대 1만 2천원 할인 쿠폰 [생일혜택] 1만원 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
     }
   },
   {
@@ -751,66 +487,6 @@
     }
   },
   {
-    "brand": "LTE 데이터충전",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "LTE 데이터충전 금액 80% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "LTE 데이터충전 금액 80% 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "LTE데이터 룰렛",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "LTE데이터룰렛 100% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "LTE데이터룰렛 100% 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "MOVV",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "KTX결합상품 최대 18%할인(15%할인+KT멤버십 3% 추가 할인) / 인천공항 프라이빗밴 서울 전지역 99,000원 특가",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "KTX결합상품 최대 18%할인(15%할인+KT멤버십 3% 추가 할인) / 인천공항 프라이빗밴 서울 전지역 99,000원 특가"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "NOL티켓",
     "category_group": "2026 8월 유쁠투쁠 혜택",
     "benefits": {
@@ -851,34 +527,8 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "VVIP",
-        "summary": "[VVIP/VIP] 백야드 숏게임 1시간 무료이용권 [ALL] QED 직영아카데미 3만원 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "[VVIP/VIP] 백야드 숏게임 1시간 무료이용권 [ALL] QED 직영아카데미 3만원 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "[VVIP/VIP] 백야드 숏게임 1시간 무료이용권 [ALL] QED 직영아카데미 3만원 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "GOLD",
-            "summary": "QED 직영아카데미 3만원 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "일반",
-            "summary": "QED 직영아카데미 3만원 할인"
-          }
-        ]
-      },
-      "SKT": null
+      "SKT": null,
+      "KT": null
     }
   },
   {
@@ -979,18 +629,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "내륙 최대 60% 할인, 제주 최대 85% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "내륙 최대 60% 할인, 제주 최대 85% 할인"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -1341,33 +980,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "VVIP",
-        "summary": "[VVIP 초이스] 스테이크 무료 [상시] 15% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "[VVIP 초이스] 스테이크 무료 [상시] 15% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "[상시]15% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "GOLD",
-            "summary": "[상시]5% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "일반",
-            "summary": "[상시]5% 할인"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -1396,26 +1009,6 @@
     }
   },
   {
-    "brand": "VOG Hair(보그헤어)",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "헤어 시술 20% 할인 (단 커트, 드라이, 부분시술/중복할인 제외) 시술시 클리닉 무료 시술 (매월 1일/11일/21일, 3일 한정)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "헤어 시술 20% 할인 (단 커트, 드라이, 부분시술/중복할인 제외) 시술시 클리닉 무료 시술 (매월 1일/11일/21일, 3일 한정)"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "VYVY",
     "category_group": "쇼핑",
     "benefits": {
@@ -1433,26 +1026,6 @@
       },
       "SKT": null,
       "KT": null
-    }
-  },
-  {
-    "brand": "V컬러링",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "100% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "100% 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
     }
   },
   {
@@ -1566,56 +1139,6 @@
     }
   },
   {
-    "brand": "genie",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "최대 30%할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "최대 30%할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "kt wiz 프로야구",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "2,000원 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "2,000원 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "3,000원 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "3,000원 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "가연결혼정보",
     "category_group": "생활/편의",
     "benefits": {
@@ -1723,38 +1246,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "제조음료 구매 시 10% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "제조음료 구매 시 10% 할인"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "brand": "공항 스카이허브 라운지",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "30% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "30% 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
+      "KT": null
     }
   },
   {
@@ -1790,18 +1282,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "10% 할인(최대 3,500원 까지 할인 가능, 삼다수 제외)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "10% 할인(최대 3,500원 까지 할인 가능, 삼다수 제외)"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -1937,18 +1418,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "1만원 할인 쿠폰",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "1만원 할인 쿠폰"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -1983,66 +1453,6 @@
         ]
       },
       "KT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "김캐디",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "VIP특화혜택",
-        "tier": "VVIP",
-        "summary": "김캐디 5,000원 할인 (3만원 결제조건)",
-        "all": [
-          {
-            "category": "VIP특화혜택",
-            "tier": "VVIP",
-            "summary": "김캐디 5,000원 할인 (3만원 결제조건)"
-          },
-          {
-            "category": "VIP특화혜택",
-            "tier": "VIP",
-            "summary": "김캐디 5,000원 할인 (3만원 결제조건)"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "꾸까",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "VVIP",
-        "summary": "[VVIP생일] 생일 무료 꽃다발 or 슈가캔들 더블패키지 무료 (택1) [VVIP 초이스] 꽃다발(M) 또는 꾸까 센트 슈가캔들 에코 패키지 무료(택1) [상시] 10% 할인 쿠폰",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "[VVIP생일] 생일 무료 꽃다발 or 슈가캔들 더블패키지 무료 (택1) [VVIP 초이스] 꽃다발(M) 또는 꾸까 센트 슈가캔들 에코 패키지 무료(택1) [상시] 10% 할인 쿠폰"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "10% 할인 쿠폰"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "GOLD",
-            "summary": "10% 할인 쿠폰"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "일반",
-            "summary": "10% 할인 쿠폰"
-          }
-        ]
-      },
-      "SKT": null,
       "LGU": null
     }
   },
@@ -2117,36 +1527,6 @@
     }
   },
   {
-    "brand": "노보텔 앰배서더 동대문",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "식음료업장 10% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "식음료업장 10% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "조식 2인 무료"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "조식 2인 무료"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "노브랜드",
     "category_group": "2026 8월 유쁠투쁠 혜택",
     "benefits": {
@@ -2187,18 +1567,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "20% 할인 쿠폰",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "20% 할인 쿠폰"
-          }
-        ]
-      },
+      "KT": null,
       "LGU": null
     }
   },
@@ -2224,41 +1593,6 @@
         ]
       },
       "KT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "다락",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "VVIP",
-        "summary": "1개월 무료 ＋ 35% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "1개월 무료 ＋ 35% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "1개월 무료 ＋ 35% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "GOLD",
-            "summary": "35% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "일반",
-            "summary": "35% 할인"
-          }
-        ]
-      },
-      "SKT": null,
       "LGU": null
     }
   },
@@ -2325,41 +1659,6 @@
       },
       "SKT": null,
       "KT": null
-    }
-  },
-  {
-    "brand": "달콤",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "VVIP",
-        "summary": "[V/VIP 초이스] 아메리카노 무료(R사이즈), [상시] 음료 사이즈 업",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "[V/VIP 초이스] 아메리카노 무료(R사이즈), [상시] 음료 사이즈 업"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "[V/VIP 초이스] 아메리카노 무료(R사이즈), [상시] 음료 사이즈 업"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "GOLD",
-            "summary": "음료 사이즈 업"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "일반",
-            "summary": "음료 사이즈 업"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
     }
   },
   {
@@ -2439,18 +1738,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "전 세계 공항라운지 이용권 30% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "전 세계 공항라운지 이용권 30% 할인"
-          }
-        ]
-      },
+      "KT": null,
       "LGU": null
     }
   },
@@ -2550,23 +1838,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "VIP특화혜택",
-        "tier": "VVIP",
-        "summary": "[V/VIP 초이스] 아메리카노(S)＋글레이즈드 무료",
-        "all": [
-          {
-            "category": "VIP특화혜택",
-            "tier": "VVIP",
-            "summary": "[V/VIP 초이스] 아메리카노(S)＋글레이즈드 무료"
-          },
-          {
-            "category": "VIP특화혜택",
-            "tier": "VIP",
-            "summary": "[V/VIP 초이스] 아메리카노(S)＋글레이즈드 무료"
-          }
-        ]
-      },
+      "KT": null,
       "LGU": null
     }
   },
@@ -2608,26 +1880,6 @@
       },
       "SKT": null,
       "KT": null
-    }
-  },
-  {
-    "brand": "데이팩",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "7,500원 할인 쿠폰＋15,000원 할인 쿠폰",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "7,500원 할인 쿠폰＋15,000원 할인 쿠폰"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
     }
   },
   {
@@ -2688,38 +1940,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[생일혜택] 생일파티세트 25% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[생일혜택] 생일파티세트 25% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "[VVIP 초이스] 3만원 할인 [상시] 20% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "[상시] 20% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "GOLD",
-            "summary": "[상시] 15% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "일반",
-            "summary": "[상시] 15% 할인"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -2950,33 +2171,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "VVIP",
-        "summary": "1,000원당 150원 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "1,000원당 150원 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "1,000원당 150원 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "GOLD",
-            "summary": "1,000원당 150원 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "일반",
-            "summary": "1,000원당 100원 할인"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -3032,33 +2227,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "VVIP",
-        "summary": "10% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "10% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "10% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "GOLD",
-            "summary": "10% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "일반",
-            "summary": "5% 할인"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -3082,33 +2251,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "VVIP",
-        "summary": "3천원 할인 쿠폰 제공",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "3천원 할인 쿠폰 제공"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "3천원 할인 쿠폰 제공"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "GOLD",
-            "summary": "2천원 할인 쿠폰 제공"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "일반",
-            "summary": "2천원 할인 쿠폰 제공"
-          }
-        ]
-      },
+      "KT": null,
       "LGU": null
     }
   },
@@ -3195,18 +2338,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "최대 제주 85%, 내륙 60% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "최대 제주 85%, 내륙 60% 할인"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -3230,19 +2362,8 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "최대 20% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "최대 20% 할인"
-          }
-        ]
-      },
-      "SKT": null
+      "SKT": null,
+      "KT": null
     }
   },
   {
@@ -3301,53 +2422,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "VVIP",
-        "summary": "(온) 제휴적립금, 등급 UP (오프) 선불카드, 등급 UP",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "(온) 제휴적립금, 등급 UP (오프) 선불카드, 등급 UP"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "(온) 제휴적립금, 등급 UP (오프) 선불카드, 등급 UP"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "GOLD",
-            "summary": "(온) 제휴적립금, 등급 UP (오프) 선불카드, 등급 UP"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "일반",
-            "summary": "(온) 제휴적립금 (오프) 선불카드, 등급 UP"
-          }
-        ]
-      },
-      "LGU": null
-    }
-  },
-  {
-    "brand": "롯데면세점 동경긴자점",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "무료 짐보관 서비스 제공, VIP 멤버십 등급 부여, 인기 상품 할인 쿠폰 제공, 리무진 버스 티켓 증정",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "무료 짐보관 서비스 제공, VIP 멤버십 등급 부여, 인기 상품 할인 쿠폰 제공, 리무진 버스 티켓 증정"
-          }
-        ]
-      },
-      "SKT": null,
+      "KT": null,
       "LGU": null
     }
   },
@@ -3409,56 +2484,6 @@
       },
       "SKT": null,
       "KT": null
-    }
-  },
-  {
-    "brand": "롯데시네마",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[상시]최대 5,000원 할인 [현장혜택] 매점 콤보 3,000원",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[상시]최대 5,000원 할인 [현장혜택] 매점 콤보 3,000원"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "[VVIP초이스]영화예매 무료 [VVIP 생일혜택]영화쿠폰 2매 or 영화쿠폰 1매 싱글콤보 1매"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "[VIP초이스]영화예매 무료 [VIP 생일혜택]영화 1＋1 관람권"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "롯데월드",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "본인 40% 및 동반 3인 30% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "본인 40% 및 동반 3인 30% 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
     }
   },
   {
@@ -3544,18 +2569,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "본인 30% 및 동반3인 30% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "본인 30% 및 동반3인 30% 할인"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -3771,46 +2785,6 @@
     }
   },
   {
-    "brand": "리뷰노트",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "광고 상품 30% 할인(100만원 한도 이내)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "광고 상품 30% 할인(100만원 한도 이내)"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "리프레쉬 골프",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "최대 1만원 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "최대 1만원 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "마티나 라운지",
     "category_group": "",
     "benefits": {
@@ -3903,33 +2877,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "VVIP",
-        "summary": "15% 할인(주문금액 10만원 한도)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "15% 할인(주문금액 10만원 한도)"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "15% 할인(주문금액 10만원 한도)"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "GOLD",
-            "summary": "15% 할인(주문금액 10만원 한도)"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "일반",
-            "summary": "5% 할인 (주문금액 10만원 한도)"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -3998,28 +2946,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[상시] ICE 아메리카노 구매 시 500원 할인(3장) [OTTX메가MGC커피] 500원 할인쿠폰 2장",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[상시] ICE 아메리카노 구매 시 500원 할인(3장) [OTTX메가MGC커피] 500원 할인쿠폰 2장"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "[V/VIP 초이스] 아메리카노(HOT/ICE) 2잔 무료"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "[V/VIP 초이스] 아메리카노(HOT/ICE) 2잔 무료"
-          }
-        ]
-      },
+      "KT": null,
       "LGU": null
     }
   },
@@ -4044,18 +2971,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[상시] 최대 6천원 할인(본인 동반 4인) [현장할인] 매점콤보 2천원 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[상시] 최대 6천원 할인(본인 동반 4인) [현장할인] 매점콤보 2천원 할인"
-          }
-        ]
-      },
+      "KT": null,
       "LGU": null
     }
   },
@@ -4107,26 +3023,6 @@
       },
       "SKT": null,
       "KT": null
-    }
-  },
-  {
-    "brand": "모두의충전",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "1,000원 포인트 적립 쿠폰 발급",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "1,000원 포인트 적립 쿠폰 발급"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
     }
   },
   {
@@ -4324,33 +3220,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "VVIP",
-        "summary": "20% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "20% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "20% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "GOLD",
-            "summary": "15% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "일반",
-            "summary": "15% 할인"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -4384,18 +3254,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "8% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "8% 할인"
-          }
-        ]
-      },
+      "KT": null,
       "LGU": null
     }
   },
@@ -4415,24 +3274,8 @@
           }
         ]
       },
-      "KT": {
-        "category": "VIP특화혜택",
-        "tier": "VVIP",
-        "summary": "[VVIP 초이스]밀리의 서재 3개월 무료",
-        "all": [
-          {
-            "category": "VIP특화혜택",
-            "tier": "VVIP",
-            "summary": "[VVIP 초이스]밀리의 서재 3개월 무료"
-          },
-          {
-            "category": "VIP특화혜택",
-            "tier": "VIP",
-            "summary": "[VIP 초이스]밀리의 서재 1개월 무료"
-          }
-        ]
-      },
-      "SKT": null
+      "SKT": null,
+      "KT": null
     }
   },
   {
@@ -4451,19 +3294,8 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "밀크T 10일 무료체험＋첫 체험자 전원 신세계상품권 3만원＋정학습생 결제자 전원 신세계상품권 5만원 증정",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "밀크T 10일 무료체험＋첫 체험자 전원 신세계상품권 3만원＋정학습생 결제자 전원 신세계상품권 5만원 증정"
-          }
-        ]
-      },
-      "SKT": null
+      "SKT": null,
+      "KT": null
     }
   },
   {
@@ -4580,18 +3412,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "20% 할인 제공",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "20% 할인 제공"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -4677,28 +3498,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[생일혜택] 아이스크림 케이크 4천원 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[생일혜택] 아이스크림 케이크 4천원 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "[VVIP 초이스] 레디팩 1개(10,800원) FREE"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "[VIP 초이스] 아이스크림군 6종 50% OFF(최대 4,900원 할인)"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -4820,38 +3620,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "10% 장바구니 할인 쿠폰",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "10% 장바구니 할인 쿠폰"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "brand": "볼록북",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "30% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "30% 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
+      "KT": null
     }
   },
   {
@@ -4942,38 +3711,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "10% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "10% 할인"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "brand": "블루보틀",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "VIP특화혜택",
-        "tier": "VVIP",
-        "summary": "블루보틀 인기 굿즈 추첨 제공",
-        "all": [
-          {
-            "category": "VIP특화혜택",
-            "tier": "VVIP",
-            "summary": "블루보틀 인기 굿즈 추첨 제공"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
+      "KT": null
     }
   },
   {
@@ -4994,26 +3732,6 @@
       },
       "SKT": null,
       "KT": null
-    }
-  },
-  {
-    "brand": "비트커피",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "아메리카노 50% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "아메리카노 50% 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
     }
   },
   {
@@ -5097,18 +3815,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "제주 최대 85% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "제주 최대 85% 할인"
-          }
-        ]
-      },
+      "KT": null,
       "LGU": null
     }
   },
@@ -5269,26 +3976,6 @@
     }
   },
   {
-    "brand": "샐러디",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "10% 할인 쿠폰 제공 (최대 2만원)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "10% 할인 쿠폰 제공 (최대 2만원)"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "서울랜드",
     "category_group": "엑티비티",
     "benefits": {
@@ -5336,18 +4023,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[상시] 본인 40% 할인(동반 2인 30%)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[상시] 본인 40% 할인(동반 2인 30%)"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -5371,44 +4047,8 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "본인 20% 할인 및 동반 3인 10% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "본인 20% 할인 및 동반 3인 10% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "[VVIP초이스]입장권 1＋1"
-          }
-        ]
-      },
-      "SKT": null
-    }
-  },
-  {
-    "brand": "서울형 키즈카페",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "서울형 키즈카페 입장료 20% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "서울형 키즈카페 입장료 20% 할인"
-          }
-        ]
-      },
       "SKT": null,
-      "LGU": null
+      "KT": null
     }
   },
   {
@@ -5532,18 +4172,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "본인＋동반2인 35% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "본인＋동반2인 35% 할인"
-          }
-        ]
-      },
+      "KT": null,
       "LGU": null
     }
   },
@@ -5638,26 +4267,6 @@
     }
   },
   {
-    "brand": "쇼핑라운지",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "멤버십 전용 특가 혜택 제공",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "멤버십 전용 특가 혜택 제공"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "수공당",
     "category_group": "문화/여가",
     "benefits": {
@@ -5733,31 +4342,6 @@
     }
   },
   {
-    "brand": "스노우",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "VIP특화혜택",
-        "tier": "VVIP",
-        "summary": "[V/VIP 초이스] 스노우 VIP 구독권 1개월 무료",
-        "all": [
-          {
-            "category": "VIP특화혜택",
-            "tier": "VVIP",
-            "summary": "[V/VIP 초이스] 스노우 VIP 구독권 1개월 무료"
-          },
-          {
-            "category": "VIP특화혜택",
-            "tier": "VIP",
-            "summary": "[V/VIP 초이스] 스노우 VIP 구독권 1개월 무료"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "스마트홈",
     "category_group": "2026 8월 유쁠투쁠 혜택",
     "benefits": {
@@ -5810,18 +4394,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "스몹 평일 입장권 20% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "스몹 평일 입장권 20% 할인"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -5915,29 +4488,8 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[상시]사이즈업",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[상시]사이즈업"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "[VVIP생일] 생일 조각케이크＋아메리카노 2잔 무료 [V/VIP 초이스] 아메리카노 Short 무료 또는 4,000원 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "[V/VIP 초이스] 아메리카노 Short 무료 또는 4,000원 할인"
-          }
-        ]
-      },
-      "SKT": null
+      "SKT": null,
+      "KT": null
     }
   },
   {
@@ -5956,19 +4508,8 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "주중 입장권 30%할인(최대 2인)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "주중 입장권 30%할인(최대 2인)"
-          }
-        ]
-      },
-      "SKT": null
+      "SKT": null,
+      "KT": null
     }
   },
   {
@@ -6044,18 +4585,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "엔진오일 2만원 할인＋에어컨필터/에어컨가스완충/부동액 10% 할인＋공임 10% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "엔진오일 2만원 할인＋에어컨필터/에어컨가스완충/부동액 10% 할인＋공임 10% 할인"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -6104,18 +4634,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "(온) 등급 UP (오프) 선불카드, 등급 UP",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "(온) 등급 UP (오프) 선불카드, 등급 UP"
-          }
-        ]
-      },
+      "KT": null,
       "LGU": null
     }
   },
@@ -6160,18 +4679,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "(온) 적립금, 등급 UP (오프) 선불카드, 등급 UP",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "(온) 적립금, 등급 UP (오프) 선불카드, 등급 UP"
-          }
-        ]
-      },
+      "KT": null,
       "LGU": null
     }
   },
@@ -6271,18 +4779,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "(온) 추가할인, 적립금 (오프) 선불카드, 등급 UP",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "(온) 추가할인, 적립금 (오프) 선불카드, 등급 UP"
-          }
-        ]
-      },
+      "KT": null,
       "LGU": null
     }
   },
@@ -6478,39 +4975,8 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "본인 및 동반 3인 15% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "본인 및 동반 3인 15% 할인"
-          }
-        ]
-      },
-      "SKT": null
-    }
-  },
-  {
-    "brand": "아고다",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "국내 숙소 예약 시 8% 할인 / 해외 숙소 예약 시 7% 할인 (할인 한도 최대 $40)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "국내 숙소 예약 시 8% 할인 / 해외 숙소 예약 시 7% 할인 (할인 한도 최대 $40)"
-          }
-        ]
-      },
       "SKT": null,
-      "LGU": null
+      "KT": null
     }
   },
   {
@@ -6564,46 +5030,6 @@
     }
   },
   {
-    "brand": "아르떼 키즈파크 제주",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "20% 할인 (동반 4인까지)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "20% 할인 (동반 4인까지)"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "아르떼뮤지엄",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "티켓 20% 할인 (동반 4인까지)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "티켓 20% 할인 (동반 4인까지)"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "아웃백",
     "category_group": "2026 8월 유쁠투쁠 혜택",
     "benefits": {
@@ -6619,34 +5045,8 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "VVIP",
-        "summary": "15% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "15% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "15% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "GOLD",
-            "summary": "15% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "일반",
-            "summary": "5% 할인"
-          }
-        ]
-      },
-      "SKT": null
+      "SKT": null,
+      "KT": null
     }
   },
   {
@@ -6832,18 +5232,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "본인 및 동반 3인 최대 20% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "본인 및 동반 3인 최대 20% 할인"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -6884,18 +5273,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "찜질스파 또는 워터파크 주중 30%할인(최대 2인)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "찜질스파 또는 워터파크 주중 30%할인(최대 2인)"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -6959,26 +5337,6 @@
     }
   },
   {
-    "brand": "어니스트플라워",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "어니스트플라워 15% 할인 쿠폰 제공",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "어니스트플라워 15% 할인 쿠폰 제공"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "어떠케어",
     "category_group": "",
     "benefits": {
@@ -7036,58 +5394,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "전 고객 10% 할인쿠폰＋첫 구매 고객 1만원 할인쿠폰",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "전 고객 10% 할인쿠폰＋첫 구매 고객 1만원 할인쿠폰"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "brand": "어플레이즈",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "어플레이즈 1개월 20% 할인 쿠폰",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "어플레이즈 1개월 20% 할인 쿠폰"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "에듀윌",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[상시]온라인 전강좌 5% 할인 [AICE 자격증] 온라인 과정 15% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[상시]온라인 전강좌 5% 할인 [AICE 자격증] 온라인 과정 15% 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
+      "KT": null
     }
   },
   {
@@ -7123,18 +5430,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[상시혜택] 본인 40% 및 동반 3인 20% 할인 [생일혜택] 이용권 50% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[상시혜택] 본인 40% 및 동반 3인 20% 할인 [생일혜택] 이용권 50% 할인"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -7159,26 +5455,6 @@
         ]
       },
       "KT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "에어클래스",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "에어클래스 전 강의 15% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "에어클래스 전 강의 15% 할인"
-          }
-        ]
-      },
-      "SKT": null,
       "LGU": null
     }
   },
@@ -7335,26 +5611,6 @@
       },
       "SKT": null,
       "KT": null
-    }
-  },
-  {
-    "brand": "여기어때",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "해외 숙소 8% 할인(최대 5만원)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "해외 숙소 8% 할인(최대 5만원)"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
     }
   },
   {
@@ -7528,18 +5784,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "웰니스패스 V/VIP 15%, 그 외 등급 10% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "웰니스패스 V/VIP 15%, 그 외 등급 10% 할인"
-          }
-        ]
-      },
+      "KT": null,
       "LGU": null
     }
   },
@@ -7579,19 +5824,8 @@
           }
         ]
       },
-      "KT": {
-        "category": "VIP특화혜택",
-        "tier": "VVIP",
-        "summary": "[VVIP초이스] 엔진오일 3만원 할인＋부가 정비 할인",
-        "all": [
-          {
-            "category": "VIP특화혜택",
-            "tier": "VVIP",
-            "summary": "[VVIP초이스] 엔진오일 3만원 할인＋부가 정비 할인"
-          }
-        ]
-      },
-      "SKT": null
+      "SKT": null,
+      "KT": null
     }
   },
   {
@@ -7637,26 +5871,6 @@
       },
       "SKT": null,
       "KT": null
-    }
-  },
-  {
-    "brand": "온누리시장(몰)",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "10%할인쿠폰(최대 할인금액 제한 없음, ID당 무제한 이용 가능)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "10%할인쿠폰(최대 할인금액 제한 없음, ID당 무제한 이용 가능)"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
     }
   },
   {
@@ -7753,26 +5967,6 @@
       },
       "SKT": null,
       "KT": null
-    }
-  },
-  {
-    "brand": "와플랫 체크",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[오픈 프로모션] 와플랫 체크 가족케어 1개월 무료 체험",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[오픈 프로모션] 와플랫 체크 가족케어 1개월 무료 체험"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
     }
   },
   {
@@ -7902,19 +6096,8 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "입장권 25%할인(최대 4인)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "입장권 25%할인(최대 4인)"
-          }
-        ]
-      },
-      "SKT": null
+      "SKT": null,
+      "KT": null
     }
   },
   {
@@ -7933,19 +6116,8 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "입장권 25%할인(최대 4인)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "입장권 25%할인(최대 4인)"
-          }
-        ]
-      },
-      "SKT": null
+      "SKT": null,
+      "KT": null
     }
   },
   {
@@ -8051,18 +6223,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[상시] 최대 10% 할인 (최대 1만원 할인) [생일혜택] 5천원 할인(1만원 이상 결제 시)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[상시] 최대 10% 할인 (최대 1만원 할인) [생일혜택] 5천원 할인(1만원 이상 결제 시)"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -8332,18 +6493,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "VIP특화혜택",
-        "tier": "VVIP",
-        "summary": "레티놀 PDRN 마스크 4매 OR 블랙티 마스크 4매 무료",
-        "all": [
-          {
-            "category": "VIP특화혜택",
-            "tier": "VVIP",
-            "summary": "레티놀 PDRN 마스크 4매 OR 블랙티 마스크 4매 무료"
-          }
-        ]
-      },
+      "KT": null,
       "LGU": null
     }
   },
@@ -8368,18 +6518,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "10% 할인쿠폰 제공(APP전용)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "10% 할인쿠폰 제공(APP전용)"
-          }
-        ]
-      },
+      "KT": null,
       "LGU": null
     }
   },
@@ -8439,34 +6578,8 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "VVIP",
-        "summary": "1,000원당 100원 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "1,000원당 100원 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "1,000원당 100원 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "GOLD",
-            "summary": "1,000원당 100원 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "일반",
-            "summary": "1,000원당 50원 할인"
-          }
-        ]
-      },
-      "SKT": null
+      "SKT": null,
+      "KT": null
     }
   },
   {
@@ -8502,18 +6615,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "본인 40% 및 동반3인 20% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "본인 40% 및 동반3인 20% 할인"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -8615,26 +6717,6 @@
       },
       "SKT": null,
       "KT": null
-    }
-  },
-  {
-    "brand": "정원e샵",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "정원e샵 상품 30%할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "정원e샵 상품 30%할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
     }
   },
   {
@@ -8788,26 +6870,6 @@
     }
   },
   {
-    "brand": "제주인터넷면세점",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "1만원 할인쿠폰(10만원 이상 구매시), 2만원 할인쿠폰(20만원 이상 구매시)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "1만원 할인쿠폰(10만원 이상 구매시), 2만원 할인쿠폰(20만원 이상 구매시)"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "제주항공",
     "category_group": "",
     "benefits": {
@@ -8865,38 +6927,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "주렁주렁 전 지점 입장권 25% 할인(본인 포함 최대 4인까지)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "주렁주렁 전 지점 입장권 25% 할인(본인 포함 최대 4인까지)"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "brand": "지니 TV",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "VOD 20% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "VOD 20% 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
+      "KT": null
     }
   },
   {
@@ -8920,91 +6951,6 @@
     }
   },
   {
-    "brand": "지니팩",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "지니팩 100% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "지니팩 100% 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "집업페이",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "월세 카드 결제 수수료 1% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "월세 카드 결제 수수료 1% 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "차방정",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "VIP특화혜택",
-        "tier": "VVIP",
-        "summary": "[V/VIP초이스] 차방정 플러스 멤버십 2개월 무료(주유/세차/주차 1만원 할인)",
-        "all": [
-          {
-            "category": "VIP특화혜택",
-            "tier": "VVIP",
-            "summary": "[V/VIP초이스] 차방정 플러스 멤버십 2개월 무료(주유/세차/주차 1만원 할인)"
-          },
-          {
-            "category": "VIP특화혜택",
-            "tier": "VIP",
-            "summary": "[V/VIP초이스] 차방정 플러스 멤버십 2개월 무료(주유/세차/주차 1만원 할인) [VIP 생일혜택] 차방정 플러스 멤버십 2개월 무료(주유/세차/주차 2만원 할인)"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "차일디",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "10% 할인 쿠폰, 15% 할인 쿠폰",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "10% 할인 쿠폰, 15% 할인 쿠폰"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "착한의사",
     "category_group": "뷰티/건강",
     "benefits": {
@@ -9020,19 +6966,8 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "종합건강검진 최대 49% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "종합건강검진 최대 49% 할인"
-          }
-        ]
-      },
-      "SKT": null
+      "SKT": null,
+      "KT": null
     }
   },
   {
@@ -9086,41 +7021,6 @@
     }
   },
   {
-    "brand": "청연(구.청소연구소)",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "VVIP",
-        "summary": "5천원 할인(1회) / 2천원 할인(정기) / 이사, 입주청소 10% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "5천원 할인(1회) / 2천원 할인(정기) / 이사, 입주청소 10% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "5천원 할인(1회) / 2천원 할인(정기) / 이사, 입주청소 10% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "GOLD",
-            "summary": "3천원 할인(1회)/ 이사, 입주청소 10% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "일반",
-            "summary": "3천원 할인(1회)/ 이사, 입주청소 10% 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "초심스터디카페",
     "category_group": "교육",
     "benefits": {
@@ -9136,54 +7036,8 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "VVIP",
-        "summary": "4천원 할인 쿠폰",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "4천원 할인 쿠폰"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "4천원 할인 쿠폰"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "GOLD",
-            "summary": "2천원 할인 쿠폰"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "일반",
-            "summary": "2천원 할인 쿠폰"
-          }
-        ]
-      },
-      "SKT": null
-    }
-  },
-  {
-    "brand": "추억의 국민학교 떡볶이",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "전 메뉴 25% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "전 메뉴 25% 할인"
-          }
-        ]
-      },
       "SKT": null,
-      "LGU": null
+      "KT": null
     }
   },
   {
@@ -9207,34 +7061,8 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "VVIP",
-        "summary": "VVIP/VIP 1만원 할인 쿠폰, GOLD이하 5천원 할인 쿠폰",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "VVIP/VIP 1만원 할인 쿠폰, GOLD이하 5천원 할인 쿠폰"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "VVIP/VIP 1만원 할인 쿠폰, GOLD이하 5천원 할인 쿠폰"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "GOLD",
-            "summary": "GOLD이하 5천원 할인 쿠폰"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "일반",
-            "summary": "GOLD이하 5천원 할인 쿠폰"
-          }
-        ]
-      },
-      "SKT": null
+      "SKT": null,
+      "KT": null
     }
   },
   {
@@ -9275,26 +7103,6 @@
       },
       "SKT": null,
       "KT": null
-    }
-  },
-  {
-    "brand": "카페베네",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "10% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "10% 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
     }
   },
   {
@@ -9553,26 +7361,6 @@
     }
   },
   {
-    "brand": "퀴즈노스",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "10% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "10% 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "크래버대게나라",
     "category_group": "",
     "benefits": {
@@ -9674,26 +7462,6 @@
     }
   },
   {
-    "brand": "클룩(KLOOK)",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "전체 액티비티 5% 할인, 국내외 렌트카 7% 할인, 국내외 유심 7% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "전체 액티비티 5% 할인, 국내외 렌트카 7% 할인, 국내외 유심 7% 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "키디키디",
     "category_group": "쇼핑",
     "benefits": {
@@ -9789,18 +7557,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "본인 및 동반1인 20% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "본인 및 동반1인 20% 할인"
-          }
-        ]
-      },
+      "KT": null,
       "LGU": null
     }
   },
@@ -9885,18 +7642,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "디자인문구 15% 할인 쿠폰(1만원 이상 구매 시), 전 상품 3천원 할인 쿠폰(3만원 이상 구매 시)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "디자인문구 15% 할인 쿠폰(1만원 이상 구매 시), 전 상품 3천원 할인 쿠폰(3만원 이상 구매 시)"
-          }
-        ]
-      },
+      "KT": null,
       "LGU": null
     }
   },
@@ -10091,19 +7837,8 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "호텔 7%, 투어&티켓 4% 항공 3% (쿠폰 3종)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "호텔 7%, 투어&티켓 4% 항공 3% (쿠폰 3종)"
-          }
-        ]
-      },
-      "SKT": null
+      "SKT": null,
+      "KT": null
     }
   },
   {
@@ -10233,19 +7968,8 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "20% 할인＋신규 5% 추가 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "20% 할인＋신규 5% 추가 할인"
-          }
-        ]
-      },
-      "SKT": null
+      "SKT": null,
+      "KT": null
     }
   },
   {
@@ -10264,19 +7988,8 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "1:1 회화 전과목 5% 할인 (대면 수업에 한함)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "1:1 회화 전과목 5% 할인 (대면 수업에 한함)"
-          }
-        ]
-      },
-      "SKT": null
+      "SKT": null,
+      "KT": null
     }
   },
   {
@@ -10295,19 +8008,8 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "전 강좌 15% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "전 강좌 15% 할인"
-          }
-        ]
-      },
-      "SKT": null
+      "SKT": null,
+      "KT": null
     }
   },
   {
@@ -10326,19 +8028,8 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "전화/화상영어 1만원 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "전화/화상영어 1만원 할인"
-          }
-        ]
-      },
-      "SKT": null
+      "SKT": null,
+      "KT": null
     }
   },
   {
@@ -10469,33 +8160,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "VVIP",
-        "summary": "1,000원당 100원 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "1,000원당 100원 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "1,000원당 100원 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "GOLD",
-            "summary": "1,000원당 100원 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "일반",
-            "summary": "1,000원당 50원 할인"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -10551,33 +8216,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "VVIP",
-        "summary": "1,000원당 100원 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "1,000원당 100원 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "1,000원당 100원 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "GOLD",
-            "summary": "1,000원당 100원 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "일반",
-            "summary": "1,000원당 50원 할인"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -10676,53 +8315,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "VVIP",
-        "summary": "30% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "30% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "30% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "GOLD",
-            "summary": "15% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "일반",
-            "summary": "15% 할인"
-          }
-        ]
-      },
-      "LGU": null
-    }
-  },
-  {
-    "brand": "패스트캠퍼스",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "AICE Associate 실전 완성 과정 30% 특별 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "AICE Associate 실전 완성 과정 30% 특별 할인"
-          }
-        ]
-      },
-      "SKT": null,
+      "KT": null,
       "LGU": null
     }
   },
@@ -10824,26 +8417,6 @@
       },
       "SKT": null,
       "KT": null
-    }
-  },
-  {
-    "brand": "포케올데이",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "10% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "10% 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
     }
   },
   {
@@ -10999,18 +8572,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "4천원 할인 쿠폰(3만 원 이상 구매 시)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "4천원 할인 쿠폰(3만 원 이상 구매 시)"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -11064,36 +8626,6 @@
     }
   },
   {
-    "brand": "플레이타임(키즈카페)",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[상시] 어린이 이용권 3천원 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[상시] 어린이 이용권 3천원 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "[VVIP초이스] 어린이 평일 이용권 무료(1인)"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "[VIP초이스] 어린이 평일 7천원 할인(1인)"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "피자알볼로",
     "category_group": "",
     "benefits": {
@@ -11124,18 +8656,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "15% 할인(온라인 주문 시)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "15% 할인(온라인 주문 시)"
-          }
-        ]
-      },
+      "KT": null,
       "LGU": null
     }
   },
@@ -11197,18 +8718,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "15% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "15% 할인"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -11232,26 +8742,6 @@
     }
   },
   {
-    "brand": "필수팩",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "가입월~익월말까지 필수팩 월정액 멤버십 할인 적용",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "가입월~익월말까지 필수팩 월정액 멤버십 할인 적용"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "핏펫",
     "category_group": "",
     "benefits": {
@@ -11272,38 +8762,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "7천원 할인 쿠폰(4만원 이상 구매 시) , 신규회원 1만원 할인 쿠폰(4만원 이상 구매 시)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "7천원 할인 쿠폰(4만원 이상 구매 시) , 신규회원 1만원 할인 쿠폰(4만원 이상 구매 시)"
-          }
-        ]
-      },
-      "LGU": null
-    }
-  },
-  {
-    "brand": "핑크퐁플러스",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "핑크퐁플러스 12개월 구독권 53%할인 및 할인 구독권 구매 시 베베핀 3종 세트 증정",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "핑크퐁플러스 12개월 구독권 53%할인 및 할인 구독권 구매 시 베베핀 3종 세트 증정"
-          }
-        ]
-      },
-      "SKT": null,
+      "KT": null,
       "LGU": null
     }
   },
@@ -11340,18 +8799,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "10% 장바구니 할인 쿠폰",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "10% 장바구니 할인 쿠폰"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -11375,31 +8823,6 @@
     }
   },
   {
-    "brand": "한화리조트",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "VIP특화혜택",
-        "tier": "VVIP",
-        "summary": "객실 할인",
-        "all": [
-          {
-            "category": "VIP특화혜택",
-            "tier": "VVIP",
-            "summary": "객실 할인"
-          },
-          {
-            "category": "VIP특화혜택",
-            "tier": "VIP",
-            "summary": "객실 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "할리스",
     "category_group": "VIP콕",
     "benefits": {
@@ -11415,24 +8838,8 @@
           }
         ]
       },
-      "KT": {
-        "category": "VIP특화혜택",
-        "tier": "VVIP",
-        "summary": "[VVIP 초이스] 커피 2잔＋휘낭시에 2개 세트 무료",
-        "all": [
-          {
-            "category": "VIP특화혜택",
-            "tier": "VVIP",
-            "summary": "[VVIP 초이스] 커피 2잔＋휘낭시에 2개 세트 무료"
-          },
-          {
-            "category": "VIP특화혜택",
-            "tier": "VIP",
-            "summary": "[생일] 바닐라 딜라이트(R) 1잔(생일 당월 한정)"
-          }
-        ]
-      },
-      "SKT": null
+      "SKT": null,
+      "KT": null
     }
   },
   {
@@ -11482,26 +8889,6 @@
         ]
       },
       "KT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "핸들대리",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "핸들대리 12% 할인쿠폰 5매",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "핸들대리 12% 할인쿠폰 5매"
-          }
-        ]
-      },
-      "SKT": null,
       "LGU": null
     }
   },
@@ -11572,18 +8959,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "10% 할인쿠폰(최대 3천원 할인)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "10% 할인쿠폰(최대 3천원 할인)"
-          }
-        ]
-      },
+      "KT": null,
       "LGU": null
     }
   },
@@ -11609,26 +8985,6 @@
         ]
       },
       "KT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "현대Hmall",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "최대 7% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "최대 7% 할인"
-          }
-        ]
-      },
-      "SKT": null,
       "LGU": null
     }
   },
@@ -11665,18 +9021,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[상시] (온) 적립금, 등급 UP (오프) 선불카드, 등급 UP",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[상시] (온) 적립금, 등급 UP (오프) 선불카드, 등급 UP"
-          }
-        ]
-      }
+      "KT": null
     }
   },
   {
@@ -11700,18 +9045,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "25% 할인(3만원 이상 결제 시 최대 5만원 할인)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "25% 할인(3만원 이상 결제 시 최대 5만원 할인)"
-          }
-        ]
-      },
+      "KT": null,
       "LGU": null
     }
   },
@@ -11793,26 +9127,6 @@
       },
       "SKT": null,
       "KT": null
-    }
-  },
-  {
-    "brand": "히트조명",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "5% 할인 쿠폰(3만원 이상 구매 시)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "5% 할인 쿠폰(3만원 이상 구매 시)"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
     }
   }
 ]
