@@ -28,6 +28,10 @@ from collections import defaultdict
 
 CARRIER_KEY = {"SKT": "SKT", "KT": "KT", "LGU": "LGU"}
 
+# 실제 업종이 아니라 통신사 사이트 내부 등급/캠페인 이름이라 category_group으로
+# 쓰면 안 되는 값들. 예: LG U+ 'VIP콕'은 업종이 아니라 VIP 전용 혜택 묶음 이름.
+NON_CATEGORY_LABELS = {"VIP콕"}
+
 
 def transform(records):
     grouped = defaultdict(lambda: {"brand": "", "category_group": "", "benefits": {}})
@@ -37,8 +41,10 @@ def transform(records):
         key = brand
         entry = grouped[key]
         entry["brand"] = brand
-        if not entry["category_group"] and r.get("category_group"):
-            entry["category_group"] = r["category_group"]
+        candidate_cat = (r.get("category_group") or "").strip()
+        if candidate_cat and candidate_cat not in NON_CATEGORY_LABELS:
+            if not entry["category_group"] or entry["category_group"] in NON_CATEGORY_LABELS:
+                entry["category_group"] = candidate_cat
 
         carrier = CARRIER_KEY.get(r["carrier"])
         if not carrier:

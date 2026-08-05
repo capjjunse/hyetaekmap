@@ -392,26 +392,24 @@
   .section-label:first-child { margin-top: 4px; }
   .section-label::before { content: ''; width: 3px; height: 12px; border-radius: 2px; background: var(--teal); display: inline-block; }
 
-  .benefit-row { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-top: 1px solid var(--border); }
+  .benefit-row { display: flex; align-items: flex-start; gap: 12px; padding: 13px 0; border-top: 1px solid var(--border); }
   .benefit-row:first-of-type { border-top: none; }
-  .carrier-badge {
-    flex: 0 0 auto; width: 44px; height: 44px; border-radius: 12px;
-    display: flex; align-items: center; justify-content: center;
-    font-weight: 800; font-size: 11.5px; color: #fff; letter-spacing: -0.02em;
-  }
-  .benefit-row.disabled .carrier-badge { background: var(--disabled) !important; color: var(--disabled-ink); }
   .benefit-info { flex: 1; min-width: 0; }
   .benefit-title { font-size: 13.5px; font-weight: 700; }
-  .benefit-desc { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
-  .benefit-row.disabled .benefit-title, .benefit-row.disabled .benefit-desc { color: var(--disabled-ink); }
+  .benefit-desc {
+    font-size: 12.5px; color: var(--muted); margin-top: 4px;
+    line-height: 1.55; word-break: keep-all; overflow-wrap: break-word;
+  }
 
   .go-btn {
-    flex: 0 0 auto; border: none; border-radius: 999px; padding: 9px 14px;
-    font-size: 12.5px; font-weight: 700; color: #fff; cursor: pointer; white-space: nowrap;
+    flex: 0 0 auto; border: none; border-radius: 14px; padding: 9px 14px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+    min-width: 62px; color: #fff; cursor: pointer;
     transition: transform 120ms ease;
   }
   .go-btn:active { transform: scale(0.95); }
-  .benefit-row.disabled .go-btn { background: var(--disabled); color: var(--disabled-ink); cursor: default; }
+  .go-carrier { font-size: 12.5px; font-weight: 800; letter-spacing: -0.01em; }
+  .go-cta { font-size: 10px; font-weight: 600; opacity: 0.9; }
 
   .toast {
     position: absolute; left: 50%; bottom: 100px; transform: translate(-50%, 8px);
@@ -604,6 +602,33 @@
     return groups;
   }
 
+  const CATEGORY_EMOJI_RULES = [
+    [/영화|시네마|CGV|메가박스|롯데시네마/i, '🎬'],
+    [/베이커리|빵집|파리바게|뚜레쥬르|파리크라상/, '🥐'],
+    [/카페|커피|디저트|제과|도넛|아이스크림|빙수|스타벅스|이디야|투썸|커피빈|폴바셋|폴 바셋|메가커피|컴포즈|빽다방/, '☕'],
+    [/편의점|생활\s*\/?\s*편의|GS25|CU\b|세븐일레븐|이마트24|미니스톱/i, '🏪'],
+    [/치킨|피자|버거|햄버거|패스트푸드|분식|bhc|BBQ|맥도날드|롯데리아|맘스터치/i, '🍔'],
+    [/외식|음식|맛집|레스토랑|푸드|한식|중식|일식|양식|뷔페/, '🍽️'],
+    [/마트|쇼핑|백화점|아울렛|이커머스|온라인몰|이마트\b|올리브영/, '🛍️'],
+    [/뷰티|헬스|건강|피트니스|헤어|스킨|화장품/, '💄'],
+    [/병원|약국|의료/, '💊'],
+    [/교육|학원|어학|스터디|전화영어|교보문고|서점|도서|책/, '📚'],
+    [/여행|항공|호텔|숙박|투어|공항/, '✈️'],
+    [/렌터카|주유|자동차|세차|모빌리티|택시|주차/, '🚗'],
+    [/공연|전시|문화|여가|테마파크|놀이공원|티켓|에버랜드|롯데월드/, '🎭'],
+    [/액티비티|엑티비티|스포츠|골프|볼링|당구|레저/, '🎳'],
+    [/통신|전화|가전|기기|앱|모바일|구독/, '📱'],
+    [/반려|펫|동물/, '🐾'],
+    [/금융|카드|은행|보험|캐시백|적립/, '💳'],
+  ];
+  function categoryEmoji(catText, brandName) {
+    const target = `${catText || ''} ${brandName || ''}`;
+    for (const [pattern, emoji] of CATEGORY_EMOJI_RULES) {
+      if (pattern.test(target)) return emoji;
+    }
+    return '🏷️';
+  }
+
   async function loadLiveBenefitData() {
     try {
       const res = await fetch('./data/places.json', { cache: 'no-store' });
@@ -614,7 +639,7 @@
         id: 'brand-' + (LIVE_ID_SEQ++),
         name: entry.brand,
         cat: entry.category_group || '기타',
-        glyph: '🏷️',
+        glyph: categoryEmoji(entry.category_group, entry.brand),
         dist: '',
         benefits: { SKT: !!entry.benefits.SKT, KT: !!entry.benefits.KT, LGU: !!entry.benefits.LGU },
         byCategory: groupByCategory(entry.benefits),
@@ -908,12 +933,14 @@
         const tier = lines[0].tier;
         html += `
           <div class="benefit-row">
-            <div class="carrier-badge" style="background:${meta.color}">${meta.label}</div>
             <div class="benefit-info">
               <div class="benefit-title">${meta.full}<span class="benefit-tier">${tier}</span></div>
               <div class="benefit-desc">${summary}</div>
             </div>
-            <button class="go-btn" style="background:${meta.color}" data-carrier="${k}" data-place="${place.name}">앱 열기</button>
+            <button class="go-btn" style="background:${meta.color}" data-carrier="${k}" data-place="${place.name}">
+              <span class="go-carrier">${meta.label}</span>
+              <span class="go-cta">앱 열기</span>
+            </button>
           </div>`;
       });
     });
