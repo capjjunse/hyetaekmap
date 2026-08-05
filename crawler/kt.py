@@ -17,10 +17,18 @@ KT 멤버십 크롤러 — 공식: https://membership.kt.com
     하나라도 있으면 상시혜택으로 분류.
   - 페이지네이션: 응답 안 <input id="pageTotal" value="N"> 까지.
 
-월간혜택('달달혜택') — 구조화된 크롤링 보류:
-  DaldalBenefit.do 페이지의 '이 달의 달달혜택' 탭은 실제 라인업이 배너 '이미지' 한 장과
-  event.kt.com 이벤트 페이지 링크로만 제공되고, 텍스트로 파싱 가능한 브랜드/혜택 목록이
-  없었다. event.kt.com 쪽 이벤트 페이지 구조를 별도로 조사해야 한다 (TODO).
+월간혜택('달달혜택') — 끝까지 조사했지만 안정적인 크롤링은 보류:
+  DaldalBenefit.do → event.kt.com/.../ongoing_event_view.html?...pcEvtNo=N (매달 번호가 바뀜)
+  → 그 안 iframe으로 app.membership.kt.com/eventpage/evnXXXXXXXXX/kmFesta_web.html
+  (역시 매달 URL이 바뀌는 '이달의 KT MEMBERSHIP FESTA' 전용 마이크로사이트) 까지 추적했다.
+  문제는:
+    1) 1차/2차/3차 쿠폰(배스킨라빈스, 쇼핑라운지 등)은 텍스트가 아니라 배너 '이미지'로만 제공됨.
+    2) 문화 행사(뮤지컬/전시) 섹션은 텍스트가 있지만 할인율 숫자가 JS로 애니메이션 카운트업
+       되며 채워지는 방식이라 정적 HTML에는 숫자가 아예 없음 (예: "최대", "% 할인"만 있고
+       중간 숫자가 빔).
+    3) URL 자체가 매달 바뀌는 1회성 이벤트 마이크로사이트라 구조가 유지된다는 보장도 없음.
+  → 안정적으로 하려면 Playwright 같은 헤드리스 브라우저로 매달 URL을 새로 찾아 JS 실행까지
+    해야 하는데, 지금 GitHub Actions 크론에는 그 정도 무게의 작업은 아직 안 붙였다 (TODO).
 
 VIP특화혜택: 별도 URL 없이 상시혜택 목록 파싱 중 tier 조건으로 자동 분류.
 """
