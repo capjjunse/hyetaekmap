@@ -13,8 +13,8 @@
     --map-water: #a7c7c9;
     --teal: #1f6f63;
     --teal-ink: #16463d;
-    --skt: #e2183c;
-    --kt: #ff7a00;
+    --skt: #3617ce;
+    --kt: #01a69f;
     --lgu: #e6007e;
     --border: rgba(28, 27, 34, 0.1);
     --chrome: #1c1b22;
@@ -39,8 +39,8 @@
       --map-water: #1a3646;
       --teal: #4fb3a2;
       --teal-ink: #bdeee3;
-      --skt: #ff5674;
-      --kt: #ffa64d;
+      --skt: #7b6ef6;
+      --kt: #2fd9c7;
       --lgu: #ff5fb0;
       --border: rgba(241, 238, 230, 0.16);
       --chrome: #242229;
@@ -55,7 +55,7 @@
   :root[data-theme="dark"] {
     --ink: #f1eee6; --ink-soft: #b9b4a8; --paper: #111015; --parchment: #262b33;
     --map-bg: #23272f; --map-road: #2f353e; --map-block: #2a2f38; --map-park: #24402f; --map-water: #1a3646;
-    --teal: #4fb3a2; --teal-ink: #bdeee3; --skt: #ff5674; --kt: #ffa64d; --lgu: #ff5fb0;
+    --teal: #4fb3a2; --teal-ink: #bdeee3; --skt: #7b6ef6; --kt: #2fd9c7; --lgu: #ff5fb0;
     --border: rgba(241, 238, 230, 0.16); --chrome: #242229; --shadow: rgba(0, 0, 0, 0.6);
     --sheet-bg: #2c2a33; --muted: #9a9488; --disabled: #2a2822; --disabled-ink: #6b6659;
     color-scheme: dark;
@@ -63,7 +63,7 @@
   :root[data-theme="light"] {
     --ink: #1c1b22; --ink-soft: #4a4854; --paper: #fbf8f2; --parchment: #efe6d4;
     --map-bg: #efe6d4; --map-road: #fbf8f2; --map-block: #e2d6ba; --map-park: #b9c9a6; --map-water: #a7c7c9;
-    --teal: #1f6f63; --teal-ink: #16463d; --skt: #e2183c; --kt: #ff7a00; --lgu: #e6007e;
+    --teal: #1f6f63; --teal-ink: #16463d; --skt: #3617ce; --kt: #01a69f; --lgu: #e6007e;
     --border: rgba(28, 27, 34, 0.1); --chrome: #1c1b22; --shadow: rgba(20, 18, 24, 0.28);
     --sheet-bg: #fffdf8; --muted: #857f70; --disabled: #dcd5c4; --disabled-ink: #a8a08d;
     color-scheme: light;
@@ -169,7 +169,7 @@
   .chip[data-carrier="LGU"] .dot { background: var(--lgu); }
   .chip[data-carrier="ALL"].active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
   .chip[data-carrier="SKT"].active { background: var(--skt); color: #fff; border-color: var(--skt); }
-  .chip[data-carrier="KT"].active { background: var(--kt); color: #241300; border-color: var(--kt); }
+  .chip[data-carrier="KT"].active { background: var(--kt); color: #fff; border-color: var(--kt); }
   .chip[data-carrier="LGU"].active { background: var(--lgu); color: #fff; border-color: var(--lgu); }
   .chip.active .dot { background: currentColor; }
   .chip.chip-active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
@@ -249,7 +249,16 @@
     border: 1px solid var(--border); box-shadow: 0 6px 16px var(--shadow);
     display: flex; align-items: center; justify-content: center; color: var(--ink);
   }
-  .fab.locate { color: var(--teal); }
+  .fab.locate { color: var(--teal); cursor: pointer; }
+  .fab.locate.active { color: #ff3b30; }
+  .fab.locate.locating { animation: locate-pulse 900ms ease-in-out infinite; }
+  @keyframes locate-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+  .my-location-dot {
+    width: 16px; height: 16px; border-radius: 50%;
+    background: #ff3b30; border: 3px solid var(--sheet-bg);
+    box-shadow: 0 0 0 5px rgba(255, 59, 48, 0.25), 0 2px 6px var(--shadow);
+  }
 
   .resultpill {
     position: absolute; left: 14px; bottom: 18px;
@@ -294,8 +303,8 @@
   .bc-tag.c-LGU b { color: var(--lgu); }
   .bc-tag.mine.c-SKT { background: var(--skt); border-color: var(--skt); color: #fff; }
   .bc-tag.mine.c-SKT b { color: #fff; }
-  .bc-tag.mine.c-KT { background: var(--kt); border-color: var(--kt); color: #241300; }
-  .bc-tag.mine.c-KT b { color: #241300; }
+  .bc-tag.mine.c-KT { background: var(--kt); border-color: var(--kt); color: #fff; }
+  .bc-tag.mine.c-KT b { color: #fff; }
   .bc-tag.mine.c-LGU { background: var(--lgu); border-color: var(--lgu); color: #fff; }
   .bc-tag.mine.c-LGU b { color: #fff; }
 
@@ -430,6 +439,7 @@
 
   @media (prefers-reduced-motion: reduce) {
     .sheet, .sheet-backdrop, .toast, .chip, .go-btn, .pin, .onboarding, .carrier-card { transition: none !important; }
+    .fab.locate.locating { animation: none !important; }
   }
 </style>
 
@@ -703,6 +713,40 @@
   }
   function formatDistance(m) { return m < 1000 ? `${Math.round(m)}m` : `${(m / 1000).toFixed(1)}km`; }
 
+  let myLocationOverlay = null;
+  function renderMyLocationMarker() {
+    if (!userLatLng) return;
+    if (myLocationOverlay) myLocationOverlay.setMap(null);
+    const el = document.createElement('div');
+    el.className = 'my-location-dot';
+    myLocationOverlay = new kakao.maps.CustomOverlay({ position: userLatLng, content: el, zIndex: 30 });
+    myLocationOverlay.setMap(kakaoMap);
+  }
+
+  function locateMe(recenter) {
+    const btn = document.querySelector('.fab.locate');
+    if (!navigator.geolocation) {
+      toastEl.textContent = '이 브라우저는 위치 정보를 지원하지 않아요';
+      toastEl.classList.add('show');
+      setTimeout(() => toastEl.classList.remove('show'), 1800);
+      return;
+    }
+    btn.classList.add('locating');
+    navigator.geolocation.getCurrentPosition((pos) => {
+      btn.classList.remove('locating');
+      btn.classList.add('active');
+      userLatLng = new kakao.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+      renderMyLocationMarker();
+      if (recenter) { kakaoMap.setCenter(userLatLng); kakaoMap.setLevel(4); }
+      if (RAW_MATCHES.length) applyFilter(); // 거리 재계산
+    }, () => {
+      btn.classList.remove('locating');
+      toastEl.textContent = '위치 정보를 가져오지 못했어요. 브라우저 위치 권한을 확인해주세요.';
+      toastEl.classList.add('show');
+      setTimeout(() => toastEl.classList.remove('show'), 2200);
+    }, { enableHighAccuracy: true, timeout: 8000 });
+  }
+
   function initKakaoMap() {
     if (typeof kakao === 'undefined' || !kakao.maps) {
       document.getElementById('mapLoading').textContent = '지도를 불러오지 못했어요 (카카오맵 SDK 로드 실패)';
@@ -715,16 +759,9 @@
 
       kakao.maps.event.addListener(kakaoMap, 'idle', searchNearbyMatches);
 
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition((pos) => {
-          userLatLng = new kakao.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
-          kakaoMap.setCenter(userLatLng);
-        }, () => {}, { timeout: 6000 });
-      }
+      locateMe(true);
 
-      document.querySelector('.fab.locate').addEventListener('click', () => {
-        if (userLatLng) kakaoMap.setCenter(userLatLng);
-      });
+      document.querySelector('.fab.locate').addEventListener('click', () => locateMe(true));
       document.querySelector('.fab.zoomin').addEventListener('click', () => kakaoMap.setLevel(kakaoMap.getLevel() - 1));
       document.querySelector('.fab.zoomout').addEventListener('click', () => kakaoMap.setLevel(kakaoMap.getLevel() + 1));
 
