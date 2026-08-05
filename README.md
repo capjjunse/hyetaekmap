@@ -27,13 +27,12 @@ python run.py skt lguplus  # 일부만
 | | 상시혜택 | 월간혜택 | VIP특화혜택 |
 |---|---|---|---|
 | **SKT** | [benefitbrand/list-tab1.do](https://sktmembership.tworld.co.kr/mps/pc-bff/benefitbrand/list-tab1.do) | [program/tday.do](https://sktmembership.tworld.co.kr/mps/pc-bff/program/tday.do) (T day) | [program/vippick.do](https://sktmembership.tworld.co.kr/mps/pc-bff/program/vippick.do) (VIP Pick) |
-| **KT** | [discount/partner/PartnerList.do](https://membership.kt.com/discount/partner/PartnerList.do) | 보류 (아래 한계 참고) | [vip/choice/VvipChoiceInfo.do](https://membership.kt.com/vip/choice/VvipChoiceInfo.do) + [ChoiceInfo.do](https://membership.kt.com/vip/choice/ChoiceInfo.do) (VVIP/VIP 초이스) |
+| **KT** | [discount/partner/PartnerList.do](https://membership.kt.com/discount/partner/PartnerList.do) | [discount/benefit/DaldalBenefit.do](https://membership.kt.com/discount/benefit/DaldalBenefit.do) (달달혜택, 실제 콘텐츠는 매달 바뀌는 이벤트 마이크로사이트에서 자동 추적) | [vip/choice/VvipChoiceInfo.do](https://membership.kt.com/vip/choice/VvipChoiceInfo.do) + [ChoiceInfo.do](https://membership.kt.com/vip/choice/ChoiceInfo.do) (VVIP/VIP 초이스) |
 | **LG U+** | [benefit-membership](https://www.lguplus.com/benefit-membership)?...BnftDivsCd=02 | [benefit-plus](https://www.lguplus.com/benefit-plus) (유플투쁠) | 같은 페이지 ?...BnftDivsCd=01 (VIP콕) |
 
 ### 알려진 한계
 
 - **KT 전체**: 반복 요청 시 서버가 요청 IP를 통째로 차단하는 일이 있습니다 (WAF 추정 — GitHub Actions IP에서도 재현됨, 하루는 되고 하루는 막히는 식). `run.py`가 이번 크롤링이 0건이면 직전 데이터를 그대로 유지하도록 안전장치를 넣어뒀지만, 근본적으로는 KT 쪽에 데이터 이용 문의를 하는 게 안전할 수 있습니다.
-- **KT 월간혜택('달달혜택')**: 실제 콘텐츠가 매달 URL이 바뀌는 이벤트 마이크로사이트 안에 있고, 일부는 이미지 배너로만·일부는 숫자가 JS 애니메이션으로 채워지는 방식이라 안정적인 텍스트 크롤링이 어려워 보류했습니다. 자세한 내용은 `crawler/kt.py` 상단 주석 참고.
 - **지도 핀 매칭**: 통신사 공식 페이지는 브랜드 단위 혜택만 제공하고 지점별 좌표는 주지 않습니다. 그래서 지도 탭은 카카오맵 카테고리 검색(음식점/카페/편의점/문화시설/대형마트)으로 현재 화면 범위의 실제 매장을 가져온 뒤, 이름이 `docs/data/places.json`의 브랜드와 일치하는 곳만 핀으로 표시합니다 — 온라인 전용 브랜드(11번가, 앱 구독 등)는 지도에는 안 뜨고 혜택 탭에서만 보입니다.
 
 ## GitHub Pages로 배포하기

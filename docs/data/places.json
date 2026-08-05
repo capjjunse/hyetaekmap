@@ -1888,6 +1888,11 @@
             "category": "상시혜택",
             "tier": "전등급",
             "summary": "[달.달.혜택] 인기 음료 6종 50% 할인(할인 한도 5천원) [상시]제조음료 구매 시 10% 할인"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "공차 인기 음료 6종 50% 할인"
           }
         ]
       }
@@ -4548,6 +4553,46 @@
     }
   },
   {
+    "brand": "뮤지컬 유미의 세포들",
+    "category_group": "달달혜택",
+    "benefits": {
+      "KT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "최대 45% 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "최대 45% 할인"
+          }
+        ]
+      },
+      "SKT": null,
+      "LGU": null
+    }
+  },
+  {
+    "brand": "뮤지컬 헬스키친",
+    "category_group": "달달혜택",
+    "benefits": {
+      "KT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "최대 40% 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "최대 40% 할인"
+          }
+        ]
+      },
+      "SKT": null,
+      "LGU": null
+    }
+  },
+  {
     "brand": "뮤직벨링",
     "category_group": "생활/편의",
     "benefits": {
@@ -5123,6 +5168,11 @@
             "category": "VIP특화혜택",
             "tier": "VIP",
             "summary": "아이스크림 6종 50% (파인트 등)"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "배스킨라빈스 레디팩 30% 할인 정상가 10,800원, 할인가 7,560원"
           }
         ]
       }
@@ -6128,7 +6178,7 @@
   },
   {
     "brand": "쇼핑라운지",
-    "category_group": "",
+    "category_group": "달달혜택",
     "benefits": {
       "KT": {
         "category": "상시혜택",
@@ -6139,6 +6189,11 @@
             "category": "상시혜택",
             "tier": "전등급",
             "summary": "[달.달.혜택] 5천원 할인(3만원 이상 구매 시) [상시]멤버십 전용 특가 혜택 제공"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "쇼핑라운지 5천원 할인"
           }
         ]
       },
@@ -6624,6 +6679,26 @@
         ]
       },
       "KT": null,
+      "LGU": null
+    }
+  },
+  {
+    "brand": "슬립노모어 서울(Sleep No More Seoul)",
+    "category_group": "달달혜택",
+    "benefits": {
+      "KT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "최대 40% 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "최대 40% 할인"
+          }
+        ]
+      },
+      "SKT": null,
       "LGU": null
     }
   },
@@ -9229,6 +9304,26 @@
         ]
       },
       "KT": null
+    }
+  },
+  {
+    "brand": "전시 아기상어 비밀 초대장:비커밍 샤크",
+    "category_group": "달달혜택",
+    "benefits": {
+      "KT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "전 등급 50% 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "전 등급 50% 할인"
+          }
+        ]
+      },
+      "SKT": null,
+      "LGU": null
     }
   },
   {

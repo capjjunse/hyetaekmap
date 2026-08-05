@@ -28,24 +28,31 @@ VIP특화혜택('VVIP/VIP 초이스', 검증 완료):
     나뉘어 있다 — 이 중 alt="혜택" 줄의 텍스트를 설명으로 쓴다(요약 카드보다 더
     구체적인 경우가 많음). 브랜드명은 h3.tit.
 
-월간혜택('달달혜택') — 끝까지 조사했지만 안정적인 크롤링은 보류:
-  DaldalBenefit.do → event.kt.com/.../ongoing_event_view.html?...pcEvtNo=N (매달 번호가 바뀜)
-  → 그 안 iframe으로 app.membership.kt.com/eventpage/evnXXXXXXXXX/kmFesta_web.html
-  (역시 매달 URL이 바뀌는 '이달의 KT MEMBERSHIP FESTA' 전용 마이크로사이트) 까지 추적했다.
-  문제는:
-    1) 1차/2차/3차 쿠폰(배스킨라빈스, 쇼핑라운지 등)은 텍스트가 아니라 배너 '이미지'로만 제공됨.
-    2) 문화 행사(뮤지컬/전시) 섹션은 텍스트가 있지만 할인율 숫자가 JS로 애니메이션 카운트업
-       되며 채워지는 방식이라 정적 HTML에는 숫자가 아예 없음 (예: "최대", "% 할인"만 있고
-       중간 숫자가 빔).
-    3) URL 자체가 매달 바뀌는 1회성 이벤트 마이크로사이트라 구조가 유지된다는 보장도 없음.
-  → 안정적으로 하려면 Playwright 같은 헤드리스 브라우저로 매달 URL을 새로 찾아 JS 실행까지
-    해야 하는데, 지금 GitHub Actions 크론에는 그 정도 무게의 작업은 아직 안 붙였다 (TODO).
+월간혜택('달달혜택', 검증 완료):
+  DaldalBenefit.do 안의 event.kt.com 링크에서 정규식으로 pcEvtNo만 뽑아내고,
+  그 번호로 KT 공식 이벤트 API를 바로 호출한다 (event.kt.com 자체는 JS SPA라
+  안 거쳐도 됨):
+    GET https://rdi.kt.com/kt/events/v1.0/{pcEvtNo}?type=P
+    -> JSON. data.evnInfo.apctUrl 이 '이달의 KT MEMBERSHIP FESTA' 마이크로사이트
+       주소 (예: https://app.membership.kt.com/eventpage/evn879840107/kmFesta_web.html,
+       매달 URL이 바뀌지만 이 API가 항상 최신 주소를 알려준다).
+  그 페이지 안:
+    - 쿠폰 라운드(1차/2차/3차): .round 하나가 회차 1개. .box a img 의 alt 속성에
+      "브랜드 레디팩 30% 할인 정상가 10,800원, 할인가 7,560원"처럼 설명이 통째로
+      들어있다 (처음엔 배너 '이미지'라 텍스트가 없는 줄 알았는데, alt 텍스트에
+      다 있었다). 브랜드명은 <a href="javascript:fnMovPage('id','브랜드명')">
+      의 두 번째 인자에서 뽑고, 못 뽑으면 alt 텍스트 앞부분(숫자 나오기 전까지)으로
+      추정한다. 아직 공개 안 된 회차는 .box.soon "COMING SOON"만 있어 건너뛴다.
+    - 문화 행사(뮤지컬/전시): #section04 안 li 하나가 1건. h3(뮤지컬/전시)+p(작품명)
+      +span(할인율)이 전부 정적 HTML에 있다 (애니메이션 카운트업은 화면 표시용
+      이펙트일 뿐 최종 값은 소스에 이미 박혀 있었다).
 """
+import re
 import time
 import requests
 from bs4 import BeautifulSoup
 
-from common import make_record, strip_html, _throttle as throttle, USER_AGENT, ALLOWED_HOSTS, CATEGORY_ALWAYS, CATEGORY_VIP
+from common import safe_get, make_record, strip_html, _throttle as throttle, USER_AGENT, ALLOWED_HOSTS, CATEGORY_ALWAYS, CATEGORY_VIP, CATEGORY_MONTHLY
 from urllib.parse import urlparse
 
 # KT는 SKT/LG U+보다 요청 간격에 훨씬 민감해 보여서(빠르게 몇 번만 쳐도 응답이
@@ -59,6 +66,8 @@ VVIP_CHOICE_PAGE = "https://membership.kt.com/vip/choice/VvipChoiceInfo.do"
 VVIP_CHOICE_API = "https://membership.kt.com/vip/choice/VvipChoiceListHtml.json"
 VIP_CHOICE_PAGE = "https://membership.kt.com/vip/choice/ChoiceInfo.do"
 VIP_CHOICE_API = "https://membership.kt.com/vip/choice/VipListHtml.json"
+DALDAL_PAGE = "https://membership.kt.com/discount/benefit/DaldalBenefit.do"
+EVENT_API_TMPL = "https://rdi.kt.com/kt/events/v1.0/{evt_no}?type=P"
 
 TIER_LABELS = {
     "vvip": "VVIP",
@@ -86,6 +95,8 @@ def _post(url, referer):
         timeout=10,
     )
     resp.raise_for_status()
+    if resp.encoding and resp.encoding.lower() == "iso-8859-1":
+        resp.encoding = resp.apparent_encoding
     return resp.text
 
 
@@ -106,6 +117,8 @@ def _fetch_partner_page(page_no):
         timeout=10,
     )
     resp.raise_for_status()
+    if resp.encoding and resp.encoding.lower() == "iso-8859-1":
+        resp.encoding = resp.apparent_encoding
     return resp.text
 
 
@@ -226,9 +239,101 @@ def crawl_vip_choice():
     return records
 
 
+def _extract_coupon_brand(href, alt):
+    m = re.search(r"fnMov(?:Page|CouponPage|DetailPage)\('[^']*',\s*'([^']*)'", href or "")
+    candidate = (m.group(1) or "").strip() if m else ""
+    if candidate and re.search(r"[가-힣]", candidate) and not re.fullmatch(r"[A-Z0-9_]+", candidate):
+        return candidate
+    # 코드성 id라 브랜드명이 아니면 alt 텍스트에서 숫자/할인 나오기 전까지를 브랜드로 추정
+    m2 = re.match(r"^([^\d%]+)", alt or "")
+    guess = (m2.group(1).strip() if m2 else "") or (alt or "").strip()
+    return guess
+
+
+def _parse_daldal(html):
+    soup = BeautifulSoup(html, "html.parser")
+    records = []
+
+    for round_el in soup.select(".round"):
+        tag_el = round_el.select_one(".tag")
+        period_el = round_el.select_one(".period")
+        round_label = tag_el.get_text(strip=True) if tag_el else ""
+        period_txt = period_el.get_text(" ", strip=True) if period_el else ""
+        for a in round_el.select(".box a"):
+            img = a.select_one("img[alt]")
+            if not img or not img.get("alt"):
+                continue
+            alt = img["alt"].strip()
+            brand = _extract_coupon_brand(a.get("href", ""), alt)
+            if not brand:
+                continue
+            records.append(
+                make_record(
+                    carrier=CARRIER,
+                    category=CATEGORY_MONTHLY,
+                    partner=brand,
+                    summary=strip_html(alt),
+                    detail=f"달달혜택 {round_label} {period_txt}".strip(),
+                    tier="전체",
+                    category_group="달달혜택",
+                    source_url=DALDAL_PAGE,
+                )
+            )
+
+    culture = soup.select_one("#section04")
+    if culture:
+        for li in culture.select("ul > li"):
+            h3 = li.select_one(".detail h3")
+            p = li.select_one(".detail p")
+            span = li.select_one(".detail span")
+            if not p or not span:
+                continue
+            kind = h3.get_text(strip=True) if h3 else ""
+            title = p.get_text(strip=True)
+            brand = f"{kind} {title}".strip() if kind else title
+            desc = strip_html(span.get_text(" ", strip=True))
+            if not brand or not desc:
+                continue
+            records.append(
+                make_record(
+                    carrier=CARRIER,
+                    category=CATEGORY_MONTHLY,
+                    partner=brand,
+                    summary=desc,
+                    detail="달달혜택 문화 행사",
+                    tier="전체",
+                    category_group="달달혜택",
+                    source_url=DALDAL_PAGE,
+                )
+            )
+    return records
+
+
+def crawl_daldal():
+    resp = safe_get(DALDAL_PAGE)
+    m = re.search(r"event\.kt\.com/[^\"'\s)]*pcEvtNo=(\d+)", resp.text)
+    if not m:
+        print("[KT] 달달혜택: DaldalBenefit.do 안에서 이벤트 번호(pcEvtNo)를 못 찾았습니다.")
+        return []
+    evt_no = m.group(1)
+
+    event_resp = safe_get(EVENT_API_TMPL.format(evt_no=evt_no))
+    apct_url = event_resp.json().get("data", {}).get("evnInfo", {}).get("apctUrl")
+    if not apct_url:
+        print(f"[KT] 달달혜택: 이벤트 API 응답에서 이달의 페이지 주소를 못 찾았습니다 (evtNo={evt_no}).")
+        return []
+
+    page_resp = safe_get(apct_url)
+    return _parse_daldal(page_resp.text)
+
+
 def crawl(max_pages=40):
     all_records = crawl_partner_list(max_pages=max_pages)
     all_records.extend(crawl_vip_choice())
+    try:
+        all_records.extend(crawl_daldal())
+    except Exception as e:
+        print(f"[KT] 달달혜택 수집 실패: {e}")
 
     if not all_records:
         print("[KT] 수집된 데이터가 없습니다 (서버 차단되었거나 구조가 바뀌었을 수 있음).")

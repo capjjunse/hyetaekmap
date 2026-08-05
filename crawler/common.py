@@ -16,6 +16,8 @@ ALLOWED_HOSTS = {
     "sktmembership.tworld.co.kr",  # SKT 공식 T멤버십
     "www.lguplus.com",             # LG U+ 공식
     "membership.kt.com",           # KT 공식 멤버십
+    "rdi.kt.com",                  # KT 공식 이벤트 정보 API (달달혜택 월간 URL 조회용)
+    "app.membership.kt.com",       # KT 공식 멤버십 이벤트 마이크로사이트 (달달혜택 실제 콘텐츠)
 }
 
 USER_AGENT = (
@@ -63,6 +65,11 @@ def safe_get(url, params=None, headers=None):
                 url, params=params, headers=req_headers, timeout=REQUEST_TIMEOUT_SEC
             )
             resp.raise_for_status()
+            # 서버가 Content-Type에 charset을 안 주면 requests가 ISO-8859-1로
+            # 잘못 추정해서 한글이 깨진다 (예: app.membership.kt.com). 그럴 때만
+            # chardet 추정치로 보정한다.
+            if resp.encoding and resp.encoding.lower() == "iso-8859-1":
+                resp.encoding = resp.apparent_encoding
             return resp
         except requests.RequestException as e:
             last_err = e
