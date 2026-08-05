@@ -145,13 +145,6 @@
   }
   .searchbox input::placeholder { color: var(--muted); }
 
-  .iconbtn {
-    flex: 0 0 auto; width: 38px; height: 38px; border-radius: 50%;
-    background: var(--sheet-bg); border: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: center;
-    color: var(--ink); box-shadow: 0 4px 14px var(--shadow);
-  }
-
   .chips { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-bottom: 1px; }
   .chips::-webkit-scrollbar { display: none; }
 
@@ -163,17 +156,8 @@
     transition: transform 120ms ease, background 120ms ease, color 120ms ease, border-color 120ms ease;
   }
   .chip:active { transform: scale(0.96); }
-  .chip .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--ink-soft); }
-  .chip[data-carrier="SKT"] .dot { background: var(--skt); }
-  .chip[data-carrier="KT"] .dot { background: var(--kt); }
-  .chip[data-carrier="LGU"] .dot { background: var(--lgu); }
-  .chip[data-carrier="ALL"].active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-  .chip[data-carrier="SKT"].active { background: var(--skt); color: #fff; border-color: var(--skt); }
-  .chip[data-carrier="KT"].active { background: var(--kt); color: #fff; border-color: var(--kt); }
-  .chip[data-carrier="LGU"].active { background: var(--lgu); color: #fff; border-color: var(--lgu); }
-  .chip.active .dot { background: currentColor; }
   .chip.chip-active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-  .benefit-tier { font-size: 10.5px; font-weight: 600; color: var(--muted); margin-left: 5px; }
+  .ln-tier { font-style: normal; font-weight: 700; opacity: 0.7; margin-right: 3px; }
   .bc-cat-label {
     font-size: 10.5px; font-weight: 800; letter-spacing: 0.02em;
     color: var(--ink); margin-top: 10px; margin-bottom: 3px;
@@ -203,7 +187,7 @@
     background: var(--sheet-bg); border: 1.5px solid var(--border);
     border-radius: 999px; padding: 5px 11px 5px 7px;
     box-shadow: 0 5px 12px var(--shadow);
-    font-size: 11.5px; font-weight: 800; color: var(--ink); white-space: nowrap;
+    font-size: 10.5px; font-weight: 800; color: var(--ink); white-space: nowrap;
   }
   .map-pin .chip-dots { display: flex; gap: 2px; flex: 0 0 auto; }
   .map-pin .chip-dots span { width: 6px; height: 6px; border-radius: 50%; display: block; }
@@ -237,7 +221,7 @@
     display: flex; align-items: center; justify-content: center; font-size: 19px; flex: 0 0 auto;
   }
   .lr-text { flex: 1; min-width: 0; }
-  .lr-name { font-size: 13.5px; font-weight: 700; }
+  .lr-name { font-size: 12.5px; font-weight: 700; }
   .lr-meta { font-size: 11.5px; color: var(--muted); margin-top: 2px; }
   .lr-dots { display: flex; gap: 3px; flex: 0 0 auto; }
   .lr-dots span { width: 6px; height: 6px; border-radius: 50%; display: block; }
@@ -287,7 +271,7 @@
     display: flex; align-items: center; justify-content: center; font-size: 20px; flex: 0 0 auto;
   }
   .bc-body { flex: 1; min-width: 0; }
-  .bc-name { font-size: 13.5px; font-weight: 700; }
+  .bc-name { font-size: 12.5px; font-weight: 700; }
   .bc-meta { font-size: 11.5px; color: var(--muted); margin-top: 1px; }
   .bc-carriers { display: flex; flex-direction: column; gap: 4px; margin-top: 4px; }
   .bc-tag {
@@ -375,7 +359,7 @@
     display: flex; align-items: center; justify-content: center; font-size: 22px;
   }
   .place-titlewrap { flex: 1; min-width: 0; }
-  .place-name { font-size: 17px; font-weight: 800; letter-spacing: -0.01em; }
+  .place-name { font-size: 16px; font-weight: 800; letter-spacing: -0.01em; }
   .place-meta { font-size: 12.5px; color: var(--muted); margin-top: 3px; }
   .fav-btn {
     flex: 0 0 auto; width: 36px; height: 36px; border-radius: 50%;
@@ -464,15 +448,6 @@
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.6" y2="16.6"/></svg>
                 <input id="search" type="text" placeholder="제휴사 · 카테고리 검색" autocomplete="off">
               </div>
-              <div class="iconbtn" aria-hidden="true">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="7" x2="20" y2="7"/><circle cx="9" cy="7" r="2.2" fill="var(--sheet-bg)"/><line x1="4" y1="17" x2="20" y2="17"/><circle cx="16" cy="17" r="2.2" fill="var(--sheet-bg)"/></svg>
-              </div>
-            </div>
-            <div class="chips" id="chips">
-              <button class="chip active" data-carrier="ALL"><span class="dot"></span>전체</button>
-              <button class="chip" data-carrier="SKT"><span class="dot"></span>SKT</button>
-              <button class="chip" data-carrier="KT"><span class="dot"></span>KT</button>
-              <button class="chip" data-carrier="LGU"><span class="dot"></span>LG U+</button>
             </div>
             <div class="chips" id="mapCatChips"></div>
           </div>
@@ -610,7 +585,7 @@
     [/편의점|생활\s*\/?\s*편의|GS25|CU\b|세븐일레븐|이마트24|미니스톱/i, '🏪', '편의점'],
     [/치킨|피자|버거|햄버거|패스트푸드|분식|bhc|BBQ|맥도날드|롯데리아|맘스터치/i, '🍔', '패스트푸드'],
     [/외식|음식|맛집|레스토랑|푸드|한식|중식|일식|양식|뷔페/, '🍽️', '외식'],
-    [/마트|쇼핑|백화점|아울렛|이커머스|온라인몰|이마트\b|올리브영/, '🛍️', '쇼핑'],
+    [/마트|쇼핑|백화점|아울렛|이커머스|온라인몰|이마트\b|올리브영|노브랜드\b/, '🛍️', '쇼핑'],
     [/뷰티|헬스|건강|피트니스|헤어|스킨|화장품/, '💄', '뷰티/건강'],
     [/병원|약국|의료/, '💊', '의료'],
     [/교육|학원|어학|스터디|전화영어|교보문고|서점|도서|책/, '📚', '교육/서점'],
@@ -657,12 +632,21 @@
     }
   }
 
+  // 브랜드명이 다른 체인 이름의 일부라서 오매칭되는 경우 (우리 데이터엔 없는
+  // 별개 브랜드인데 이름만 겹치는 경우) — 이 문자열이 place_name에 같이 있으면
+  // 해당 브랜드로 매칭하지 않는다.
+  const BRAND_MATCH_EXCLUSIONS = {
+    '이마트': ['에브리데이'],
+  };
   function findBrandByName(placeName) {
     // 카카오맵 검색결과 place_name(예: "스타벅스 강남역점") 안에 브랜드명이 포함되는지로 매칭.
     // 가장 긴 브랜드명이 우선(예: "GS THE FRESH"가 "GS25"보다 먼저 매칭되도록).
     let best = null;
     for (const b of BENEFIT_DATA) {
-      if (b.name && placeName.includes(b.name) && (!best || b.name.length > best.name.length)) best = b;
+      if (!b.name || !placeName.includes(b.name)) continue;
+      const excluded = (BRAND_MATCH_EXCLUSIONS[b.name] || []).some((x) => placeName.includes(x));
+      if (excluded) continue;
+      if (!best || b.name.length > best.name.length) best = b;
     }
     return best;
   }
@@ -672,7 +656,6 @@
   }
 
   // ---- state ----
-  let activeCarriers = new Set(); // 비어있으면 "전체"(필터 없음)
   let mapCategory = '전체';
   let selectedId = null;
   let query = '';
@@ -698,14 +681,12 @@
       const raw = localStorage.getItem(LS_CARRIERS);
       const arr = raw ? JSON.parse(raw) : [];
       if (Array.isArray(arr)) arr.filter(k => CARRIER_KEYS.includes(k)).forEach(k => myCarriers.add(k));
-      activeCarriers = new Set(myCarriers);
       return true;
     } catch (e) { return false; }
   }
 
   // ---- element refs ----
   const mapEl = document.getElementById('map');
-  const chipsEl = document.getElementById('chips');
   const mapCatChipsEl = document.getElementById('mapCatChips');
   const sheetEl = document.getElementById('sheet');
   const backdropEl = document.getElementById('backdrop');
@@ -728,7 +709,7 @@
 
   // ---- helpers ----
   function visibleCarrierKeys() {
-    return activeCarriers.size === 0 ? CARRIER_KEYS : CARRIER_KEYS.filter(k => activeCarriers.has(k));
+    return myCarriers.size === 0 ? CARRIER_KEYS : CARRIER_KEYS.filter(k => myCarriers.has(k));
   }
   function matchesFilter(place) {
     const carrierOk = visibleCarrierKeys().some(k => place.benefits[k]);
@@ -890,24 +871,6 @@
     if (mapMode === 'list') renderListPanel();
   }
 
-  function renderCarrierChips() {
-    chipsEl.querySelectorAll('.chip').forEach((c) => {
-      const carrier = c.dataset.carrier;
-      const isActive = carrier === 'ALL' ? activeCarriers.size === 0 : activeCarriers.has(carrier);
-      c.classList.toggle('active', isActive);
-    });
-  }
-  chipsEl.addEventListener('click', (e) => {
-    const chip = e.target.closest('.chip');
-    if (!chip) return;
-    const carrier = chip.dataset.carrier;
-    if (carrier === 'ALL') activeCarriers.clear();
-    else if (activeCarriers.has(carrier)) activeCarriers.delete(carrier);
-    else activeCarriers.add(carrier);
-    renderCarrierChips();
-    applyFilter();
-    if (currentView === 'benefits') renderBenefitTab();
-  });
   searchEl.addEventListener('input', (e) => { query = e.target.value; applyFilter(); });
 
   function renderMapCatChips() {
@@ -938,7 +901,7 @@
     const dots = visibleCarrierKeys().filter(k => p.benefits[k]).map(k => `<span style="background:${CARRIER_META[k].color}"></span>`).join('');
     return `<div class="listrow" data-id="${p.id}">
       <div class="lr-icon">${p.glyph}</div>
-      <div class="lr-text"><div class="lr-name">${p.name}</div><div class="lr-meta">${p.cat}${p.dist ? ' · ' + p.dist : ''}</div></div>
+      <div class="lr-text"><div class="lr-name">${p.name}</div><div class="lr-meta">${p.mapCat}${p.dist ? ' · ' + p.dist : ''}</div></div>
       <div class="lr-dots">${dots}</div>
       <svg class="lr-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
     </div>`;
@@ -953,13 +916,43 @@
   });
 
   // ---- 바텀시트 ----
-  function joinSummaries(lines) {
-    const seen = new Set();
-    return lines.map((l) => l.summary).filter((s) => {
-      if (seen.has(s)) return false;
-      seen.add(s);
-      return true;
-    }).join('<br>');
+  function mergeDiscountAccrual(summaries) {
+    // "3% 할인" / "3% 적립" 처럼 할인<->적립만 다르고 나머진 같은 문장은 "3% 할인/적립"로 합친다.
+    const used = new Set();
+    const result = [];
+    for (let i = 0; i < summaries.length; i++) {
+      if (used.has(i)) continue;
+      let s = summaries[i];
+      for (let j = i + 1; j < summaries.length; j++) {
+        if (used.has(j)) continue;
+        if (summaries[i].replace(/할인/g, '적립') === summaries[j] || summaries[j].replace(/할인/g, '적립') === summaries[i]) {
+          s = (summaries[i].includes('할인') ? summaries[i] : summaries[j]).replace(/할인/g, '할인/적립');
+          used.add(j);
+          break;
+        }
+      }
+      used.add(i);
+      result.push(s);
+    }
+    return result;
+  }
+  function formatBenefitLines(lines) {
+    // 등급별로 묶고, 등급이 다르면 무조건 줄바꿈 + 등급 라벨 표시.
+    const tierOrder = [];
+    const byTier = new Map();
+    lines.forEach((l) => {
+      if (!byTier.has(l.tier)) { byTier.set(l.tier, []); tierOrder.push(l.tier); }
+      byTier.get(l.tier).push(l.summary);
+    });
+    const out = [];
+    tierOrder.forEach((tier) => {
+      const merged = mergeDiscountAccrual([...new Set(byTier.get(tier))]);
+      merged.forEach((s, i) => {
+        const prefix = (i === 0 && tier && tier !== '전체') ? `<i class="ln-tier">${tier}</i>` : '';
+        out.push(prefix + s);
+      });
+    });
+    return out.join('<br>');
   }
   function benefitSectionsHtml(place) {
     const visible = visibleCarrierKeys();
@@ -975,12 +968,11 @@
       html += `<div class="section-label">${cat}</div>`;
       rows.forEach(({ k, lines }) => {
         const meta = CARRIER_META[k];
-        const summary = joinSummaries(lines);
-        const tier = lines[0].tier;
+        const summary = formatBenefitLines(lines);
         html += `
           <div class="benefit-row">
             <div class="benefit-info">
-              <div class="benefit-title">${meta.full}<span class="benefit-tier">${tier}</span></div>
+              <div class="benefit-title">${meta.full}</div>
               <div class="benefit-desc">${summary}</div>
             </div>
             <button class="go-btn" style="background:${meta.color}" data-carrier="${k}" data-place="${place.name}">
@@ -1001,7 +993,7 @@
     if (!place) return;
     if (RAW_MATCHES.some(p => p.id === id)) applyFilter();
     const isFav = favorites.has(id);
-    const metaLine = place.dist ? `${place.cat} · 현재 위치에서 ${place.dist}` : place.cat;
+    const metaLine = place.dist ? `${place.mapCat} · 현재 위치에서 ${place.dist}` : place.mapCat;
     sheetContentEl.innerHTML = `
       <div class="place-head">
         <div class="place-icon">${place.glyph}</div>
@@ -1056,7 +1048,7 @@
         .map((k) => {
           const m = CARRIER_META[k];
           const mine = myCarriers.has(k);
-          const summary = joinSummaries(byCategory[cat][k]);
+          const summary = formatBenefitLines(byCategory[cat][k]);
           return `<span class="bc-tag c-${k} ${mine ? 'mine' : ''}"><b>${m.label}</b> · ${summary}</span>`;
         }).join('');
       if (tags) sections += `<div class="bc-cat-label">${cat}</div><div class="bc-carriers">${tags}</div>`;
@@ -1065,7 +1057,7 @@
       <div class="bc-icon">${p.glyph}</div>
       <div class="bc-body">
         <div class="bc-name">${p.name}</div>
-        <div class="bc-meta">${p.dist ? `${p.cat} · ${p.dist}` : p.cat}</div>
+        <div class="bc-meta">${p.dist ? `${p.mapCat} · ${p.dist}` : p.mapCat}</div>
         ${sections}
       </div>
     </div>`;
@@ -1098,7 +1090,7 @@
   function favRowHtml(p) {
     return `<div class="fav-row" data-id="${p.id}">
       <div class="lr-icon">${p.glyph}</div>
-      <div class="lr-text"><div class="lr-name">${p.name}</div><div class="lr-meta">${p.cat}${p.dist ? ' · ' + p.dist : ''}</div></div>
+      <div class="lr-text"><div class="lr-name">${p.name}</div><div class="lr-meta">${p.mapCat}${p.dist ? ' · ' + p.dist : ''}</div></div>
       <button class="fav-remove" data-remove="${p.id}" aria-label="즐겨찾기 삭제">×</button>
     </div>`;
   }
@@ -1120,9 +1112,7 @@
   // ---- 통신사 선택 (온보딩 + MY 공용) ----
   function toggleCarrier(key) {
     if (myCarriers.has(key)) myCarriers.delete(key); else myCarriers.add(key);
-    activeCarriers = new Set(myCarriers); // 내 통신사 = 기본 활성 필터
     obCardsEl.innerHTML = CARRIER_KEYS.map(k => carrierCardHtml(k, myCarriers.has(k))).join('');
-    renderCarrierChips();
     renderMyTab();
     renderBenefitTab();
     applyFilter();
@@ -1170,7 +1160,6 @@
   const alreadyOnboarded = loadSavedOnboarding();
   if (alreadyOnboarded) onboardingEl.classList.add('hidden');
   obCardsEl.innerHTML = CARRIER_KEYS.map(k => carrierCardHtml(k, myCarriers.has(k))).join('');
-  renderCarrierChips();
   renderMyTab();
   loadLiveBenefitData().then(() => {
     renderBenefitTab();

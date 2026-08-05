@@ -1,7 +1,7 @@
 [
   {
     "brand": "11번가",
-    "category_group": "VIP Pick",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -201,7 +201,7 @@
   },
   {
     "brand": "CGV",
-    "category_group": "T day",
+    "category_group": "문화/여가",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -283,7 +283,7 @@
   },
   {
     "brand": "CJ더마켓",
-    "category_group": "VVIP 초이스",
+    "category_group": "",
     "benefits": {
       "KT": {
         "category": "상시혜택",
@@ -434,7 +434,7 @@
   },
   {
     "brand": "G car",
-    "category_group": "VIP Pick",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -647,7 +647,7 @@
   },
   {
     "brand": "JAJU",
-    "category_group": "VIP Pick",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "VIP특화혜택",
@@ -762,7 +762,7 @@
   },
   {
     "brand": "LG생활건강",
-    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "category_group": "",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -867,7 +867,7 @@
   },
   {
     "brand": "MOVV",
-    "category_group": "VIP Pick",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "VIP특화혜택",
@@ -898,7 +898,7 @@
   },
   {
     "brand": "NOL티켓",
-    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "category_group": "",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -1106,7 +1106,7 @@
   },
   {
     "brand": "SK브로드밴드 B tv",
-    "category_group": "VIP Pick",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -1321,7 +1321,7 @@
   },
   {
     "brand": "T 우주",
-    "category_group": "VIP Pick",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "VIP특화혜택",
@@ -1376,7 +1376,7 @@
   },
   {
     "brand": "TMAP 렌터카",
-    "category_group": "VIP Pick",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "VIP특화혜택",
@@ -1613,7 +1613,7 @@
   },
   {
     "brand": "WHIPPED",
-    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "category_group": "",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -1798,7 +1798,7 @@
   },
   {
     "brand": "고반식당",
-    "category_group": "VIP Pick",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "VIP특화혜택",
@@ -1838,7 +1838,7 @@
   },
   {
     "brand": "공차",
-    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -2149,7 +2149,7 @@
   },
   {
     "brand": "김캐디",
-    "category_group": "VVIP 초이스",
+    "category_group": "",
     "benefits": {
       "KT": {
         "category": "상시혜택",
@@ -2184,7 +2184,7 @@
   },
   {
     "brand": "꾸까",
-    "category_group": "VIP Pick",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "VIP특화혜택",
@@ -2310,7 +2310,7 @@
   },
   {
     "brand": "노보텔 앰배서더 동대문",
-    "category_group": "VVIP 초이스",
+    "category_group": "",
     "benefits": {
       "KT": {
         "category": "상시혜택",
@@ -2350,7 +2350,7 @@
   },
   {
     "brand": "노브랜드",
-    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "category_group": "",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -2370,7 +2370,7 @@
   },
   {
     "brand": "노브랜드 버거",
-    "category_group": "T day",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "월간혜택",
@@ -2506,7 +2506,7 @@
   },
   {
     "brand": "다이소",
-    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "category_group": "",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -2551,7 +2551,7 @@
   },
   {
     "brand": "달콤",
-    "category_group": "VVIP 초이스",
+    "category_group": "",
     "benefits": {
       "KT": {
         "category": "상시혜택",
@@ -2652,7 +2652,7 @@
   },
   {
     "brand": "더 라운지",
-    "category_group": "VIP Pick",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "VIP특화혜택",
@@ -2708,7 +2708,7 @@
   },
   {
     "brand": "더벤티",
-    "category_group": "T day",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -2768,7 +2768,7 @@
   },
   {
     "brand": "던킨",
-    "category_group": "VVIP 초이스",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -3171,7 +3171,7 @@
   },
   {
     "brand": "땅스부대찌개",
-    "category_group": "T day",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "월간혜택",
@@ -3355,7 +3355,7 @@
   },
   {
     "brand": "럭키찬스",
-    "category_group": "T day",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "월간혜택",
@@ -3523,7 +3523,7 @@
   },
   {
     "brand": "롯데렌터카 G car",
-    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "category_group": "",
     "benefits": {
       "LGU": {
         "category": "VIP특화혜택",
@@ -3594,7 +3594,7 @@
   },
   {
     "brand": "롯데마트 제타",
-    "category_group": "T day",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "월간혜택",
@@ -3619,7 +3619,7 @@
   },
   {
     "brand": "롯데면세점",
-    "category_group": "VIP Pick",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -3755,7 +3755,7 @@
   },
   {
     "brand": "롯데시네마",
-    "category_group": "VVIP 초이스",
+    "category_group": "",
     "benefits": {
       "KT": {
         "category": "상시혜택",
@@ -4004,7 +4004,7 @@
   },
   {
     "brand": "롱블랙",
-    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "category_group": "",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -4316,7 +4316,7 @@
   },
   {
     "brand": "메가MGC커피",
-    "category_group": "VVIP 초이스",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -4554,7 +4554,7 @@
   },
   {
     "brand": "뮤지컬 유미의 세포들",
-    "category_group": "달달혜택",
+    "category_group": "",
     "benefits": {
       "KT": {
         "category": "월간혜택",
@@ -4574,7 +4574,7 @@
   },
   {
     "brand": "뮤지컬 헬스키친",
-    "category_group": "달달혜택",
+    "category_group": "",
     "benefits": {
       "KT": {
         "category": "월간혜택",
@@ -4808,7 +4808,7 @@
   },
   {
     "brand": "밀리의 서재",
-    "category_group": "VVIP 초이스",
+    "category_group": "",
     "benefits": {
       "KT": {
         "category": "VIP특화혜택",
@@ -4833,7 +4833,7 @@
   },
   {
     "brand": "밀리의서재",
-    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "category_group": "",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -5053,7 +5053,7 @@
   },
   {
     "brand": "배민X명랑핫도그",
-    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "category_group": "",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -5180,7 +5180,7 @@
   },
   {
     "brand": "백미당",
-    "category_group": "T day",
+    "category_group": "푸드",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -5226,7 +5226,7 @@
   },
   {
     "brand": "백억커피",
-    "category_group": "T day",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "월간혜택",
@@ -5257,7 +5257,7 @@
   },
   {
     "brand": "뱅크시 특별전",
-    "category_group": "VIP Pick",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "VIP특화혜택",
@@ -5471,7 +5471,7 @@
   },
   {
     "brand": "블루보틀",
-    "category_group": "VVIP 초이스",
+    "category_group": "",
     "benefits": {
       "KT": {
         "category": "상시혜택",
@@ -5748,7 +5748,7 @@
   },
   {
     "brand": "사조몰",
-    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "category_group": "",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -5992,7 +5992,7 @@
   },
   {
     "brand": "설성목장",
-    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "category_group": "",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -6178,7 +6178,7 @@
   },
   {
     "brand": "쇼핑라운지",
-    "category_group": "달달혜택",
+    "category_group": "",
     "benefits": {
       "KT": {
         "category": "상시혜택",
@@ -6278,7 +6278,7 @@
   },
   {
     "brand": "슈피겐",
-    "category_group": "T day",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "월간혜택",
@@ -6303,7 +6303,7 @@
   },
   {
     "brand": "스노우",
-    "category_group": "VVIP 초이스",
+    "category_group": "",
     "benefits": {
       "KT": {
         "category": "상시혜택",
@@ -6338,7 +6338,7 @@
   },
   {
     "brand": "스마트홈",
-    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "category_group": "",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -6480,7 +6480,7 @@
   },
   {
     "brand": "스타벅스",
-    "category_group": "VVIP 초이스",
+    "category_group": "",
     "benefits": {
       "LGU": {
         "category": "VIP특화혜택",
@@ -6567,7 +6567,7 @@
   },
   {
     "brand": "스파오",
-    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "category_group": "",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -6587,7 +6587,7 @@
   },
   {
     "brand": "스피드메이트",
-    "category_group": "VIP Pick",
+    "category_group": "생활/편의",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -6684,7 +6684,7 @@
   },
   {
     "brand": "슬립노모어 서울(Sleep No More Seoul)",
-    "category_group": "달달혜택",
+    "category_group": "",
     "benefits": {
       "KT": {
         "category": "월간혜택",
@@ -6967,7 +6967,7 @@
   },
   {
     "brand": "씨네Q",
-    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -7134,7 +7134,7 @@
   },
   {
     "brand": "아떼",
-    "category_group": "T day",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -7229,7 +7229,7 @@
   },
   {
     "brand": "아웃백",
-    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "category_group": "",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -7340,7 +7340,7 @@
   },
   {
     "brand": "아이디어스",
-    "category_group": "T day",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "월간혜택",
@@ -7828,7 +7828,7 @@
   },
   {
     "brand": "에이스바이옴",
-    "category_group": "VIP Pick",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "VIP특화혜택",
@@ -8209,7 +8209,7 @@
   },
   {
     "brand": "오션월드",
-    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "category_group": "",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -8466,7 +8466,7 @@
   },
   {
     "brand": "요기요×네네치킨",
-    "category_group": "T day",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "월간혜택",
@@ -8699,7 +8699,7 @@
   },
   {
     "brand": "원스토어",
-    "category_group": "T day",
+    "category_group": "APP/기기",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -8856,7 +8856,7 @@
   },
   {
     "brand": "윌라",
-    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "category_group": "",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -8876,7 +8876,7 @@
   },
   {
     "brand": "윌라스토리",
-    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "category_group": "",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -8896,7 +8896,7 @@
   },
   {
     "brand": "유가네닭갈비",
-    "category_group": "T day",
+    "category_group": "푸드",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -9017,7 +9017,7 @@
   },
   {
     "brand": "이니스프리",
-    "category_group": "VVIP 초이스",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -9308,7 +9308,7 @@
   },
   {
     "brand": "전시 아기상어 비밀 초대장:비커밍 샤크",
-    "category_group": "달달혜택",
+    "category_group": "",
     "benefits": {
       "KT": {
         "category": "월간혜택",
@@ -9690,7 +9690,7 @@
   },
   {
     "brand": "차방정",
-    "category_group": "VVIP 초이스",
+    "category_group": "",
     "benefits": {
       "KT": {
         "category": "상시혜택",
@@ -9745,7 +9745,7 @@
   },
   {
     "brand": "착한소비×지리산처럼",
-    "category_group": "T day",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "월간혜택",
@@ -9998,7 +9998,7 @@
   },
   {
     "brand": "카카오웹툰",
-    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "category_group": "",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -10018,7 +10018,7 @@
   },
   {
     "brand": "카카오페이지",
-    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "category_group": "",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -10083,7 +10083,7 @@
   },
   {
     "brand": "캐리비안 베이",
-    "category_group": "T day",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -10174,7 +10174,7 @@
   },
   {
     "brand": "컬리",
-    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "category_group": "",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -10214,7 +10214,7 @@
   },
   {
     "brand": "컬쳐랜드",
-    "category_group": "VIP Pick",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -10289,7 +10289,7 @@
   },
   {
     "brand": "코토나",
-    "category_group": "T day",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "월간혜택",
@@ -10309,7 +10309,7 @@
   },
   {
     "brand": "쿠캣",
-    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "category_group": "",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -10767,7 +10767,7 @@
   },
   {
     "brand": "투썸플레이스",
-    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "category_group": "",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -10852,7 +10852,7 @@
   },
   {
     "brand": "트래블버킷X네이버",
-    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "category_group": "",
     "benefits": {
       "LGU": {
         "category": "월간혜택",
@@ -11218,7 +11218,7 @@
   },
   {
     "brand": "파리바게뜨",
-    "category_group": "VIP Pick",
+    "category_group": "푸드",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -11387,7 +11387,7 @@
   },
   {
     "brand": "파스쿠찌",
-    "category_group": "T day",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -11538,7 +11538,7 @@
   },
   {
     "brand": "퍼블로그",
-    "category_group": "VIP Pick",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -11643,7 +11643,7 @@
   },
   {
     "brand": "포케올데이",
-    "category_group": "T day",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "월간혜택",
@@ -11789,7 +11789,7 @@
   },
   {
     "brand": "풀무원",
-    "category_group": "VIP Pick",
+    "category_group": "쇼핑",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -11896,7 +11896,7 @@
   },
   {
     "brand": "플레이타임(키즈카페)",
-    "category_group": "VVIP 초이스",
+    "category_group": "",
     "benefits": {
       "KT": {
         "category": "상시혜택",
@@ -11987,7 +11987,7 @@
   },
   {
     "brand": "피자헛",
-    "category_group": "VIP Pick",
+    "category_group": "푸드",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -12252,7 +12252,7 @@
   },
   {
     "brand": "할리스",
-    "category_group": "VVIP 초이스",
+    "category_group": "",
     "benefits": {
       "LGU": {
         "category": "VIP특화혜택",

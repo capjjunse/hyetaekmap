@@ -23,14 +23,20 @@ run.py 가 만든 benefits.json(통신사별 원본 레코드)을
 ]
 """
 import json
+import re
 import sys
 from collections import defaultdict
 
 CARRIER_KEY = {"SKT": "SKT", "KT": "KT", "LGU": "LGU"}
 
-# 실제 업종이 아니라 통신사 사이트 내부 등급/캠페인 이름이라 category_group으로
-# 쓰면 안 되는 값들. 예: LG U+ 'VIP콕'은 업종이 아니라 VIP 전용 혜택 묶음 이름.
-NON_CATEGORY_LABELS = {"VIP콕"}
+# 실제 업종이 아니라 통신사 사이트 내부 프로그램/캠페인 이름이라 category_group으로
+# 쓰면 안 되는 값들. 예: LG U+ 'VIP콕'은 업종이 아니라 VIP 전용 혜택 묶음 이름이고,
+# '2026 8월 유플투쁠 혜택'처럼 매달 바뀌는 캠페인명도 마찬가지 (그래서 패턴으로 잡음).
+NON_CATEGORY_PATTERN = re.compile(r"^(VIP콕|T day|VIP Pick|VVIP 초이스|VIP 초이스|달달혜택)$|투쁠")
+
+
+def _is_real_category(text):
+    return bool(text) and not NON_CATEGORY_PATTERN.search(text)
 
 
 def transform(records):
@@ -42,8 +48,8 @@ def transform(records):
         entry = grouped[key]
         entry["brand"] = brand
         candidate_cat = (r.get("category_group") or "").strip()
-        if candidate_cat and candidate_cat not in NON_CATEGORY_LABELS:
-            if not entry["category_group"] or entry["category_group"] in NON_CATEGORY_LABELS:
+        if _is_real_category(candidate_cat):
+            if not _is_real_category(entry["category_group"]):
                 entry["category_group"] = candidate_cat
 
         carrier = CARRIER_KEY.get(r["carrier"])
