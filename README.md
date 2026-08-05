@@ -22,17 +22,19 @@ python run.py skt lguplus  # 일부만
 
 실행하면 `crawler/benefits.json`(원본)과 `docs/data/places.json`(프론트용, 브랜드 단위로 통신사 3사 데이터를 합친 것)이 갱신됩니다.
 
-**반드시 각 통신사 공식 도메인에서만 크롤링하도록** `crawler/common.py`의 `ALLOWED_HOSTS`에 없는 도메인은 요청 자체가 거부됩니다.
+**반드시 아래 공식 페이지에서만 크롤링합니다** (도메인은 `crawler/common.py`의 `ALLOWED_HOSTS`로 코드 레벨에서 강제, 그 외 도메인은 요청 자체가 거부됨). 카테고리(상시/월간/VIP특화)는 사이트가 실제로 분리해서 제공하는 페이지 기준으로 나눈 것이지, 등급 배지를 보고 추측한 게 아닙니다.
 
-- SKT: `sktmembership.tworld.co.kr`
-- LG U+: `www.lguplus.com`
-- KT: `membership.kt.com`
+| | 상시혜택 | 월간혜택 | VIP특화혜택 |
+|---|---|---|---|
+| **SKT** | [benefitbrand/list-tab1.do](https://sktmembership.tworld.co.kr/mps/pc-bff/benefitbrand/list-tab1.do) | [program/tday.do](https://sktmembership.tworld.co.kr/mps/pc-bff/program/tday.do) (T day) | [program/vippick.do](https://sktmembership.tworld.co.kr/mps/pc-bff/program/vippick.do) (VIP Pick) |
+| **KT** | [discount/partner/PartnerList.do](https://membership.kt.com/discount/partner/PartnerList.do) | 보류 (아래 한계 참고) | [vip/choice/VvipChoiceInfo.do](https://membership.kt.com/vip/choice/VvipChoiceInfo.do) + [ChoiceInfo.do](https://membership.kt.com/vip/choice/ChoiceInfo.do) (VVIP/VIP 초이스) |
+| **LG U+** | [benefit-membership](https://www.lguplus.com/benefit-membership)?...BnftDivsCd=02 | [benefit-plus](https://www.lguplus.com/benefit-plus) (유플투쁠) | 같은 페이지 ?...BnftDivsCd=01 (VIP콕) |
 
 ### 알려진 한계
 
-- **KT**: 반복 요청 시 서버가 요청 IP를 통째로 차단하는 것으로 보입니다 (WAF 추정 — Playwright로 실제 브라우저를 띄워도 TCP 연결 자체가 안 됨). 로컬 네트워크에서 낮은 빈도로 실행해보시고, 계속 막히면 KT에 데이터 이용 문의를 권장합니다. `crawler/kt.py`의 파싱 셀렉터는 실제 페이지를 끝까지 확인하지 못해 추정치입니다.
-- **SKT 월간 혜택**: 아직 소스를 찾지 못했습니다 (상시혜택/VIP특화혜택만 확인).
-- **지도 핀 좌표 없음**: 통신사 공식 페이지는 브랜드 단위 혜택만 제공하고 지점별 좌표(위도/경도)는 주지 않습니다. 그래서 `docs/data/places.json`은 혜택 탭(리스트)에서만 쓰이고, 지도 탭의 핀은 여전히 데모용 목데이터입니다. 실제 지도에 연결하려면 카카오맵 Local API로 브랜드별 지점 좌표를 추가로 조회해서 브랜드명 기준으로 매칭해야 합니다.
+- **KT 전체**: 반복 요청 시 서버가 요청 IP를 통째로 차단하는 일이 있습니다 (WAF 추정 — GitHub Actions IP에서도 재현됨, 하루는 되고 하루는 막히는 식). `run.py`가 이번 크롤링이 0건이면 직전 데이터를 그대로 유지하도록 안전장치를 넣어뒀지만, 근본적으로는 KT 쪽에 데이터 이용 문의를 하는 게 안전할 수 있습니다.
+- **KT 월간혜택('달달혜택')**: 실제 콘텐츠가 매달 URL이 바뀌는 이벤트 마이크로사이트 안에 있고, 일부는 이미지 배너로만·일부는 숫자가 JS 애니메이션으로 채워지는 방식이라 안정적인 텍스트 크롤링이 어려워 보류했습니다. 자세한 내용은 `crawler/kt.py` 상단 주석 참고.
+- **지도 핀 매칭**: 통신사 공식 페이지는 브랜드 단위 혜택만 제공하고 지점별 좌표는 주지 않습니다. 그래서 지도 탭은 카카오맵 카테고리 검색(음식점/카페/편의점/문화시설/대형마트)으로 현재 화면 범위의 실제 매장을 가져온 뒤, 이름이 `docs/data/places.json`의 브랜드와 일치하는 곳만 핀으로 표시합니다 — 온라인 전용 브랜드(11번가, 앱 구독 등)는 지도에는 안 뜨고 혜택 탭에서만 보입니다.
 
 ## GitHub Pages로 배포하기
 

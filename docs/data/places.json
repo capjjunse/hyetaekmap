@@ -1,7 +1,7 @@
 [
   {
     "brand": "11번가",
-    "category_group": "",
+    "category_group": "VIP Pick",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -27,6 +27,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER/LITE",
             "summary": "포인트 사용가능 (100%, 1P 단위)"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "5,000원 할인 쿠폰 단일 상품 20,000원 이상 구매 시 사용 가능"
           }
         ]
       },
@@ -125,11 +130,11 @@
     "benefits": {
       "SKT": {
         "category": "상시혜택",
-        "tier": "GOLD/SILVER",
-        "summary": "VOD/월정액 5종(연 6회까지) 10% 할인",
+        "tier": "VIP",
+        "summary": "VOD/월정액 5종(연 6회까지) 20% 할인",
         "all": [
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "VOD/월정액 5종(연 6회까지) 20% 할인"
           },
@@ -144,7 +149,7 @@
             "summary": "VOD 상품만 T 플러스포인트 사용 가능(100%, 1P 단위)"
           },
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "VOD/월정액 5종(연 6회까지) 20% 적립"
           },
@@ -200,11 +205,11 @@
     "benefits": {
       "SKT": {
         "category": "상시혜택",
-        "tier": "GOLD/SILVER",
-        "summary": "영화 관람권(11,000원 이상) 예매 시 최대 4,000원 할인",
+        "tier": "VIP",
+        "summary": "무료 관람 연 3회, 평일/주말 관람 1+1 연 9회, 특별관 할인 혜택 연 12회, 영화 관람권(11,000원 이상) 예매 시 최대 4,000원 할인",
         "all": [
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "무료 관람 연 3회, 평일/주말 관람 1+1 연 9회, 특별관 할인 혜택 연 12회, 영화 관람권(11,000원 이상) 예매 시 최대 4,000원 할인"
           },
@@ -214,7 +219,7 @@
             "summary": "영화 관람권(11,000원 이상) 예매 시 최대 4,000원 할인"
           },
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "무료 관람 연 3회, 평일/주말 관람 1+1 연 9회, 특별관 할인 혜택 연 12회, 영화 관람권(11,000원 이상) 예매 시 최대 4,000원 할인"
           },
@@ -227,6 +232,16 @@
             "category": "월간혜택",
             "tier": "전체",
             "summary": "영화 티켓 8,500원 예매+매점 할인 쿠폰 2종"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "영화 관람권 1장 무료 연 3회, 평일/주말 관람권 1+1 연 9회"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "(VIP PICK 횟수 미차감) IMAX, 4DX, SCREENX (2D 한정) 할인가 예매 IMAX 최대 3,000원 할인, 4DX 최대 4,000원 할인, SCREENX 최대 5,000원 할인(주말/평일 구분없이 연 12회(월 1~12회)이용 가능)"
           }
         ]
       },
@@ -268,7 +283,7 @@
   },
   {
     "brand": "CJ더마켓",
-    "category_group": "",
+    "category_group": "VVIP 초이스",
     "benefits": {
       "KT": {
         "category": "상시혜택",
@@ -289,6 +304,16 @@
             "category": "상시혜택",
             "tier": "VIP",
             "summary": "[V/VIP 초이스] 45% 할인 쿠폰 적립금 5천원"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "45% 할인＋적립금 5,000점"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "45% 할인＋적립금 5,000점"
           }
         ]
       },
@@ -409,7 +434,7 @@
   },
   {
     "brand": "G car",
-    "category_group": "",
+    "category_group": "VIP Pick",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -435,6 +460,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
             "summary": "포인트 사용 가능(100%, 1P 단위)"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "대여료 60%+보험료 5% 할인(2시간 이상 차량 대여 시)"
           }
         ]
       },
@@ -613,6 +643,26 @@
       },
       "SKT": null,
       "KT": null
+    }
+  },
+  {
+    "brand": "JAJU",
+    "category_group": "VIP Pick",
+    "benefits": {
+      "SKT": {
+        "category": "VIP특화혜택",
+        "tier": "VIP",
+        "summary": "(VIP PICK 횟수 미차감) 10,000원 할인 50,000원 이상 구매 시 사용 가능",
+        "all": [
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "(VIP PICK 횟수 미차감) 10,000원 할인 50,000원 이상 구매 시 사용 가능"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
     }
   },
   {
@@ -817,8 +867,20 @@
   },
   {
     "brand": "MOVV",
-    "category_group": "",
+    "category_group": "VIP Pick",
     "benefits": {
+      "SKT": {
+        "category": "VIP특화혜택",
+        "tier": "VIP",
+        "summary": "(VIP PICK 횟수 미차감) 인천공항 프라이빗 밴 특가+왕복편 10% 할인",
+        "all": [
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "(VIP PICK 횟수 미차감) 인천공항 프라이빗 밴 특가+왕복편 10% 할인"
+          }
+        ]
+      },
       "KT": {
         "category": "상시혜택",
         "tier": "전등급",
@@ -831,7 +893,6 @@
           }
         ]
       },
-      "SKT": null,
       "LGU": null
     }
   },
@@ -1045,15 +1106,15 @@
   },
   {
     "brand": "SK브로드밴드 B tv",
-    "category_group": "",
+    "category_group": "VIP Pick",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
-        "tier": "GOLD/SILVER",
-        "summary": "VOD/월정액 4종(연 6회까지) 10% 할인",
+        "tier": "VIP",
+        "summary": "VOD/월정액 4종(연 6회까지) 20% 할인",
         "all": [
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "VOD/월정액 4종(연 6회까지) 20% 할인"
           },
@@ -1068,7 +1129,7 @@
             "summary": "VOD 상품에 한해 T 플러스포인트 사용 가능(100%, 1P 단위)"
           },
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "VOD/월정액 4종(연 6회까지) 20% 적립"
           },
@@ -1086,6 +1147,11 @@
             "category": "상시혜택",
             "tier": "LITE",
             "summary": "VOD 상품에 한해 T 플러스포인트 사용 가능(100%, 1P 단위)"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "5,500원 할인"
           }
         ]
       },
@@ -1254,6 +1320,26 @@
     }
   },
   {
+    "brand": "T 우주",
+    "category_group": "VIP Pick",
+    "benefits": {
+      "SKT": {
+        "category": "VIP특화혜택",
+        "tier": "VIP",
+        "summary": "T 우주패스 할인 쿠폰 2장 발급(총 9,900원 할인, 연 12회) 쇼핑 11번가, 편의점&카페 월간 4,900원 할인 쿠폰 1장 + 올리브영&스타벅스&이마트24 월간 5,000원 할인 쿠폰 1장",
+        "all": [
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "T 우주패스 할인 쿠폰 2장 발급(총 9,900원 할인, 연 12회) 쇼핑 11번가, 편의점&카페 월간 4,900원 할인 쿠폰 1장 + 올리브영&스타벅스&이마트24 월간 5,000원 할인 쿠폰 1장"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
+    }
+  },
+  {
     "brand": "T 우주 신한카드",
     "category_group": "",
     "benefits": {
@@ -1281,6 +1367,26 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
             "summary": "T 우주패스 구독 시 9900원 캐시백"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
+    }
+  },
+  {
+    "brand": "TMAP 렌터카",
+    "category_group": "VIP Pick",
+    "benefits": {
+      "SKT": {
+        "category": "VIP특화혜택",
+        "tier": "VIP",
+        "summary": "(VIP PICK 횟수 미차감) TMAP 렌터카 10,000원 할인 쿠폰 50,000원 이상 결제 시 사용 가능",
+        "all": [
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "(VIP PICK 횟수 미차감) TMAP 렌터카 10,000원 할인 쿠폰 50,000원 이상 결제 시 사용 가능"
           }
         ]
       },
@@ -1390,6 +1496,11 @@
             "category": "상시혜택",
             "tier": "일반",
             "summary": "[상시]5% 할인"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "스테이크 무료(2인 샐러드바 이용시)"
           }
         ]
       }
@@ -1678,6 +1789,26 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
             "summary": "본인 35% 할인 (동반 2인까지 적용)"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
+    }
+  },
+  {
+    "brand": "고반식당",
+    "category_group": "VIP Pick",
+    "benefits": {
+      "SKT": {
+        "category": "VIP특화혜택",
+        "tier": "VIP",
+        "summary": "(VIP PICK 횟수 미차감) 10,000원 할인 50,000원 이상 주문 시 사용 가능",
+        "all": [
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "(VIP PICK 횟수 미차감) 10,000원 할인 50,000원 이상 주문 시 사용 가능"
           }
         ]
       },
@@ -2013,13 +2144,23 @@
   },
   {
     "brand": "김캐디",
-    "category_group": "",
+    "category_group": "VVIP 초이스",
     "benefits": {
       "KT": {
-        "category": "VIP특화혜택",
+        "category": "상시혜택",
         "tier": "VVIP",
         "summary": "김캐디 5,000원 할인 (3만원 결제조건)",
         "all": [
+          {
+            "category": "상시혜택",
+            "tier": "VVIP",
+            "summary": "김캐디 5,000원 할인 (3만원 결제조건)"
+          },
+          {
+            "category": "상시혜택",
+            "tier": "VIP",
+            "summary": "김캐디 5,000원 할인 (3만원 결제조건)"
+          },
           {
             "category": "VIP특화혜택",
             "tier": "VVIP",
@@ -2038,8 +2179,20 @@
   },
   {
     "brand": "꾸까",
-    "category_group": "",
+    "category_group": "VIP Pick",
     "benefits": {
+      "SKT": {
+        "category": "VIP특화혜택",
+        "tier": "VIP",
+        "summary": "(VIP PICK 횟수 미차감) VIP PICK 전용 상품(꽃다발/센트) 50% 할인",
+        "all": [
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "(VIP PICK 횟수 미차감) VIP PICK 전용 상품(꽃다발/센트) 50% 할인"
+          }
+        ]
+      },
       "KT": {
         "category": "상시혜택",
         "tier": "VVIP",
@@ -2064,10 +2217,19 @@
             "category": "상시혜택",
             "tier": "일반",
             "summary": "10% 할인 쿠폰"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "생일 무료 꽃다발 or 슈가캔들 더블패키지 무료 (택1)"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "꽃다발(M) 또는 꾸까 센트 슈가캔들 에코 패키지 무료(택1)"
           }
         ]
       },
-      "SKT": null,
       "LGU": null
     }
   },
@@ -2143,7 +2305,7 @@
   },
   {
     "brand": "노보텔 앰배서더 동대문",
-    "category_group": "",
+    "category_group": "VVIP 초이스",
     "benefits": {
       "KT": {
         "category": "상시혜택",
@@ -2164,6 +2326,16 @@
             "category": "상시혜택",
             "tier": "VIP",
             "summary": "조식 2인 무료"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "조식 2인 무료 (KT멤버십 채널을 통한 호텔 숙박 시)"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "조식 2인 무료 (KT멤버십 채널을 통한 호텔 숙박 시)"
           }
         ]
       },
@@ -2374,7 +2546,7 @@
   },
   {
     "brand": "달콤",
-    "category_group": "",
+    "category_group": "VVIP 초이스",
     "benefits": {
       "KT": {
         "category": "상시혜택",
@@ -2400,6 +2572,16 @@
             "category": "상시혜택",
             "tier": "일반",
             "summary": "음료 사이즈 업"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "아메리카노 커피 무료 제공"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "아메리카노 커피 무료 제공"
           }
         ]
       },
@@ -2461,6 +2643,26 @@
         ]
       },
       "KT": null
+    }
+  },
+  {
+    "brand": "더 라운지",
+    "category_group": "VIP Pick",
+    "benefits": {
+      "SKT": {
+        "category": "VIP특화혜택",
+        "tier": "VIP",
+        "summary": "국내 라운지/마티나 골드 라운지 8,000원 할인 국내 라운지/마티나 골드 라운지에서 사용 가능(럭셔리 라운지 사용 불가)",
+        "all": [
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "국내 라운지/마티나 골드 라운지 8,000원 할인 국내 라운지/마티나 골드 라운지에서 사용 가능(럭셔리 라운지 사용 불가)"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
     }
   },
   {
@@ -2561,7 +2763,7 @@
   },
   {
     "brand": "던킨",
-    "category_group": "",
+    "category_group": "VVIP 초이스",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -2601,19 +2803,29 @@
         ]
       },
       "KT": {
-        "category": "VIP특화혜택",
+        "category": "상시혜택",
         "tier": "VVIP",
         "summary": "[V/VIP 초이스] 아메리카노(S)＋글레이즈드 무료",
         "all": [
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VVIP",
             "summary": "[V/VIP 초이스] 아메리카노(S)＋글레이즈드 무료"
           },
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "[V/VIP 초이스] 아메리카노(S)＋글레이즈드 무료"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "아메리카노(S)＋글레이즈드 무료 제공"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "아메리카노(S)＋글레이즈드 무료 제공"
           }
         ]
       },
@@ -2686,11 +2898,11 @@
     "benefits": {
       "SKT": {
         "category": "상시혜택",
-        "tier": "GOLD/SILVER",
-        "summary": "20% 할인",
+        "tier": "VIP",
+        "summary": "30% 할인",
         "all": [
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "30% 할인"
           },
@@ -2705,7 +2917,7 @@
             "summary": "포인트 사용가능 (100%, 10P 단위)"
           },
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "30% 적립"
           },
@@ -2767,6 +2979,11 @@
             "category": "상시혜택",
             "tier": "일반",
             "summary": "[상시] 15% 할인"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "3만원 할인(방문, 4만원 결제조건)"
           }
         ]
       }
@@ -3383,6 +3600,11 @@
             "category": "월간혜택",
             "tier": "전체",
             "summary": "상품 1개 이상 구매 시 50% 할인"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "(VIP PICK 횟수 미차감) 30% 할인(최대 5,000원) 롯데마트 제타 앱에서 상품 1개 이상 구매 시 사용 가능"
           }
         ]
       },
@@ -3392,7 +3614,7 @@
   },
   {
     "brand": "롯데면세점",
-    "category_group": "",
+    "category_group": "VIP Pick",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -3408,6 +3630,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
             "summary": "제휴쿠폰 최대 $56 증정(온라인) 최대 3만원 할인쿠폰 및 LDFPAY 1만 원 증정(오프라인)"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "온라인 스페셜 쿠폰 $12+오프라인 LDF PAY 1만원 추가 증정"
           }
         ]
       },
@@ -3523,7 +3750,7 @@
   },
   {
     "brand": "롯데시네마",
-    "category_group": "",
+    "category_group": "VVIP 초이스",
     "benefits": {
       "KT": {
         "category": "상시혜택",
@@ -3544,6 +3771,21 @@
             "category": "상시혜택",
             "tier": "VIP",
             "summary": "[VIP초이스]영화예매 무료 [VIP 생일혜택]영화 1＋1 관람권"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "생일 영화&팝콘 무료(생일 당월 한정)"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "무료영화 예매(2D 일반)"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "무료영화 예매(2D 일반)"
           }
         ]
       },
@@ -3926,11 +4168,11 @@
     "benefits": {
       "SKT": {
         "category": "상시혜택",
-        "tier": "GOLD/SILVER",
-        "summary": "20% 할인",
+        "tier": "VIP",
+        "summary": "30% 할인",
         "all": [
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "30% 할인"
           },
@@ -3940,7 +4182,7 @@
             "summary": "20% 할인"
           },
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "30% 할인"
           },
@@ -4069,15 +4311,15 @@
   },
   {
     "brand": "메가MGC커피",
-    "category_group": "",
+    "category_group": "VVIP 초이스",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
-        "tier": "GOLD/SILVER",
-        "summary": "10% 할인",
+        "tier": "VIP",
+        "summary": "20% 할인",
         "all": [
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "20% 할인"
           },
@@ -4092,7 +4334,7 @@
             "summary": "포인트 사용 가능(100%, 10P 단위)"
           },
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "20% 적립"
           },
@@ -4127,6 +4369,16 @@
             "category": "상시혜택",
             "tier": "VIP",
             "summary": "[V/VIP 초이스] 아메리카노(HOT/ICE) 2잔 무료"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "아메리카노(ICE/HOT) 2잔 무료"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "아메리카노(ICE/HOT) 2잔 무료"
           }
         ]
       },
@@ -4321,11 +4573,11 @@
     "benefits": {
       "SKT": {
         "category": "상시혜택",
-        "tier": "GOLD/SILVER",
-        "summary": "35% 할인",
+        "tier": "VIP",
+        "summary": "최초 1개월 무료+이후부터 35% 할인",
         "all": [
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "최초 1개월 무료+이후부터 35% 할인"
           },
@@ -4335,7 +4587,7 @@
             "summary": "35% 할인"
           },
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "최초 1개월 무료+이후부터 35% 할인"
           },
@@ -4387,11 +4639,11 @@
     "benefits": {
       "SKT": {
         "category": "상시혜택",
-        "tier": "GOLD/SILVER",
-        "summary": "온라인: 15% 할인 / 오프라인: 15% 할인",
+        "tier": "VIP",
+        "summary": "온라인: 25% 할인 / 오프라인: 25% 할인",
         "all": [
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "온라인: 25% 할인 / 오프라인: 25% 할인"
           },
@@ -4406,7 +4658,7 @@
             "summary": "온라인: 포인트 사용 가능(100%, 10P 단위) / 오프라인: 포인트 사용 불가"
           },
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "온라인: 25% 적립 / 오프라인: 25% 할인"
           },
@@ -4510,6 +4762,31 @@
     }
   },
   {
+    "brand": "밀리의 서재",
+    "category_group": "VVIP 초이스",
+    "benefits": {
+      "KT": {
+        "category": "VIP특화혜택",
+        "tier": "VVIP",
+        "summary": "1개월 무료",
+        "all": [
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "1개월 무료"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "1개월 무료"
+          }
+        ]
+      },
+      "SKT": null,
+      "LGU": null
+    }
+  },
+  {
     "brand": "밀리의서재",
     "category_group": "2026 8월 유쁠투쁠 혜택",
     "benefits": {
@@ -4526,19 +4803,24 @@
         ]
       },
       "KT": {
-        "category": "VIP특화혜택",
+        "category": "상시혜택",
         "tier": "VVIP",
         "summary": "[VVIP 초이스]밀리의 서재 3개월 무료",
         "all": [
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VVIP",
             "summary": "[VVIP 초이스]밀리의 서재 3개월 무료"
           },
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "[VIP 초이스]밀리의 서재 1개월 무료"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "3개월 무료"
           }
         ]
       },
@@ -4750,11 +5032,11 @@
     "benefits": {
       "SKT": {
         "category": "상시혜택",
-        "tier": "GOLD/SILVER",
-        "summary": "싱글레귤러 30% 할인(1,200원)",
+        "tier": "VIP",
+        "summary": "싱글레귤러 50% 할인(2,000원)",
         "all": [
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "싱글레귤러 50% 할인(2,000원)"
           },
@@ -4769,7 +5051,7 @@
             "summary": "포인트 사용 가능(100%, 10P 단위)"
           },
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "싱글레귤러 50% 적립(2,000P)"
           },
@@ -4826,6 +5108,21 @@
             "category": "상시혜택",
             "tier": "VIP",
             "summary": "[VIP 초이스] 아이스크림군 6종 50% OFF(최대 4,900원 할인)"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "레디팩 무료"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "아이스크림 6종 50% (파인트 등)"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "아이스크림 6종 50% (파인트 등)"
           }
         ]
       }
@@ -4879,8 +5176,20 @@
   },
   {
     "brand": "백억커피",
-    "category_group": "2026 8월 유쁠투쁠 혜택",
+    "category_group": "T day",
     "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "아메리카노 100원에 드림",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "아메리카노 100원에 드림"
+          }
+        ]
+      },
       "LGU": {
         "category": "월간혜택",
         "tier": "전체",
@@ -4893,8 +5202,27 @@
           }
         ]
       },
-      "SKT": null,
       "KT": null
+    }
+  },
+  {
+    "brand": "뱅크시 특별전",
+    "category_group": "VIP Pick",
+    "benefits": {
+      "SKT": {
+        "category": "VIP특화혜택",
+        "tier": "VIP",
+        "summary": "전시 티켓 1+1 혜택(정가 23,000원) * 전시장 매표소에서 사용 가능(온라인 예매 시 사용 안 됨)",
+        "all": [
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "전시 티켓 1+1 혜택(정가 23,000원) * 전시장 매표소에서 사용 가능(온라인 예매 시 사용 안 됨)"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
     }
   },
   {
@@ -5093,13 +5421,18 @@
   },
   {
     "brand": "블루보틀",
-    "category_group": "",
+    "category_group": "VVIP 초이스",
     "benefits": {
       "KT": {
-        "category": "VIP특화혜택",
+        "category": "상시혜택",
         "tier": "VVIP",
         "summary": "블루보틀 인기 굿즈 추첨 제공",
         "all": [
+          {
+            "category": "상시혜택",
+            "tier": "VVIP",
+            "summary": "블루보틀 인기 굿즈 추첨 제공"
+          },
           {
             "category": "VIP특화혜택",
             "tier": "VVIP",
@@ -5536,6 +5869,11 @@
             "category": "상시혜택",
             "tier": "VVIP",
             "summary": "[VVIP초이스]입장권 1＋1"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "입장권 1＋1 혜택 (1인 정상가 결제 시, 동반 1인 무료 입장)"
           }
         ]
       },
@@ -5884,23 +6222,58 @@
     }
   },
   {
-    "brand": "스노우",
-    "category_group": "",
+    "brand": "슈피겐",
+    "category_group": "T day",
     "benefits": {
-      "KT": {
-        "category": "VIP특화혜택",
-        "tier": "VVIP",
-        "summary": "[V/VIP 초이스] 스노우 VIP 구독권 1개월 무료",
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "40,000원 이상 결제 시 20,000원 할인(최대 50%)",
         "all": [
           {
-            "category": "VIP특화혜택",
-            "tier": "VVIP",
-            "summary": "[V/VIP 초이스] 스노우 VIP 구독권 1개월 무료"
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "40,000원 이상 결제 시 20,000원 할인(최대 50%)"
           },
           {
             "category": "VIP특화혜택",
             "tier": "VIP",
+            "summary": "(VIP PICK 횟수 미차감) 10,000원 할인 30,000원 이상 구매 시 사용 가능"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
+    }
+  },
+  {
+    "brand": "스노우",
+    "category_group": "VVIP 초이스",
+    "benefits": {
+      "KT": {
+        "category": "상시혜택",
+        "tier": "VVIP",
+        "summary": "[V/VIP 초이스] 스노우 VIP 구독권 1개월 무료",
+        "all": [
+          {
+            "category": "상시혜택",
+            "tier": "VVIP",
             "summary": "[V/VIP 초이스] 스노우 VIP 구독권 1개월 무료"
+          },
+          {
+            "category": "상시혜택",
+            "tier": "VIP",
+            "summary": "[V/VIP 초이스] 스노우 VIP 구독권 1개월 무료"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "SNOW VIP 구독권"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "SNOW VIP 구독권"
           }
         ]
       },
@@ -6052,7 +6425,7 @@
   },
   {
     "brand": "스타벅스",
-    "category_group": "",
+    "category_group": "VVIP 초이스",
     "benefits": {
       "LGU": {
         "category": "VIP특화혜택",
@@ -6085,6 +6458,21 @@
             "category": "상시혜택",
             "tier": "VIP",
             "summary": "[V/VIP 초이스] 아메리카노 Short 무료 또는 4,000원 할인"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "생일 조각케이크＋음료 2잔 무료(생일 당월 한정)"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "아메리카노(s) 무료 or 4천원 할인"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "아메리카노(s) 무료 or 4천원 할인"
           }
         ]
       },
@@ -6144,7 +6532,7 @@
   },
   {
     "brand": "스피드메이트",
-    "category_group": "생활/편의",
+    "category_group": "VIP Pick",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -6175,6 +6563,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
             "summary": "국산차 엔진오일 2만 원 할인"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "국산차 엔진오일 30,000원 및 부가서비스 할인/수입차 엔진오일 30% 할인 중 택1 수입차 엔진오일 30% 할인은 금액 제한 없음"
           }
         ]
       },
@@ -6666,7 +7059,7 @@
   },
   {
     "brand": "아떼",
-    "category_group": "",
+    "category_group": "T day",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -6682,6 +7075,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
             "summary": "모든 제품 15% 할인"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "최대 30,000원 할인"
           }
         ]
       },
@@ -6863,6 +7261,26 @@
       },
       "SKT": null,
       "KT": null
+    }
+  },
+  {
+    "brand": "아이디어스",
+    "category_group": "T day",
+    "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "20,000원 이상 주문 시 10,000원 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "20,000원 이상 주문 시 10,000원 할인"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
     }
   },
   {
@@ -7334,6 +7752,26 @@
     }
   },
   {
+    "brand": "에이스바이옴",
+    "category_group": "VIP Pick",
+    "benefits": {
+      "SKT": {
+        "category": "VIP특화혜택",
+        "tier": "VIP",
+        "summary": "비에날씬 모든 상품 50% 할인 VIP PICK 전용 공식 특판 몰에서 이용 가능",
+        "all": [
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "비에날씬 모든 상품 50% 할인 VIP PICK 전용 공식 특판 몰에서 이용 가능"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
+    }
+  },
+  {
     "brand": "에필로우",
     "category_group": "",
     "benefits": {
@@ -7731,14 +8169,19 @@
         ]
       },
       "KT": {
-        "category": "VIP특화혜택",
+        "category": "상시혜택",
         "tier": "VVIP",
         "summary": "[VVIP초이스] 엔진오일 3만원 할인＋부가 정비 할인",
         "all": [
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VVIP",
             "summary": "[VVIP초이스] 엔진오일 3만원 할인＋부가 정비 할인"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "엔진오일 3만원 할인＋부가 정비 할인"
           }
         ]
       },
@@ -7816,11 +8259,11 @@
     "benefits": {
       "SKT": {
         "category": "상시혜택",
-        "tier": "GOLD/SILVER",
-        "summary": "5% 할인",
+        "tier": "VIP",
+        "summary": "15% 할인",
         "all": [
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "15% 할인"
           },
@@ -7840,7 +8283,7 @@
             "summary": "포인트 사용 가능(100%, 10P 단위)"
           },
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "15% 적립"
           },
@@ -8212,6 +8655,11 @@
             "category": "월간혜택",
             "tier": "전체",
             "summary": "게임 30% 할인(최대 15,000원)"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "게임 카테고리 50% 할인 쿠폰(최대 1만 원)"
           }
         ]
       },
@@ -8494,7 +8942,7 @@
   },
   {
     "brand": "이니스프리",
-    "category_group": "",
+    "category_group": "VVIP 초이스",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -8514,14 +8962,19 @@
         ]
       },
       "KT": {
-        "category": "VIP특화혜택",
+        "category": "상시혜택",
         "tier": "VVIP",
         "summary": "레티놀 PDRN 마스크 4매 OR 블랙티 마스크 4매 무료",
         "all": [
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VVIP",
             "summary": "레티놀 PDRN 마스크 4매 OR 블랙티 마스크 4매 무료"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "레티놀 DPRN 마스크 4매 OR 블랙티 마스크 4매 무료"
           }
         ]
       },
@@ -8570,11 +9023,11 @@
     "benefits": {
       "SKT": {
         "category": "상시혜택",
-        "tier": "GOLD/SILVER",
-        "summary": "3% 할인 (구매한도 및 횟수 제한은 유의 사항 참고)",
+        "tier": "VIP",
+        "summary": "짝수월 7%, 홀수월 3% 할인 (구매한도 및 횟수 제한은 유의 사항 참고)",
         "all": [
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "짝수월 7%, 홀수월 3% 할인 (구매한도 및 횟수 제한은 유의 사항 참고)"
           },
@@ -8584,7 +9037,7 @@
             "summary": "3% 할인 (구매한도 및 횟수 제한은 유의 사항 참고)"
           },
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "짝수월 7%, 홀수월 3% 적립 (구매한도 및 횟수 제한은 유의 사항 참고)"
           },
@@ -9142,22 +9595,32 @@
   },
   {
     "brand": "차방정",
-    "category_group": "",
+    "category_group": "VVIP 초이스",
     "benefits": {
       "KT": {
-        "category": "VIP특화혜택",
+        "category": "상시혜택",
         "tier": "VVIP",
         "summary": "[V/VIP초이스] 차방정 플러스 멤버십 2개월 무료(주유/세차/주차 1만원 할인)",
         "all": [
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VVIP",
             "summary": "[V/VIP초이스] 차방정 플러스 멤버십 2개월 무료(주유/세차/주차 1만원 할인)"
           },
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "[V/VIP초이스] 차방정 플러스 멤버십 2개월 무료(주유/세차/주차 1만원 할인) [VIP 생일혜택] 차방정 플러스 멤버십 2개월 무료(주유/세차/주차 2만원 할인)"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "플러스 멤버십 2개월 무료(주유/세차/주차 1만원 할인)"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "플러스 멤버십 2개월 무료(주유/세차/주차 1만원 할인)"
           }
         ]
       },
@@ -9656,7 +10119,7 @@
   },
   {
     "brand": "컬쳐랜드",
-    "category_group": "",
+    "category_group": "VIP Pick",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -9672,6 +10135,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
             "summary": "3% 할인 (5만 원권/3만 원권/1만 원권)"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "컬쳐랜드 상품권 5만 원권 2장 7% 할인"
           }
         ]
       },
@@ -9815,11 +10283,11 @@
     "benefits": {
       "SKT": {
         "category": "상시혜택",
-        "tier": "GOLD/SILVER",
-        "summary": "5% 할인",
+        "tier": "VIP",
+        "summary": "8% 할인",
         "all": [
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "8% 할인"
           },
@@ -9829,7 +10297,7 @@
             "summary": "5% 할인"
           },
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "8% 할인"
           },
@@ -9850,11 +10318,11 @@
     "benefits": {
       "SKT": {
         "category": "상시혜택",
-        "tier": "GOLD/SILVER",
-        "summary": "이용권(통합/워터파크/스파) 10% 할인 (본인 및 동반 1인)",
+        "tier": "VIP",
+        "summary": "이용권(통합/워터파크/스파) 15% 할인 (본인 및 동반 1인)",
         "all": [
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "이용권(통합/워터파크/스파) 15% 할인 (본인 및 동반 1인)"
           },
@@ -9864,7 +10332,7 @@
             "summary": "이용권(통합/워터파크/스파) 10% 할인 (본인 및 동반 1인)"
           },
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "이용권(통합/워터파크/스파) 15% 할인 (본인 및 동반 1인)"
           },
@@ -10655,7 +11123,7 @@
   },
   {
     "brand": "파리바게뜨",
-    "category_group": "푸드",
+    "category_group": "VIP Pick",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -10691,6 +11159,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER/LITE",
             "summary": "포인트 사용가능 (100%, 10P 단위)"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "빙수 3종 5,000원 할인(애플망고 POP빙수, 우유 팥빙수, 베리밤 팥빙수 중 택1)"
           }
         ]
       },
@@ -10883,11 +11356,11 @@
     "benefits": {
       "SKT": {
         "category": "상시혜택",
-        "tier": "GOLD/SILVER",
-        "summary": "15% 할인",
+        "tier": "VIP",
+        "summary": "30% 할인",
         "all": [
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "30% 할인"
           },
@@ -10902,7 +11375,7 @@
             "summary": "포인트 사용가능 (100%, 온라인: 1P 단위, 오프라인 10P 단위)"
           },
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "30% 적립"
           },
@@ -10970,7 +11443,7 @@
   },
   {
     "brand": "퍼블로그",
-    "category_group": "",
+    "category_group": "VIP Pick",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -10996,6 +11469,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER/LITE",
             "summary": "포토북, 사진인화 구입 시 전액 포인트 사용 가능(1P 단위)"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "(VIP PICK 횟수 미차감) 포토북 최대 68% 할인"
           }
         ]
       },
@@ -11216,7 +11694,7 @@
   },
   {
     "brand": "풀무원",
-    "category_group": "쇼핑",
+    "category_group": "VIP Pick",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -11232,6 +11710,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
             "summary": "5,000원 할인(3만 원 이상 구매 시)"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "(VIP PICK 횟수 미차감) 8,000원 할인 30,000원 이상 구매 시 사용 가능"
           }
         ]
       },
@@ -11318,7 +11801,7 @@
   },
   {
     "brand": "플레이타임(키즈카페)",
-    "category_group": "",
+    "category_group": "VVIP 초이스",
     "benefits": {
       "KT": {
         "category": "상시혜택",
@@ -11339,6 +11822,21 @@
             "category": "상시혜택",
             "tier": "VIP",
             "summary": "[VIP초이스] 어린이 평일 7천원 할인(1인)"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "어린이 평일 이용권 무료(1인)"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "어린이 평일 이용권 7천원 할인 (1인)"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "어린이 평일 이용권 7천원 할인 (1인)"
           }
         ]
       },
@@ -11394,15 +11892,15 @@
   },
   {
     "brand": "피자헛",
-    "category_group": "푸드",
+    "category_group": "VIP Pick",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
-        "tier": "GOLD/SILVER",
-        "summary": "20% 할인",
+        "tier": "VIP",
+        "summary": "30% 할인",
         "all": [
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "30% 할인"
           },
@@ -11417,7 +11915,7 @@
             "summary": "포인트 사용가능 (100%, 10P 단위)"
           },
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "30% 적립"
           },
@@ -11430,6 +11928,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER/LITE",
             "summary": "포인트 사용가능 (100%, 10P 단위)"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "크래프티드 플래츠 세트 10,000원에 드림 또는 파스타 무료(리치 치즈, 상하이 쉬림프, 알프레도 베이컨 크림 파스타 중 택 1) 크래프티드 플래츠 세트: 트리플 치즈 또는 치즈 페페로니 플래츠(1인 피자)+리치 치즈 파스타+콜라 245ml+생피클(M)+핫소스(정가 23,700원, 플래츠 2종 중 택1)"
           }
         ]
       },
@@ -11632,17 +12135,17 @@
     "category_group": "",
     "benefits": {
       "KT": {
-        "category": "VIP특화혜택",
+        "category": "상시혜택",
         "tier": "VVIP",
         "summary": "객실 할인",
         "all": [
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VVIP",
             "summary": "객실 할인"
           },
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "객실 할인"
           }
@@ -11654,7 +12157,7 @@
   },
   {
     "brand": "할리스",
-    "category_group": "",
+    "category_group": "VVIP 초이스",
     "benefits": {
       "LGU": {
         "category": "VIP특화혜택",
@@ -11669,19 +12172,24 @@
         ]
       },
       "KT": {
-        "category": "VIP특화혜택",
+        "category": "상시혜택",
         "tier": "VVIP",
         "summary": "[VVIP 초이스] 커피 2잔＋휘낭시에 2개 세트 무료",
         "all": [
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VVIP",
             "summary": "[VVIP 초이스] 커피 2잔＋휘낭시에 2개 세트 무료"
           },
           {
-            "category": "VIP특화혜택",
+            "category": "상시혜택",
             "tier": "VIP",
             "summary": "[생일] 바닐라 딜라이트(R) 1잔(생일 당월 한정)"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "카페아메리카노(R) 2잔 ＋ 휘낭시에 2개 세트 무료"
           }
         ]
       },
