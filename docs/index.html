@@ -474,6 +474,7 @@
               <button class="chip" data-carrier="KT"><span class="dot"></span>KT</button>
               <button class="chip" data-carrier="LGU"><span class="dot"></span>LG U+</button>
             </div>
+            <div class="chips" id="mapCatChips"></div>
           </div>
 
           <div class="map" id="map">
@@ -582,7 +583,7 @@
   let BENEFIT_DATA_IS_LIVE = false;
   let LIVE_ID_SEQ = 0;
 
-  function getCategories() { return ['전체', ...new Set(BENEFIT_DATA.map(p => p.cat).filter(Boolean))]; }
+  function getCategories() { return ['전체', ...new Set(BENEFIT_DATA.map(p => p.mapCat).filter(Boolean))]; }
 
   const CATEGORY_ORDER = ['상시혜택', '월간혜택', 'VIP특화혜택'];
 
@@ -602,31 +603,31 @@
     return groups;
   }
 
-  const CATEGORY_EMOJI_RULES = [
-    [/영화|시네마|CGV|메가박스|롯데시네마/i, '🎬'],
-    [/베이커리|빵집|파리바게|뚜레쥬르|파리크라상/, '🥐'],
-    [/카페|커피|디저트|제과|도넛|아이스크림|빙수|스타벅스|이디야|투썸|커피빈|폴바셋|폴 바셋|메가커피|컴포즈|빽다방/, '☕'],
-    [/편의점|생활\s*\/?\s*편의|GS25|CU\b|세븐일레븐|이마트24|미니스톱/i, '🏪'],
-    [/치킨|피자|버거|햄버거|패스트푸드|분식|bhc|BBQ|맥도날드|롯데리아|맘스터치/i, '🍔'],
-    [/외식|음식|맛집|레스토랑|푸드|한식|중식|일식|양식|뷔페/, '🍽️'],
-    [/마트|쇼핑|백화점|아울렛|이커머스|온라인몰|이마트\b|올리브영/, '🛍️'],
-    [/뷰티|헬스|건강|피트니스|헤어|스킨|화장품/, '💄'],
-    [/병원|약국|의료/, '💊'],
-    [/교육|학원|어학|스터디|전화영어|교보문고|서점|도서|책/, '📚'],
-    [/여행|항공|호텔|숙박|투어|공항/, '✈️'],
-    [/렌터카|주유|자동차|세차|모빌리티|택시|주차/, '🚗'],
-    [/공연|전시|문화|여가|테마파크|놀이공원|티켓|에버랜드|롯데월드/, '🎭'],
-    [/액티비티|엑티비티|스포츠|골프|볼링|당구|레저/, '🎳'],
-    [/통신|전화|가전|기기|앱|모바일|구독/, '📱'],
-    [/반려|펫|동물/, '🐾'],
-    [/금융|카드|은행|보험|캐시백|적립/, '💳'],
+  const CATEGORY_RULES = [
+    [/영화|시네마|CGV|메가박스|롯데시네마/i, '🎬', '영화관'],
+    [/베이커리|빵집|파리바게|뚜레쥬르|파리크라상/, '🥐', '베이커리'],
+    [/카페|커피|디저트|제과|도넛|아이스크림|빙수|스타벅스|이디야|투썸|커피빈|폴바셋|폴 바셋|메가커피|컴포즈|빽다방/, '☕', '카페'],
+    [/편의점|생활\s*\/?\s*편의|GS25|CU\b|세븐일레븐|이마트24|미니스톱/i, '🏪', '편의점'],
+    [/치킨|피자|버거|햄버거|패스트푸드|분식|bhc|BBQ|맥도날드|롯데리아|맘스터치/i, '🍔', '패스트푸드'],
+    [/외식|음식|맛집|레스토랑|푸드|한식|중식|일식|양식|뷔페/, '🍽️', '외식'],
+    [/마트|쇼핑|백화점|아울렛|이커머스|온라인몰|이마트\b|올리브영/, '🛍️', '쇼핑'],
+    [/뷰티|헬스|건강|피트니스|헤어|스킨|화장품/, '💄', '뷰티/건강'],
+    [/병원|약국|의료/, '💊', '의료'],
+    [/교육|학원|어학|스터디|전화영어|교보문고|서점|도서|책/, '📚', '교육/서점'],
+    [/여행|항공|호텔|숙박|투어|공항/, '✈️', '여행'],
+    [/렌터카|주유|자동차|세차|모빌리티|택시|주차/, '🚗', '자동차'],
+    [/공연|전시|문화|여가|테마파크|놀이공원|티켓|에버랜드|롯데월드/, '🎭', '문화/여가'],
+    [/액티비티|엑티비티|스포츠|골프|볼링|당구|레저/, '🎳', '액티비티'],
+    [/통신|전화|가전|기기|앱|모바일|구독/, '📱', '디지털/구독'],
+    [/반려|펫|동물/, '🐾', '반려동물'],
+    [/금융|카드|은행|보험|캐시백|적립/, '💳', '금융'],
   ];
-  function categoryEmoji(catText, brandName) {
+  function classifyCategory(catText, brandName) {
     const target = `${catText || ''} ${brandName || ''}`;
-    for (const [pattern, emoji] of CATEGORY_EMOJI_RULES) {
-      if (pattern.test(target)) return emoji;
+    for (const [pattern, emoji, label] of CATEGORY_RULES) {
+      if (pattern.test(target)) return { emoji, label };
     }
-    return '🏷️';
+    return { emoji: '🏷️', label: '기타' };
   }
 
   async function loadLiveBenefitData() {
@@ -635,15 +636,19 @@
       if (!res.ok) return;
       const raw = await res.json();
       if (!Array.isArray(raw) || !raw.length) return;
-      BENEFIT_DATA = raw.map(entry => ({
-        id: 'brand-' + (LIVE_ID_SEQ++),
-        name: entry.brand,
-        cat: entry.category_group || '기타',
-        glyph: categoryEmoji(entry.category_group, entry.brand),
-        dist: '',
-        benefits: { SKT: !!entry.benefits.SKT, KT: !!entry.benefits.KT, LGU: !!entry.benefits.LGU },
-        byCategory: groupByCategory(entry.benefits),
-      }));
+      BENEFIT_DATA = raw.map(entry => {
+        const cls = classifyCategory(entry.category_group, entry.brand);
+        return {
+          id: 'brand-' + (LIVE_ID_SEQ++),
+          name: entry.brand,
+          cat: entry.category_group || '기타',
+          mapCat: cls.label,
+          glyph: cls.emoji,
+          dist: '',
+          benefits: { SKT: !!entry.benefits.SKT, KT: !!entry.benefits.KT, LGU: !!entry.benefits.LGU },
+          byCategory: groupByCategory(entry.benefits),
+        };
+      });
       BENEFIT_DATA_IS_LIVE = true;
       benefitCategory = '전체';
       if (currentView === 'benefits') renderBenefitTab();
@@ -668,6 +673,7 @@
 
   // ---- state ----
   let activeCarriers = new Set(); // 비어있으면 "전체"(필터 없음)
+  let mapCategory = '전체';
   let selectedId = null;
   let query = '';
   let mapMode = 'map';
@@ -676,9 +682,31 @@
   const myCarriers = new Set();
   const favorites = new Set();
 
+  // ---- 내 통신사 선택 저장 (한 번만 물어보기) ----
+  const LS_ONBOARDED = 'hyetaekmap_onboarded_v1';
+  const LS_CARRIERS = 'hyetaekmap_my_carriers_v1';
+  function saveMyCarriers() {
+    try { localStorage.setItem(LS_CARRIERS, JSON.stringify([...myCarriers])); } catch (e) {}
+  }
+  function markOnboarded() {
+    try { localStorage.setItem(LS_ONBOARDED, '1'); } catch (e) {}
+    saveMyCarriers();
+  }
+  function loadSavedOnboarding() {
+    try {
+      if (localStorage.getItem(LS_ONBOARDED) !== '1') return false;
+      const raw = localStorage.getItem(LS_CARRIERS);
+      const arr = raw ? JSON.parse(raw) : [];
+      if (Array.isArray(arr)) arr.filter(k => CARRIER_KEYS.includes(k)).forEach(k => myCarriers.add(k));
+      activeCarriers = new Set(myCarriers);
+      return true;
+    } catch (e) { return false; }
+  }
+
   // ---- element refs ----
   const mapEl = document.getElementById('map');
   const chipsEl = document.getElementById('chips');
+  const mapCatChipsEl = document.getElementById('mapCatChips');
   const sheetEl = document.getElementById('sheet');
   const backdropEl = document.getElementById('backdrop');
   const sheetContentEl = document.getElementById('sheetContent');
@@ -704,9 +732,10 @@
   }
   function matchesFilter(place) {
     const carrierOk = visibleCarrierKeys().some(k => place.benefits[k]);
+    const catOk = mapCategory === '전체' || place.mapCat === mapCategory;
     const q = query.trim().toLowerCase();
     const queryOk = !q || place.name.toLowerCase().includes(q) || place.cat.toLowerCase().includes(q);
-    return carrierOk && queryOk;
+    return carrierOk && catOk && queryOk;
   }
   function placeMatchesMine(place) { return [...myCarriers].some(k => place.benefits[k]); }
   function sortedPlaces(list) {
@@ -826,6 +855,7 @@
         name: m.placeName,
         brandName: m.brand.name,
         cat: m.brand.cat,
+        mapCat: m.brand.mapCat,
         glyph: m.brand.glyph,
         dist: distM != null ? formatDistance(distM) : '',
         _distM: distM,
@@ -834,6 +864,7 @@
         _lat: m.lat, _lng: m.lng,
       };
     }).sort((a, b) => (a._distM ?? Infinity) - (b._distM ?? Infinity));
+    renderMapCatChips();
     applyFilter();
   }
 
@@ -878,6 +909,21 @@
     if (currentView === 'benefits') renderBenefitTab();
   });
   searchEl.addEventListener('input', (e) => { query = e.target.value; applyFilter(); });
+
+  function renderMapCatChips() {
+    const cats = ['전체', ...new Set(RAW_MATCHES.map(p => p.mapCat).filter(Boolean))];
+    if (!cats.includes(mapCategory)) mapCategory = '전체';
+    mapCatChipsEl.innerHTML = cats.map(c =>
+      `<button class="chip ${c === mapCategory ? 'chip-active' : ''}" data-mapcat="${c}">${c === '전체' ? '전체 업종' : c}</button>`
+    ).join('');
+  }
+  mapCatChipsEl.addEventListener('click', (e) => {
+    const chip = e.target.closest('.chip');
+    if (!chip) return;
+    mapCategory = chip.dataset.mapcat;
+    renderMapCatChips();
+    applyFilter();
+  });
 
   // ---- 지도 <-> 리스트 토글 ----
   function setMapMode(mode) {
@@ -1028,7 +1074,7 @@
     const categories = getCategories();
     benefitCatChipsEl.innerHTML = categories.map(c => `<button class="chip ${c === benefitCategory ? 'chip-active' : ''}" data-cat="${c}">${c}</button>`).join('');
     const filtered = BENEFIT_DATA
-      .filter(p => benefitCategory === '전체' || p.cat === benefitCategory)
+      .filter(p => benefitCategory === '전체' || p.mapCat === benefitCategory)
       .filter(p => visibleCarrierKeys().some(k => p.benefits[k]));
     const list = sortedPlaces(filtered);
     benefitListEl.innerHTML = list.length ? list.map(benefitCardHtml).join('') : `<div class="fav-empty">해당 카테고리의 제휴사가 없어요</div>`;
@@ -1080,6 +1126,7 @@
     renderMyTab();
     renderBenefitTab();
     applyFilter();
+    saveMyCarriers();
   }
   obCardsEl.addEventListener('click', (e) => {
     const card = e.target.closest('.carrier-card');
@@ -1089,7 +1136,10 @@
     const card = e.target.closest('.carrier-card');
     if (card) toggleCarrier(card.dataset.carrier);
   });
-  obConfirmEl.addEventListener('click', () => onboardingEl.classList.add('hidden'));
+  obConfirmEl.addEventListener('click', () => {
+    markOnboarded();
+    onboardingEl.classList.add('hidden');
+  });
 
   // ---- 탭바 ----
   function showView(view) {
@@ -1117,7 +1167,9 @@
   });
 
   // ---- 초기화 ----
-  obCardsEl.innerHTML = CARRIER_KEYS.map(k => carrierCardHtml(k, false)).join('');
+  const alreadyOnboarded = loadSavedOnboarding();
+  if (alreadyOnboarded) onboardingEl.classList.add('hidden');
+  obCardsEl.innerHTML = CARRIER_KEYS.map(k => carrierCardHtml(k, myCarriers.has(k))).join('');
   renderCarrierChips();
   renderMyTab();
   loadLiveBenefitData().then(() => {
