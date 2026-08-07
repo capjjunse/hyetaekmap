@@ -5951,6 +5951,26 @@
     }
   },
   {
+    "brand": "설빙",
+    "category_group": "",
+    "benefits": {
+      "LGU": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "(선착순) 빙수메뉴 최대 35% 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "(선착순) 빙수메뉴 최대 35% 할인"
+          }
+        ]
+      },
+      "SKT": null,
+      "KT": null
+    }
+  },
+  {
     "brand": "설성갈비",
     "category_group": "푸드",
     "benefits": {
@@ -6401,26 +6421,6 @@
           }
         ]
       }
-    }
-  },
-  {
-    "brand": "스와로브스키",
-    "category_group": "푸드",
-    "benefits": {
-      "LGU": {
-        "category": "상시혜택",
-        "tier": "VVIP/VIP/우수",
-        "summary": "상시 드립백&커피캡슐 구매 5% 할인 쿠폰 3장",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VVIP/VIP/우수",
-            "summary": "상시 드립백&커피캡슐 구매 5% 할인 쿠폰 3장"
-          }
-        ]
-      },
-      "SKT": null,
-      "KT": null
     }
   },
   {
@@ -10029,6 +10029,26 @@
             "category": "월간혜택",
             "tier": "전체",
             "summary": "(선착순) 최대 5,000 캐시 증정"
+          }
+        ]
+      },
+      "SKT": null,
+      "KT": null
+    }
+  },
+  {
+    "brand": "카페 스와로브스키",
+    "category_group": "푸드",
+    "benefits": {
+      "LGU": {
+        "category": "상시혜택",
+        "tier": "VVIP/VIP/우수",
+        "summary": "상시 드립백&커피캡슐 구매 5% 할인 쿠폰 3장",
+        "all": [
+          {
+            "category": "상시혜택",
+            "tier": "VVIP/VIP/우수",
+            "summary": "상시 드립백&커피캡슐 구매 5% 할인 쿠폰 3장"
           }
         ]
       },
