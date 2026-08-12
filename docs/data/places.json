@@ -234,6 +234,11 @@
             "summary": "영화 티켓 8,500원 예매+매점 할인 쿠폰 2종"
           },
           {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "영화 티켓 8,500원 예매+매점 할인 쿠폰 2종"
+          },
+          {
             "category": "VIP특화혜택",
             "tier": "VIP",
             "summary": "영화 관람권 1장 무료 연 3회, 평일/주말 관람권 1+1 연 9회"
@@ -9033,6 +9038,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
             "summary": "리스테이 10% 추가 할인"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "5,000원 추가 할인+(공식몰)선세럼 10ml 증정"
           }
         ]
       },
@@ -9176,6 +9186,26 @@
         ]
       },
       "SKT": null
+    }
+  },
+  {
+    "brand": "이마트에브리데이",
+    "category_group": "",
+    "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "40,000원 이상 구매 시 20% 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "40,000원 이상 구매 시 20% 할인"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
     }
   },
   {
@@ -10789,6 +10819,18 @@
     "brand": "투썸플레이스",
     "category_group": "",
     "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "VIP Only 찬스",
+        "summary": "시즌 음료 5종/조각 케이크 5종 40% 할인(10종 중 택1)",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "VIP Only 찬스",
+            "summary": "시즌 음료 5종/조각 케이크 5종 40% 할인(10종 중 택1)"
+          }
+        ]
+      },
       "LGU": {
         "category": "월간혜택",
         "tier": "전체",
@@ -10801,7 +10843,6 @@
           }
         ]
       },
-      "SKT": null,
       "KT": null
     }
   },
