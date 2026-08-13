@@ -303,12 +303,12 @@
           {
             "category": "상시혜택",
             "tier": "VVIP",
-            "summary": "[V/VIP 초이스] 45% 할인 쿠폰 적립금 5천원"
+            "summary": "[V/VIP 초이스] 45% 할인 쿠폰＋적립금 5천원"
           },
           {
             "category": "상시혜택",
             "tier": "VIP",
-            "summary": "[V/VIP 초이스] 45% 할인 쿠폰 적립금 5천원"
+            "summary": "[V/VIP 초이스] 45% 할인 쿠폰＋적립금 5천원"
           },
           {
             "category": "VIP특화혜택",
@@ -889,12 +889,12 @@
       "KT": {
         "category": "상시혜택",
         "tier": "전등급",
-        "summary": "KTX결합상품 최대 18%할인(15%할인+KT멤버십 3% 추가 할인) / 인천공항 프라이빗밴 서울 전지역 99,000원 특가",
+        "summary": "KTX결합상품 최대 18%할인(15%할인＋KT멤버십 3% 추가 할인) / 인천공항 프라이빗밴 서울 전지역 99,000원 특가",
         "all": [
           {
             "category": "상시혜택",
             "tier": "전등급",
-            "summary": "KTX결합상품 최대 18%할인(15%할인+KT멤버십 3% 추가 할인) / 인천공항 프라이빗밴 서울 전지역 99,000원 특가"
+            "summary": "KTX결합상품 최대 18%할인(15%할인＋KT멤버십 3% 추가 할인) / 인천공항 프라이빗밴 서울 전지역 99,000원 특가"
           }
         ]
       },
@@ -1707,26 +1707,6 @@
     }
   },
   {
-    "brand": "genie",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "최대 30%할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "최대 30%할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "kt wiz 프로야구",
     "category_group": "",
     "benefits": {
@@ -2118,6 +2098,26 @@
     }
   },
   {
+    "brand": "기프티쇼",
+    "category_group": "",
+    "benefits": {
+      "KT": {
+        "category": "상시혜택",
+        "tier": "전등급",
+        "summary": "구매실적 상관없이 VIP등급업(~5% 기프티쇼 차감 할인, 알파쇼핑 할인쿠폰 등 제공)",
+        "all": [
+          {
+            "category": "상시혜택",
+            "tier": "전등급",
+            "summary": "구매실적 상관없이 VIP등급업(~5% 기프티쇼 차감 할인, 알파쇼핑 할인쿠폰 등 제공)"
+          }
+        ]
+      },
+      "SKT": null,
+      "LGU": null
+    }
+  },
+  {
     "brand": "기프티콘",
     "category_group": "",
     "benefits": {
@@ -2461,17 +2461,17 @@
       "KT": {
         "category": "상시혜택",
         "tier": "VVIP",
-        "summary": "1개월 무료 ＋ 35% 할인",
+        "summary": "1개월 무료＋35% 할인",
         "all": [
           {
             "category": "상시혜택",
             "tier": "VVIP",
-            "summary": "1개월 무료 ＋ 35% 할인"
+            "summary": "1개월 무료＋35% 할인"
           },
           {
             "category": "상시혜택",
             "tier": "VIP",
-            "summary": "1개월 무료 ＋ 35% 할인"
+            "summary": "1개월 무료＋35% 할인"
           },
           {
             "category": "상시혜택",
@@ -3359,6 +3359,26 @@
     }
   },
   {
+    "brand": "래디오비즈",
+    "category_group": "",
+    "benefits": {
+      "KT": {
+        "category": "상시혜택",
+        "tier": "전등급",
+        "summary": "래디오비즈 1개월 20% 할인 쿠폰",
+        "all": [
+          {
+            "category": "상시혜택",
+            "tier": "전등급",
+            "summary": "래디오비즈 1개월 20% 할인 쿠폰"
+          }
+        ]
+      },
+      "SKT": null,
+      "LGU": null
+    }
+  },
+  {
     "brand": "럭키찬스",
     "category_group": "",
     "benefits": {
@@ -3804,26 +3824,6 @@
     }
   },
   {
-    "brand": "롯데월드",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "본인 40% 및 동반 3인 30% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "본인 40% 및 동반 3인 30% 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "롯데월드 서울스카이",
     "category_group": "",
     "benefits": {
@@ -3963,7 +3963,18 @@
           }
         ]
       },
-      "KT": null
+      "KT": {
+        "category": "상시혜택",
+        "tier": "전등급",
+        "summary": "[8월 프로모션] 본인 및 동반 1인 42% 할인 [상시] 본인 40% 및 동반 3인 30% 할인",
+        "all": [
+          {
+            "category": "상시혜택",
+            "tier": "전등급",
+            "summary": "[8월 프로모션] 본인 및 동반 1인 42% 할인 [상시] 본인 40% 및 동반 3인 30% 할인"
+          }
+        ]
+      }
     }
   },
   {
@@ -7700,26 +7711,6 @@
     }
   },
   {
-    "brand": "어플레이즈",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "어플레이즈 1개월 20% 할인 쿠폰",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "어플레이즈 1개월 20% 할인 쿠폰"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "에듀윌",
     "category_group": "",
     "benefits": {
@@ -9639,6 +9630,26 @@
     }
   },
   {
+    "brand": "지니 (genie)",
+    "category_group": "",
+    "benefits": {
+      "KT": {
+        "category": "상시혜택",
+        "tier": "전등급",
+        "summary": "최대 30%할인",
+        "all": [
+          {
+            "category": "상시혜택",
+            "tier": "전등급",
+            "summary": "최대 30%할인"
+          }
+        ]
+      },
+      "SKT": null,
+      "LGU": null
+    }
+  },
+  {
     "brand": "지니 TV",
     "category_group": "",
     "benefits": {
@@ -9656,26 +9667,6 @@
       },
       "SKT": null,
       "LGU": null
-    }
-  },
-  {
-    "brand": "지니뮤직",
-    "category_group": "APP/기기",
-    "benefits": {
-      "LGU": {
-        "category": "상시혜택",
-        "tier": "VVIP/VIP/우수",
-        "summary": "①지니뮤직 앱 음악감상 ②추가 혜택(택1)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VVIP/VIP/우수",
-            "summary": "①지니뮤직 앱 음악감상 ②추가 혜택(택1)"
-          }
-        ]
-      },
-      "SKT": null,
-      "KT": null
     }
   },
   {
