@@ -1867,12 +1867,12 @@
       "KT": {
         "category": "상시혜택",
         "tier": "전등급",
-        "summary": "[달.달.혜택] 인기 음료 6종 50% 할인(할인 한도 5천원) [상시]제조음료 구매 시 10% 할인",
+        "summary": "제조음료 구매 시 10% 할인",
         "all": [
           {
             "category": "상시혜택",
             "tier": "전등급",
-            "summary": "[달.달.혜택] 인기 음료 6종 50% 할인(할인 한도 5천원) [상시]제조음료 구매 시 10% 할인"
+            "summary": "제조음료 구매 시 10% 할인"
           }
         ]
       }
@@ -2838,6 +2838,26 @@
     }
   },
   {
+    "brand": "던킨 음료 카테고리+자이언트 버킷",
+    "category_group": "",
+    "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "50% 할인 또는 적립",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "50% 할인 또는 적립"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
+    }
+  },
+  {
     "brand": "데이원클리닉",
     "category_group": "뷰티/건강",
     "benefits": {
@@ -3244,28 +3264,33 @@
       },
       "KT": {
         "category": "상시혜택",
-        "tier": "VVIP",
-        "summary": "1,000원당 150원 할인",
+        "tier": "전등급",
+        "summary": "[달.달.혜택] 4천원 할인(1만원 이상 구매 시)",
         "all": [
           {
             "category": "상시혜택",
+            "tier": "전등급",
+            "summary": "[달.달.혜택] 4천원 할인(1만원 이상 구매 시)"
+          },
+          {
+            "category": "상시혜택",
             "tier": "VVIP",
-            "summary": "1,000원당 150원 할인"
+            "summary": "[상시] 1,000원당 150원 할인"
           },
           {
             "category": "상시혜택",
             "tier": "VIP",
-            "summary": "1,000원당 150원 할인"
+            "summary": "[상시] 1,000원당 150원 할인"
           },
           {
             "category": "상시혜택",
             "tier": "GOLD",
-            "summary": "1,000원당 150원 할인"
+            "summary": "[상시] 1,000원당 150원 할인"
           },
           {
             "category": "상시혜택",
             "tier": "일반",
-            "summary": "1,000원당 100원 할인"
+            "summary": "[상시] 1,000원당 100원 할인"
           },
           {
             "category": "월간혜택",
@@ -4865,9 +4890,14 @@
       },
       "KT": {
         "category": "상시혜택",
-        "tier": "VVIP",
-        "summary": "[VVIP 초이스]밀리의 서재 3개월 무료",
+        "tier": "전등급",
+        "summary": "[달.달.혜택] 밀리의서재 1개월 무료",
         "all": [
+          {
+            "category": "상시혜택",
+            "tier": "전등급",
+            "summary": "[달.달.혜택] 밀리의서재 1개월 무료"
+          },
           {
             "category": "상시혜택",
             "tier": "VVIP",
@@ -5158,12 +5188,12 @@
       "KT": {
         "category": "상시혜택",
         "tier": "전등급",
-        "summary": "[달.달.혜택] 레디팩 30% 할인 [생일혜택] 아이스크림 케이크 4천원 할인",
+        "summary": "[생일혜택] 아이스크림 케이크 4천원 할인",
         "all": [
           {
             "category": "상시혜택",
             "tier": "전등급",
-            "summary": "[달.달.혜택] 레디팩 30% 할인 [생일혜택] 아이스크림 케이크 4천원 할인"
+            "summary": "[생일혜택] 아이스크림 케이크 4천원 할인"
           },
           {
             "category": "상시혜택",
@@ -6261,6 +6291,18 @@
     "brand": "쉐이크쉑",
     "category_group": "",
     "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "VIP 찬스",
+        "summary": "20% 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "VIP 찬스",
+            "summary": "20% 할인"
+          }
+        ]
+      },
       "LGU": {
         "category": "VIP특화혜택",
         "tier": "VVIP/VIP",
@@ -6273,7 +6315,6 @@
           }
         ]
       },
-      "SKT": null,
       "KT": null
     }
   },
@@ -10759,6 +10800,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
             "summary": "모든 제품 15% 할인 쿠폰"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "최대 30,000원 할인"
           }
         ]
       },
