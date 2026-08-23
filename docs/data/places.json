@@ -8428,12 +8428,12 @@
       "LGU": {
         "category": "상시혜택",
         "tier": "VVIP/VIP/우수",
-        "summary": "VVIP/VIP : 1천원 할인우수 : 5백원 할인",
+        "summary": "3천원 할인",
         "all": [
           {
             "category": "상시혜택",
             "tier": "VVIP/VIP/우수",
-            "summary": "VVIP/VIP : 1천원 할인우수 : 5백원 할인"
+            "summary": "3천원 할인"
           }
         ]
       },
@@ -10935,12 +10935,12 @@
       "LGU": {
         "category": "상시혜택",
         "tier": "VVIP/VIP/우수",
-        "summary": "VVIP/VIP : 5천원 할인우수 : 1천원 할인",
+        "summary": "VVIP/VIP : 1만원 할인우수 : 1천원 할인",
         "all": [
           {
             "category": "상시혜택",
             "tier": "VVIP/VIP/우수",
-            "summary": "VVIP/VIP : 5천원 할인우수 : 1천원 할인"
+            "summary": "VVIP/VIP : 1만원 할인우수 : 1천원 할인"
           }
         ]
       },
