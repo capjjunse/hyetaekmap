@@ -566,26 +566,6 @@
     }
   },
   {
-    "brand": "GS칼텍스",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[케멤페] 3천원 할인(3만원 이상 주유 시)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[케멤페] 3천원 할인(3만원 이상 주유 시)"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "HBR하버드비즈니스리뷰",
     "category_group": "교육",
     "benefits": {
@@ -2812,7 +2792,7 @@
           {
             "category": "상시혜택",
             "tier": "VVIP",
-            "summary": "[VVIP 초이스] 3만원 할인 [상시] 20% 할인"
+            "summary": "[VVIP초이스] 2만원 할인(3만원 이상 주문 시) [상시] 20% 할인"
           },
           {
             "category": "상시혜택",
@@ -2832,7 +2812,7 @@
           {
             "category": "VIP특화혜택",
             "tier": "VVIP",
-            "summary": "3만원 할인(방문, 4만원 결제조건)"
+            "summary": "2만원 할인(3만원 이상 주문 시)"
           }
         ]
       }
@@ -3068,38 +3048,28 @@
       },
       "KT": {
         "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[달.달.혜택] 4천원 할인(1만원 이상 구매 시)",
+        "tier": "VVIP",
+        "summary": "1,000원당 150원 할인",
         "all": [
           {
             "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[달.달.혜택] 4천원 할인(1만원 이상 구매 시)"
-          },
-          {
-            "category": "상시혜택",
             "tier": "VVIP",
-            "summary": "[상시] 1,000원당 150원 할인"
+            "summary": "1,000원당 150원 할인"
           },
           {
             "category": "상시혜택",
             "tier": "VIP",
-            "summary": "[상시] 1,000원당 150원 할인"
+            "summary": "1,000원당 150원 할인"
           },
           {
             "category": "상시혜택",
             "tier": "GOLD",
-            "summary": "[상시] 1,000원당 150원 할인"
+            "summary": "1,000원당 150원 할인"
           },
           {
             "category": "상시혜택",
             "tier": "일반",
-            "summary": "[상시] 1,000원당 100원 할인"
-          },
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "뚜레쥬르 4천원 할인"
+            "summary": "1,000원당 100원 할인"
           }
         ]
       }
@@ -3374,12 +3344,12 @@
       "KT": {
         "category": "상시혜택",
         "tier": "전등급",
-        "summary": "[케멤페]G car 60% 할인 [상시]최대 20% 할인",
+        "summary": "최대 20% 할인",
         "all": [
           {
             "category": "상시혜택",
             "tier": "전등급",
-            "summary": "[케멤페]G car 60% 할인 [상시]최대 20% 할인"
+            "summary": "최대 20% 할인"
           }
         ]
       },
@@ -3442,6 +3412,26 @@
     }
   },
   {
+    "brand": "롯데마트&슈퍼",
+    "category_group": "",
+    "benefits": {
+      "KT": {
+        "category": "상시혜택",
+        "tier": "전등급",
+        "summary": "[달.달.혜택] 롯데마트/슈퍼 5천원 할인권",
+        "all": [
+          {
+            "category": "상시혜택",
+            "tier": "전등급",
+            "summary": "[달.달.혜택] 롯데마트/슈퍼 5천원 할인권"
+          }
+        ]
+      },
+      "SKT": null,
+      "LGU": null
+    }
+  },
+  {
     "brand": "롯데면세점",
     "category_group": "",
     "benefits": {
@@ -3470,27 +3460,27 @@
       "KT": {
         "category": "상시혜택",
         "tier": "VVIP",
-        "summary": "(온) 제휴적립금, 등급 UP (오프) 선불카드, 등급 UP",
+        "summary": "(온) 제휴쿠폰, 등급 UP (오프) 선불카드, 등급 UP",
         "all": [
           {
             "category": "상시혜택",
             "tier": "VVIP",
-            "summary": "(온) 제휴적립금, 등급 UP (오프) 선불카드, 등급 UP"
+            "summary": "(온) 제휴쿠폰, 등급 UP (오프) 선불카드, 등급 UP"
           },
           {
             "category": "상시혜택",
             "tier": "VIP",
-            "summary": "(온) 제휴적립금, 등급 UP (오프) 선불카드, 등급 UP"
+            "summary": "(온) 제휴쿠폰, 등급 UP (오프) 선불카드, 등급 UP"
           },
           {
             "category": "상시혜택",
             "tier": "GOLD",
-            "summary": "(온) 제휴적립금, 등급 UP (오프) 선불카드, 등급 UP"
+            "summary": "(온) 제휴쿠폰, 등급 UP (오프) 선불카드, 등급 UP"
           },
           {
             "category": "상시혜택",
             "tier": "일반",
-            "summary": "(온) 제휴적립금 (오프) 선불카드, 등급 UP"
+            "summary": "(온) 제휴쿠폰 (오프) 선불카드, 등급 UP"
           }
         ]
       },
@@ -3765,12 +3755,12 @@
       "KT": {
         "category": "상시혜택",
         "tier": "전등급",
-        "summary": "[8월 프로모션] 본인 및 동반 1인 42% 할인 [상시] 본인 40% 및 동반 3인 30% 할인",
+        "summary": "본인 40% 및 동반 3인 30% 할인",
         "all": [
           {
             "category": "상시혜택",
             "tier": "전등급",
-            "summary": "[8월 프로모션] 본인 및 동반 1인 42% 할인 [상시] 본인 40% 및 동반 3인 30% 할인"
+            "summary": "본인 40% 및 동반 3인 30% 할인"
           }
         ]
       }
@@ -4338,7 +4328,27 @@
     }
   },
   {
-    "brand": "뮤지컬 유미의 세포들",
+    "brand": "뮤지컬 광화문연가",
+    "category_group": "",
+    "benefits": {
+      "KT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "최대 35% 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "최대 35% 할인"
+          }
+        ]
+      },
+      "SKT": null,
+      "LGU": null
+    }
+  },
+  {
+    "brand": "뮤지컬 디어 에반 핸슨",
     "category_group": "",
     "benefits": {
       "KT": {
@@ -4350,26 +4360,6 @@
             "category": "월간혜택",
             "tier": "전체",
             "summary": "최대 45% 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "뮤지컬 헬스키친",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "월간혜택",
-        "tier": "전체",
-        "summary": "최대 40% 할인",
-        "all": [
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "최대 40% 할인"
           }
         ]
       },
@@ -4622,14 +4612,9 @@
     "benefits": {
       "KT": {
         "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[달.달.혜택] 밀리의서재 1개월 무료",
+        "tier": "VVIP",
+        "summary": "[VVIP 초이스]밀리의 서재 3개월 무료",
         "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[달.달.혜택] 밀리의서재 1개월 무료"
-          },
           {
             "category": "상시혜택",
             "tier": "VVIP",
@@ -4644,11 +4629,6 @@
             "category": "VIP특화혜택",
             "tier": "VVIP",
             "summary": "3개월 무료"
-          },
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "밀리의서재 1개월 무료 구독"
           }
         ]
       },
@@ -4817,12 +4797,12 @@
       "KT": {
         "category": "상시혜택",
         "tier": "전등급",
-        "summary": "[케멤페] 최대 9천원 할인",
+        "summary": "[달.달.혜택] 배민XBHC 최대 1만원 할인(7천원 할인＋휴대폰 결제 3천원 할인, 1.8만원 이상 주문 시)",
         "all": [
           {
             "category": "상시혜택",
             "tier": "전등급",
-            "summary": "[케멤페] 최대 9천원 할인"
+            "summary": "[달.달.혜택] 배민XBHC 최대 1만원 할인(7천원 할인＋휴대폰 결제 3천원 할인, 1.8만원 이상 주문 시)"
           }
         ]
       },
@@ -4961,6 +4941,26 @@
         ]
       },
       "KT": null
+    }
+  },
+  {
+    "brand": "버거킹",
+    "category_group": "",
+    "benefits": {
+      "KT": {
+        "category": "상시혜택",
+        "tier": "전등급",
+        "summary": "[달.달.혜택] 와퍼세트 45% 또는 불고기와퍼 롱치킨버거 2인 메뉴 50% 할인",
+        "all": [
+          {
+            "category": "상시혜택",
+            "tier": "전등급",
+            "summary": "[달.달.혜택] 와퍼세트 45% 또는 불고기와퍼 롱치킨버거 2인 메뉴 50% 할인"
+          }
+        ]
+      },
+      "SKT": null,
+      "LGU": null
     }
   },
   {
@@ -5841,17 +5841,12 @@
       "KT": {
         "category": "상시혜택",
         "tier": "전등급",
-        "summary": "[달.달.혜택] 5천원 할인(3만원 이상 구매 시) [상시]멤버십 전용 특가 혜택 제공",
+        "summary": "[달.달.혜택] 5천원 할인 (멤버십 혜택가 기준, 단일 상품 3만5천원 이상 결제 시) [상시]멤버십 전용 특가 혜택 제공",
         "all": [
           {
             "category": "상시혜택",
             "tier": "전등급",
-            "summary": "[달.달.혜택] 5천원 할인(3만원 이상 구매 시) [상시]멤버십 전용 특가 혜택 제공"
-          },
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "쇼핑라운지 5천원 할인"
+            "summary": "[달.달.혜택] 5천원 할인 (멤버십 혜택가 기준, 단일 상품 3만5천원 이상 결제 시) [상시]멤버십 전용 특가 혜택 제공"
           }
         ]
       },
@@ -6271,26 +6266,6 @@
     }
   },
   {
-    "brand": "슬립노모어 서울(Sleep No More Seoul)",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "월간혜택",
-        "tier": "전체",
-        "summary": "최대 40% 할인",
-        "all": [
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "최대 40% 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "신라면세점",
     "category_group": "",
     "benefits": {
@@ -6691,12 +6666,12 @@
       "KT": {
         "category": "상시혜택",
         "tier": "전등급",
-        "summary": "[케멤페] 국내 숙소 10%, 해외 숙소 12% 할인 (최대 USD $50까지) [상시]국내 숙소 예약 시 8% 할인 / 해외 숙소 예약 시 7% 할인 (할인 한도 최대 $40)",
+        "summary": "국내 숙소 예약 시 8% 할인 / 해외 숙소 예약 시 7% 할인 (할인 한도 최대 $40)",
         "all": [
           {
             "category": "상시혜택",
             "tier": "전등급",
-            "summary": "[케멤페] 국내 숙소 10%, 해외 숙소 12% 할인 (최대 USD $50까지) [상시]국내 숙소 예약 시 8% 할인 / 해외 숙소 예약 시 7% 할인 (할인 한도 최대 $40)"
+            "summary": "국내 숙소 예약 시 8% 할인 / 해외 숙소 예약 시 7% 할인 (할인 한도 최대 $40)"
           }
         ]
       },
@@ -8784,18 +8759,38 @@
     }
   },
   {
-    "brand": "전시 아기상어 비밀 초대장:비커밍 샤크",
+    "brand": "전시 이기훈 원화전 :내일의 낙원",
     "category_group": "",
     "benefits": {
       "KT": {
         "category": "월간혜택",
         "tier": "전체",
-        "summary": "전 등급 50% 할인",
+        "summary": "입장권 1인 45% 할인 (패키지 50% 할인)",
         "all": [
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "전 등급 50% 할인"
+            "summary": "입장권 1인 45% 할인 (패키지 50% 할인)"
+          }
+        ]
+      },
+      "SKT": null,
+      "LGU": null
+    }
+  },
+  {
+    "brand": "전시 조은 원화전 :오늘의 정원",
+    "category_group": "",
+    "benefits": {
+      "KT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "입장권 1인 45% 할인 (패키지 50% 할인)",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "입장권 1인 45% 할인 (패키지 50% 할인)"
           }
         ]
       },
@@ -9132,12 +9127,22 @@
       "KT": {
         "category": "상시혜택",
         "tier": "전등급",
-        "summary": "VOD 20% 할인",
+        "summary": "[상시]VOD 20% 할인",
         "all": [
           {
             "category": "상시혜택",
             "tier": "전등급",
-            "summary": "VOD 20% 할인"
+            "summary": "[상시]VOD 20% 할인"
+          },
+          {
+            "category": "상시혜택",
+            "tier": "VVIP",
+            "summary": "[V/VIP초이스]지니 TV VOD 1만원 이용권"
+          },
+          {
+            "category": "상시혜택",
+            "tier": "VIP",
+            "summary": "[V/VIP초이스]지니 TV VOD 1만원 이용권"
           }
         ]
       },
@@ -9554,18 +9559,7 @@
           }
         ]
       },
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[케멤페] 본인 및 동반 1인 50% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[케멤페] 본인 및 동반 1인 50% 할인"
-          }
-        ]
-      },
+      "KT": null,
       "LGU": null
     }
   },
@@ -11035,7 +11029,7 @@
           {
             "category": "VIP특화혜택",
             "tier": "VIP",
-            "summary": "시즌 음료 3종 50% 할인(최대 2잔) 혜택 음료: 룽고(S/G), 아이스크림 카페 라떼(S), 아이스크림 멜론 프라페(S/G) 중 택1"
+            "summary": "시즌 음료 3종 50% 할인(최대 2잔) 혜택 음료: 아이스크림 카페 라떼(S/G), 아이스크림 멜론 프라페(S),룽고(S/G) 중 택1"
           }
         ]
       },
