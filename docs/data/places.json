@@ -2612,17 +2612,17 @@
       "SKT": {
         "category": "상시혜택",
         "tier": "VIP/GOLD",
-        "summary": "15% 할인",
+        "summary": "15% 할인(1일 1회)",
         "all": [
           {
             "category": "상시혜택",
             "tier": "VIP/GOLD",
-            "summary": "15% 할인"
+            "summary": "15% 할인(1일 1회)"
           },
           {
             "category": "상시혜택",
             "tier": "SILVER",
-            "summary": "5% 할인"
+            "summary": "5% 할인(1일 1회)"
           },
           {
             "category": "상시혜택",
@@ -2632,12 +2632,12 @@
           {
             "category": "상시혜택",
             "tier": "VIP/GOLD",
-            "summary": "15% 적립"
+            "summary": "15% 적립(1일 1회)"
           },
           {
             "category": "상시혜택",
             "tier": "SILVER",
-            "summary": "5% 적립"
+            "summary": "5% 적립(1일 1회)"
           },
           {
             "category": "상시혜택",
