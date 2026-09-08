@@ -6861,41 +6861,6 @@
     }
   },
   {
-    "brand": "아웃백",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "VVIP",
-        "summary": "15% 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VVIP",
-            "summary": "15% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP",
-            "summary": "15% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "GOLD",
-            "summary": "15% 할인"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "일반",
-            "summary": "5% 할인"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "아웃백 스테이크하우스",
     "category_group": "",
     "benefits": {
@@ -6936,7 +6901,33 @@
           }
         ]
       },
-      "KT": null,
+      "KT": {
+        "category": "상시혜택",
+        "tier": "VVIP",
+        "summary": "15% 할인",
+        "all": [
+          {
+            "category": "상시혜택",
+            "tier": "VVIP",
+            "summary": "15% 할인"
+          },
+          {
+            "category": "상시혜택",
+            "tier": "VIP",
+            "summary": "15% 할인"
+          },
+          {
+            "category": "상시혜택",
+            "tier": "GOLD",
+            "summary": "15% 할인"
+          },
+          {
+            "category": "상시혜택",
+            "tier": "일반",
+            "summary": "5% 할인"
+          }
+        ]
+      },
       "LGU": null
     }
   },
@@ -8040,26 +8031,6 @@
       },
       "SKT": null,
       "KT": null
-    }
-  },
-  {
-    "brand": "와플랫 체크",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[오픈 프로모션] 와플랫 체크 가족케어 1개월 무료 체험",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[오픈 프로모션] 와플랫 체크 가족케어 1개월 무료 체험"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
     }
   },
   {
