@@ -2643,6 +2643,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER/LITE",
             "summary": "포인트 사용가능(100%, 10P 단위)"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "VIP 찬스",
+            "summary": "30% 할인/적립"
           }
         ]
       },
@@ -3061,6 +3066,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER/LITE",
             "summary": "포인트 사용가능 (100%, 10P 단위)"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "1,000원당 300원 할인 또는 300P 적립"
           }
         ]
       },
@@ -4668,31 +4678,6 @@
     }
   },
   {
-    "brand": "밀리의 서재",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "VIP특화혜택",
-        "tier": "VVIP",
-        "summary": "1개월 무료",
-        "all": [
-          {
-            "category": "VIP특화혜택",
-            "tier": "VVIP",
-            "summary": "1개월 무료"
-          },
-          {
-            "category": "VIP특화혜택",
-            "tier": "VIP",
-            "summary": "1개월 무료"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "밀리의서재",
     "category_group": "",
     "benefits": {
@@ -4715,6 +4700,16 @@
             "category": "VIP특화혜택",
             "tier": "VVIP",
             "summary": "3개월 무료"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "1개월 무료"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "1개월 무료"
           }
         ]
       },
@@ -4934,6 +4929,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
             "summary": "포인트 사용 가능(100%, 10P 단위)"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "파인트 40% 할인/적립"
           }
         ]
       },
@@ -5032,6 +5032,26 @@
         ]
       },
       "KT": null
+    }
+  },
+  {
+    "brand": "버거리",
+    "category_group": "",
+    "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "인기 버거 세트 3종 4,000원 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "인기 버거 세트 3종 4,000원 할인"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
     }
   },
   {
@@ -10365,6 +10385,26 @@
     }
   },
   {
+    "brand": "트리니티항공",
+    "category_group": "여행/교통",
+    "benefits": {
+      "LGU": {
+        "category": "상시혜택",
+        "tier": "VVIP/VIP/우수",
+        "summary": "국내선 5,000원 / 국제선 10,000원 할인",
+        "all": [
+          {
+            "category": "상시혜택",
+            "tier": "VVIP/VIP/우수",
+            "summary": "국내선 5,000원 / 국제선 10,000원 할인"
+          }
+        ]
+      },
+      "SKT": null,
+      "KT": null
+    }
+  },
+  {
     "brand": "트립닷컴",
     "category_group": "여행/교통",
     "benefits": {
@@ -10447,7 +10487,7 @@
   },
   {
     "brand": "티웨이항공",
-    "category_group": "여행/교통",
+    "category_group": "",
     "benefits": {
       "SKT": {
         "category": "상시혜택",
@@ -10466,19 +10506,8 @@
           }
         ]
       },
-      "LGU": {
-        "category": "상시혜택",
-        "tier": "VVIP/VIP/우수",
-        "summary": "국내선 5,000원 / 국제선 10,000원 할인",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VVIP/VIP/우수",
-            "summary": "국내선 5,000원 / 국제선 10,000원 할인"
-          }
-        ]
-      },
-      "KT": null
+      "KT": null,
+      "LGU": null
     }
   },
   {
