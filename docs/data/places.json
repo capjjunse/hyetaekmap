@@ -10388,6 +10388,23 @@
     "brand": "트리니티항공",
     "category_group": "여행/교통",
     "benefits": {
+      "SKT": {
+        "category": "상시혜택",
+        "tier": "VIP/GOLD/SILVER",
+        "summary": "국내선 4,000원(편도,왕복), 국제선 15,000원(왕복) 할인 쿠폰 제공",
+        "all": [
+          {
+            "category": "상시혜택",
+            "tier": "VIP/GOLD/SILVER",
+            "summary": "국내선 4,000원(편도,왕복), 국제선 15,000원(왕복) 할인 쿠폰 제공"
+          },
+          {
+            "category": "상시혜택",
+            "tier": "VIP/GOLD/SILVER",
+            "summary": "국내선 4,000원(편도,왕복), 국제선 15,000원(왕복) 할인 쿠폰 제공"
+          }
+        ]
+      },
       "LGU": {
         "category": "상시혜택",
         "tier": "VVIP/VIP/우수",
@@ -10400,7 +10417,6 @@
           }
         ]
       },
-      "SKT": null,
       "KT": null
     }
   },
@@ -10478,31 +10494,6 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
             "summary": "(에버온) 전기차 충전 10% 할인"
-          }
-        ]
-      },
-      "KT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "티웨이항공",
-    "category_group": "",
-    "benefits": {
-      "SKT": {
-        "category": "상시혜택",
-        "tier": "VIP/GOLD/SILVER",
-        "summary": "국내선 4,000원(편도,왕복), 국제선 15,000원(왕복) 할인 쿠폰 제공",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VIP/GOLD/SILVER",
-            "summary": "국내선 4,000원(편도,왕복), 국제선 15,000원(왕복) 할인 쿠폰 제공"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP/GOLD/SILVER",
-            "summary": "국내선 4,000원(편도,왕복), 국제선 15,000원(왕복) 할인 쿠폰 제공"
           }
         ]
       },
