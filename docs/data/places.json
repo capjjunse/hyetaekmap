@@ -939,12 +939,12 @@
       "SKT": {
         "category": "상시혜택",
         "tier": "VIP/GOLD/SILVER",
-        "summary": "제주: 주중/주말 최대 85% 할인, 내륙: 주중/주말 최대 60% 할인",
+        "summary": "제주&내륙: 주중/주말 최대 60% 할인",
         "all": [
           {
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
-            "summary": "제주: 주중/주말 최대 85% 할인, 내륙: 주중/주말 최대 60% 할인"
+            "summary": "제주&내륙: 주중/주말 최대 60% 할인"
           },
           {
             "category": "상시혜택",
@@ -964,7 +964,7 @@
           {
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
-            "summary": "제주: 주중/주말 최대 85% 할인, 내륙: 주중/주말 최대 60% 할인"
+            "summary": "제주&내륙: 주중/주말 최대 60% 할인"
           }
         ]
       },
@@ -3071,6 +3071,11 @@
             "category": "월간혜택",
             "tier": "전체",
             "summary": "1,000원당 300원 할인 또는 300P 적립"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "1,000원당 300원 할인 또는 300P 적립"
           }
         ]
       },
@@ -3345,17 +3350,17 @@
       "SKT": {
         "category": "상시혜택",
         "tier": "VIP/GOLD/SILVER",
-        "summary": "제주: 주중/주말 최대 85% 할인, 내륙: 주중/주말 최대 60% 할인",
+        "summary": "제주: 최대 60% 할인, 내륙: 최대 60% 할인",
         "all": [
           {
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
-            "summary": "제주: 주중/주말 최대 85% 할인, 내륙: 주중/주말 최대 60% 할인"
+            "summary": "제주: 최대 60% 할인, 내륙: 최대 60% 할인"
           },
           {
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
-            "summary": "제주: 주중/주말 최대 85% 할인, 내륙: 주중/주말 최대 60% 할인"
+            "summary": "제주: 최대 60% 할인, 내륙: 최대 60% 할인"
           }
         ]
       },
@@ -5380,12 +5385,12 @@
       "SKT": {
         "category": "상시혜택",
         "tier": "VIP/GOLD/SILVER",
-        "summary": "제주: 주중/주말 최대 85% 할인",
+        "summary": "제주: 주중/주말 최대 60% 할인",
         "all": [
           {
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
-            "summary": "제주: 주중/주말 최대 85% 할인"
+            "summary": "제주: 주중/주말 최대 60% 할인"
           },
           {
             "category": "상시혜택",
@@ -5405,7 +5410,7 @@
           {
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
-            "summary": "제주: 주중/주말 최대 85% 할인"
+            "summary": "제주: 주중/주말 최대 60% 할인"
           }
         ]
       },
@@ -10766,6 +10771,11 @@
           },
           {
             "category": "월간혜택",
+            "tier": "VIP Only 찬스",
+            "summary": "추석 기획전 40% 할인"
+          },
+          {
+            "category": "월간혜택",
             "tier": "전체",
             "summary": "1,000원당 200원 할인 또는 200P 적립"
           }
@@ -11506,6 +11516,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER/LITE",
             "summary": "포인트 사용가능 (100%, 10P 단위)"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "방문 포장 50% 할인/적립"
           },
           {
             "category": "VIP특화혜택",
