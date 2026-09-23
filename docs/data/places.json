@@ -4115,6 +4115,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER/LITE",
             "summary": "포인트 사용 가능(100%, 1P단위)"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "VIP 찬스",
+            "summary": "30% 할인"
           }
         ]
       },
@@ -5994,6 +5999,18 @@
     "brand": "쉐이크쉑",
     "category_group": "",
     "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "30% 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "30% 할인"
+          }
+        ]
+      },
       "LGU": {
         "category": "VIP특화혜택",
         "tier": "VVIP/VIP",
@@ -6006,7 +6023,6 @@
           }
         ]
       },
-      "SKT": null,
       "KT": null
     }
   },
@@ -10771,13 +10787,13 @@
           },
           {
             "category": "월간혜택",
-            "tier": "VIP Only 찬스",
-            "summary": "추석 기획전 최대 40% 할인"
+            "tier": "전체",
+            "summary": "1,000원당 200원 할인 또는 200P 적립"
           },
           {
             "category": "월간혜택",
-            "tier": "전체",
-            "summary": "1,000원당 200원 할인 또는 200P 적립"
+            "tier": "VIP Only 찬스",
+            "summary": "추석 기획전 최대 40% 할인"
           }
         ]
       },
@@ -10932,6 +10948,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER/LITE",
             "summary": "포인트 사용 가능(100%, 10P 단위)"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "VIP 찬스",
+            "summary": "10,000원 이상 구매 시 20% 할인"
           }
         ]
       },
