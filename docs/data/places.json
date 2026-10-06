@@ -9916,26 +9916,6 @@
     }
   },
   {
-    "brand": "초대 혜택",
-    "category_group": "",
-    "benefits": {
-      "KT": {
-        "category": "상시혜택",
-        "tier": "전등급",
-        "summary": "[초대 혜택] 2026 KT VOYAGE FESTIVAL 응모",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "전등급",
-            "summary": "[초대 혜택] 2026 KT VOYAGE FESTIVAL 응모"
-          }
-        ]
-      },
-      "SKT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "초심스터디카페",
     "category_group": "교육",
     "benefits": {
