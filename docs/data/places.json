@@ -224,6 +224,11 @@
             "summary": "영화 관람권(11,000원 이상) 예매 시 최대 4,000원 할인"
           },
           {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "영화 티켓 8,500원 예매+매점 할인 쿠폰 2종"
+          },
+          {
             "category": "VIP특화혜택",
             "tier": "VIP",
             "summary": "영화 관람권 1장 무료 연 3회, 평일/주말 관람권 1+1 연 9회"
@@ -1325,6 +1330,26 @@
     }
   },
   {
+    "brand": "T 우주 Google AI Plus (400GB) 가입 시",
+    "category_group": "",
+    "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "Npay 포인트 6,900P 증정",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "Npay 포인트 6,900P 증정"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
+    }
+  },
+  {
     "brand": "T 우주 신한카드",
     "category_group": "",
     "benefits": {
@@ -1889,6 +1914,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER/LITE",
             "summary": "포인트 사용가능 (100%, 10P 단위)"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "VIP 찬스",
+            "summary": "인기 음료 6종 30% 할인/적립"
           }
         ]
       },
@@ -2762,6 +2792,26 @@
     }
   },
   {
+    "brand": "더 키친 일 뽀르노",
+    "category_group": "",
+    "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "50,000원 이상 주문 시 30% 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "50,000원 이상 주문 시 30% 할인"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
+    }
+  },
+  {
     "brand": "더라운지",
     "category_group": "",
     "benefits": {
@@ -3455,6 +3505,26 @@
     }
   },
   {
+    "brand": "럭키찬스 런 with AI 게임",
+    "category_group": "",
+    "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "가민워치, 용감한 쿠키런 응모 이벤트",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "가민워치, 용감한 쿠키런 응모 이벤트"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
+    }
+  },
+  {
     "brand": "런드리고",
     "category_group": "",
     "benefits": {
@@ -3692,12 +3762,12 @@
       "KT": {
         "category": "상시혜택",
         "tier": "전등급",
-        "summary": "[달.달.혜택] 1인팩 or 2인팩 40% 할인",
+        "summary": "[달.달.혜택] 1인팩 or 2인팩 최대 40% 할인",
         "all": [
           {
             "category": "상시혜택",
             "tier": "전등급",
-            "summary": "[달.달.혜택] 1인팩 or 2인팩 40% 할인"
+            "summary": "[달.달.혜택] 1인팩 or 2인팩 최대 40% 할인"
           }
         ]
       },
@@ -4098,6 +4168,26 @@
         ]
       },
       "KT": null
+    }
+  },
+  {
+    "brand": "롯데월드 어드벤처 서울/부산",
+    "category_group": "",
+    "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "종합이용권 최대 55% 할인(본인+동반 3명)",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "종합이용권 최대 55% 할인(본인+동반 3명)"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
     }
   },
   {
@@ -4878,6 +4968,18 @@
     "brand": "밀리의서재",
     "category_group": "",
     "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "전자책 1개월 구독권 무료 증정",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "전자책 1개월 구독권 무료 증정"
+          }
+        ]
+      },
       "LGU": {
         "category": "월간혜택",
         "tier": "전체",
@@ -4921,8 +5023,7 @@
             "summary": "1개월 무료"
           }
         ]
-      },
-      "SKT": null
+      }
     }
   },
   {
@@ -5117,6 +5218,26 @@
       },
       "SKT": null,
       "KT": null
+    }
+  },
+  {
+    "brand": "배달의민족xbhc",
+    "category_group": "",
+    "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "VIP 찬스",
+        "summary": "6,000원 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "VIP 찬스",
+            "summary": "6,000원 할인"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
     }
   },
   {
@@ -6301,12 +6422,12 @@
       "SKT": {
         "category": "월간혜택",
         "tier": "전체",
-        "summary": "모든 서비스 20,000원 할인 쿠폰",
+        "summary": "모든 서비스 20,000원 할인",
         "all": [
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "모든 서비스 20,000원 할인 쿠폰"
+            "summary": "모든 서비스 20,000원 할인"
           }
         ]
       },
@@ -8160,6 +8281,26 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
             "summary": "10% 할인(오프라인)"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
+    }
+  },
+  {
+    "brand": "예스24",
+    "category_group": "",
+    "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "크레마클럽 60일 이용권 무료",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "크레마클럽 60일 이용권 무료"
           }
         ]
       },
@@ -11640,6 +11781,26 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER/LITE",
             "summary": "시그니처 커피 4종 구매 시 포인트 사용가능(100%, 10P 단위)"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
+    }
+  },
+  {
+    "brand": "폴라리스 오피스",
+    "category_group": "",
+    "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "AI 요금제 1개월 이용권",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "AI 요금제 1개월 이용권"
           }
         ]
       },
