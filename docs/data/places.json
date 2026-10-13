@@ -5247,17 +5247,17 @@
       "SKT": {
         "category": "상시혜택",
         "tier": "VIP",
-        "summary": "싱글레귤러 50% 할인(2,000원)",
+        "summary": "싱글레귤러 50% 할인(2,150원)",
         "all": [
           {
             "category": "상시혜택",
             "tier": "VIP",
-            "summary": "싱글레귤러 50% 할인(2,000원)"
+            "summary": "싱글레귤러 50% 할인(2,150원)"
           },
           {
             "category": "상시혜택",
             "tier": "GOLD/SILVER",
-            "summary": "싱글레귤러 30% 할인(1,200원)"
+            "summary": "싱글레귤러 30% 할인(1,290원)"
           },
           {
             "category": "상시혜택",
@@ -5267,12 +5267,12 @@
           {
             "category": "상시혜택",
             "tier": "VIP",
-            "summary": "싱글레귤러 50% 적립(2,000P)"
+            "summary": "싱글레귤러 50% 적립(2,150P)"
           },
           {
             "category": "상시혜택",
             "tier": "GOLD/SILVER",
-            "summary": "싱글레귤러 30% 적립(1,200P)"
+            "summary": "싱글레귤러 30% 적립(1,290P)"
           },
           {
             "category": "상시혜택",
