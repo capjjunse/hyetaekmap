@@ -2940,6 +2940,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER/LITE",
             "summary": "포인트 사용가능(100%, 10P 단위)"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "VIP 찬스",
+            "summary": "30% 할인/적립"
           }
         ]
       },
@@ -3031,6 +3036,26 @@
       },
       "SKT": null,
       "LGU": null
+    }
+  },
+  {
+    "brand": "도그마루",
+    "category_group": "생활/편의",
+    "benefits": {
+      "LGU": {
+        "category": "상시혜택",
+        "tier": "VVIP/VIP/우수",
+        "summary": "분양/입양 시 동물미아방지칩(펫플칩) 무료증정",
+        "all": [
+          {
+            "category": "상시혜택",
+            "tier": "VVIP/VIP/우수",
+            "summary": "분양/입양 시 동물미아방지칩(펫플칩) 무료증정"
+          }
+        ]
+      },
+      "SKT": null,
+      "KT": null
     }
   },
   {
@@ -3338,6 +3363,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER/LITE",
             "summary": "포인트 사용가능 (100%, 10P 단위)"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "1,000원당 300원 할인 또는 300P 적립"
           }
         ]
       },
@@ -5364,6 +5394,11 @@
           {
             "category": "월간혜택",
             "tier": "전체",
+            "summary": "스페셜 아이스크림 1+1"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
             "summary": "아이스크림 1+1"
           }
         ]
@@ -6439,6 +6474,18 @@
     "brand": "쉐이크쉑",
     "category_group": "",
     "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "VIP 찬스",
+        "summary": "20% 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "VIP 찬스",
+            "summary": "20% 할인"
+          }
+        ]
+      },
       "LGU": {
         "category": "VIP특화혜택",
         "tier": "VVIP/VIP",
@@ -6451,7 +6498,6 @@
           }
         ]
       },
-      "SKT": null,
       "KT": null
     }
   },
@@ -6495,10 +6541,15 @@
     "category_group": "",
     "benefits": {
       "SKT": {
-        "category": "VIP특화혜택",
-        "tier": "VIP",
-        "summary": "(VIP PICK 횟수 미차감) 10,000원 할인 30,000원 이상 구매 시 사용 가능",
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "40,000원 이상 결제 시 20,000원 할인",
         "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "40,000원 이상 결제 시 20,000원 할인"
+          },
           {
             "category": "VIP특화혜택",
             "tier": "VIP",
@@ -6864,6 +6915,26 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
             "summary": "전화/화상 전 과정 40% 할인(12/24/48주 기간에 한함(4주 수업 제외)"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
+    }
+  },
+  {
+    "brand": "슬로우캘리",
+    "category_group": "",
+    "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "VIP 찬스",
+        "summary": "대표 메뉴 4,000원 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "VIP 찬스",
+            "summary": "대표 메뉴 4,000원 할인"
           }
         ]
       },
