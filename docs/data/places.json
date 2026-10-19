@@ -988,6 +988,36 @@
     }
   },
   {
+    "brand": "SK나이츠",
+    "category_group": "",
+    "benefits": {
+      "SKT": {
+        "category": "상시혜택",
+        "tier": "VIP/GOLD/SILVER",
+        "summary": "현장 티켓 구매 시 주중 20%, 주말 및 공휴일 15% 할인(동반 1인)",
+        "all": [
+          {
+            "category": "상시혜택",
+            "tier": "VIP/GOLD/SILVER",
+            "summary": "현장 티켓 구매 시 주중 20%, 주말 및 공휴일 15% 할인(동반 1인)"
+          },
+          {
+            "category": "상시혜택",
+            "tier": "VIP/GOLD/SILVER",
+            "summary": "현장 티켓 구매 시 주중 20%, 주말 및 공휴일 15% 할인(동반 1인)"
+          },
+          {
+            "category": "상시혜택",
+            "tier": "VIP/GOLD/SILVER",
+            "summary": "포인트 사용 가능(100%, 10P 단위)"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
+    }
+  },
+  {
     "brand": "SK렌터카",
     "category_group": "여행/교통",
     "benefits": {
