@@ -1000,16 +1000,6 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
             "summary": "현장 티켓 구매 시 주중 20%, 주말 및 공휴일 15% 할인(동반 1인)"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP/GOLD/SILVER",
-            "summary": "현장 티켓 구매 시 주중 20%, 주말 및 공휴일 15% 할인(동반 1인)"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP/GOLD/SILVER",
-            "summary": "포인트 사용 가능(100%, 10P 단위)"
           }
         ]
       },
@@ -5631,10 +5621,20 @@
     "category_group": "",
     "benefits": {
       "SKT": {
-        "category": "VIP특화혜택",
-        "tier": "VIP",
-        "summary": "온라인 도서문화상품권 5만 원권 2장 7% 할인",
+        "category": "상시혜택",
+        "tier": "VIP/GOLD/SILVER",
+        "summary": "5% 할인(5만 원권/3만 원권)",
         "all": [
+          {
+            "category": "상시혜택",
+            "tier": "VIP/GOLD/SILVER",
+            "summary": "5% 할인(5만 원권/3만 원권)"
+          },
+          {
+            "category": "상시혜택",
+            "tier": "VIP/GOLD/SILVER",
+            "summary": "5% 할인(5만 원권/3만 원권)"
+          },
           {
             "category": "VIP특화혜택",
             "tier": "VIP",
