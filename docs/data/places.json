@@ -1000,6 +1000,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
             "summary": "현장 티켓 구매 시 주중 20%, 주말 및 공휴일 15% 할인(동반 1인)"
+          },
+          {
+            "category": "상시혜택",
+            "tier": "VIP/GOLD/SILVER",
+            "summary": "현장 티켓 구매 시 주중 20%, 주말 및 공휴일 15% 할인(동반 1인)"
           }
         ]
       },
@@ -3116,6 +3121,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER/LITE",
             "summary": "포인트 사용가능 (100%, 10P 단위)"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "방문 포장 50% 할인/적립"
           }
         ]
       },
@@ -3541,8 +3551,13 @@
       "SKT": {
         "category": "월간혜택",
         "tier": "전체",
-        "summary": "이니스프리 100% 당첨 랜덤 추첨 이벤트",
+        "summary": "2027학년도 수능 응원 꽃다발+응원 메시지",
         "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "2027학년도 수능 응원 꽃다발+응원 메시지"
+          },
           {
             "category": "월간혜택",
             "tier": "전체",
@@ -5414,12 +5429,12 @@
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "스페셜 아이스크림 1+1"
+            "summary": "아이스크림 1+1"
           },
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "아이스크림 1+1"
+            "summary": "스페셜 아이스크림 1+1"
           }
         ]
       },
@@ -5461,6 +5476,26 @@
       },
       "SKT": null,
       "KT": null
+    }
+  },
+  {
+    "brand": "버거킹",
+    "category_group": "",
+    "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "와퍼 단품 40% 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "와퍼 단품 40% 할인"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
     }
   },
   {
@@ -5856,6 +5891,26 @@
           }
         ]
       },
+      "LGU": null
+    }
+  },
+  {
+    "brand": "빙동댕",
+    "category_group": "",
+    "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "15,000원 이상 구매 시 6,000원 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "15,000원 이상 구매 시 6,000원 할인"
+          }
+        ]
+      },
+      "KT": null,
       "LGU": null
     }
   },
@@ -7530,6 +7585,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER/LITE",
             "summary": "포인트 사용가능 (100%, 10p 단위)"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "VIP Only 찬스",
+            "summary": "25% 할인/적립"
           }
         ]
       },
@@ -10890,6 +10950,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
             "summary": "모든 제품 15% 할인 쿠폰"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "최대 25,000원 할인"
           }
         ]
       },
@@ -11576,6 +11641,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER/LITE",
             "summary": "포인트 사용 가능(100%, 10P 단위)"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "VIP 찬스",
+            "summary": "10,000원 이상 구매 시 20% 할인"
           }
         ]
       },
