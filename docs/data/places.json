@@ -8390,41 +8390,6 @@
     }
   },
   {
-    "brand": "여행자 보험",
-    "category_group": "",
-    "benefits": {
-      "SKT": {
-        "category": "상시혜택",
-        "tier": "VIP/GOLD/SILVER",
-        "summary": "어시스트 카드 결제 금액의 최대 10% 할인(최대 30만P)",
-        "all": [
-          {
-            "category": "상시혜택",
-            "tier": "VIP/GOLD/SILVER",
-            "summary": "어시스트 카드 결제 금액의 최대 10% 할인(최대 30만P)"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP/GOLD/SILVER",
-            "summary": "포인트 사용가능 (100%, 10P 단위)"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP/GOLD/SILVER",
-            "summary": "어시스트 카드 결제 금액의 최대 10% 적립(최대 30만P)"
-          },
-          {
-            "category": "상시혜택",
-            "tier": "VIP/GOLD/SILVER",
-            "summary": "포인트 사용가능 (100%, 10P 단위)"
-          }
-        ]
-      },
-      "KT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "열린베이커리",
     "category_group": "",
     "benefits": {
