@@ -65,6 +65,26 @@
     }
   },
   {
+    "brand": "29CM",
+    "category_group": "",
+    "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "장바구니 15% 할인(최대 20,000원)",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "장바구니 15% 할인(최대 20,000원)"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
+    }
+  },
+  {
     "brand": "5G 데이터충전",
     "category_group": "",
     "benefits": {
@@ -222,11 +242,6 @@
             "category": "상시혜택",
             "tier": "GOLD/SILVER",
             "summary": "영화 관람권(11,000원 이상) 예매 시 최대 4,000원 할인"
-          },
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "영화 티켓 8,500원 예매+매점 할인 쿠폰 2종"
           },
           {
             "category": "VIP특화혜택",
@@ -455,6 +470,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
             "summary": "포인트 사용 가능(100%, 1P 단위)"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "대여료 70% 할인"
           },
           {
             "category": "VIP특화혜택",
@@ -1190,26 +1210,6 @@
     }
   },
   {
-    "brand": "T deal",
-    "category_group": "",
-    "benefits": {
-      "SKT": {
-        "category": "월간혜택",
-        "tier": "전체",
-        "summary": "장바구니 부담 쏙! 단 5일 특가 기획전",
-        "all": [
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "장바구니 부담 쏙! 단 5일 특가 기획전"
-          }
-        ]
-      },
-      "KT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "T 다이렉트 샵",
     "category_group": "",
     "benefits": {
@@ -1347,26 +1347,6 @@
             "category": "VIP특화혜택",
             "tier": "VIP",
             "summary": "T 우주패스 할인 쿠폰 2장 발급(총 9,900원 할인, 연 12회) 쇼핑 11번가, 편의점&카페 월간 4,900원 할인 쿠폰 1장 + 올리브영&스타벅스&이마트24 월간 5,000원 할인 쿠폰 1장"
-          }
-        ]
-      },
-      "KT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "T 우주 Google AI Plus (400GB) 가입 시",
-    "category_group": "",
-    "benefits": {
-      "SKT": {
-        "category": "월간혜택",
-        "tier": "전체",
-        "summary": "Npay 포인트 6,900P 증정",
-        "all": [
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "Npay 포인트 6,900P 증정"
           }
         ]
       },
@@ -1539,26 +1519,6 @@
           }
         ]
       }
-    }
-  },
-  {
-    "brand": "VOG HAIR(보그헤어)",
-    "category_group": "",
-    "benefits": {
-      "SKT": {
-        "category": "월간혜택",
-        "tier": "전체",
-        "summary": "헤어 시술 40% 할인(최대 50,000원)",
-        "all": [
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "헤어 시술 40% 할인(최대 50,000원)"
-          }
-        ]
-      },
-      "KT": null,
-      "LGU": null
     }
   },
   {
@@ -1939,11 +1899,6 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER/LITE",
             "summary": "포인트 사용가능 (100%, 10P 단위)"
-          },
-          {
-            "category": "월간혜택",
-            "tier": "VIP 찬스",
-            "summary": "인기 음료 6종 30% 할인/적립"
           }
         ]
       },
@@ -2524,26 +2479,6 @@
     }
   },
   {
-    "brand": "노브랜드버거",
-    "category_group": "",
-    "benefits": {
-      "SKT": {
-        "category": "월간혜택",
-        "tier": "VIP 찬스",
-        "summary": "시그니처 세트 구매 시 치즈스틱 2조각 증정",
-        "all": [
-          {
-            "category": "월간혜택",
-            "tier": "VIP 찬스",
-            "summary": "시그니처 세트 구매 시 치즈스틱 2조각 증정"
-          }
-        ]
-      },
-      "KT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "노트미",
     "category_group": "",
     "benefits": {
@@ -2688,18 +2623,6 @@
     "brand": "닥터피엘",
     "category_group": "쇼핑",
     "benefits": {
-      "SKT": {
-        "category": "월간혜택",
-        "tier": "전체",
-        "summary": "50,000원 이상 구매 시 15,000원 할인",
-        "all": [
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "50,000원 이상 구매 시 15,000원 할인"
-          }
-        ]
-      },
       "LGU": {
         "category": "상시혜택",
         "tier": "VVIP/VIP/우수",
@@ -2712,6 +2635,7 @@
           }
         ]
       },
+      "SKT": null,
       "KT": null
     }
   },
@@ -2814,26 +2738,6 @@
         ]
       },
       "KT": null
-    }
-  },
-  {
-    "brand": "더 키친 일뽀르노",
-    "category_group": "",
-    "benefits": {
-      "SKT": {
-        "category": "월간혜택",
-        "tier": "전체",
-        "summary": "50,000원 이상 주문 시 30% 할인",
-        "all": [
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "50,000원 이상 주문 시 30% 할인"
-          }
-        ]
-      },
-      "KT": null,
-      "LGU": null
     }
   },
   {
@@ -2968,8 +2872,8 @@
           },
           {
             "category": "월간혜택",
-            "tier": "VIP 찬스",
-            "summary": "30% 할인/적립"
+            "tier": "VIP Only 찬스",
+            "summary": "40% 할인/적립"
           }
         ]
       },
@@ -3121,11 +3025,6 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER/LITE",
             "summary": "포인트 사용가능 (100%, 10P 단위)"
-          },
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "방문 포장 50% 할인/적립"
           }
         ]
       },
@@ -3393,11 +3292,6 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER/LITE",
             "summary": "포인트 사용가능 (100%, 10P 단위)"
-          },
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "1,000원당 300원 할인 또는 300P 적립"
           }
         ]
       },
@@ -3550,38 +3444,18 @@
     "benefits": {
       "SKT": {
         "category": "월간혜택",
-        "tier": "전체",
-        "summary": "이니스프리 100% 당첨 랜덤 추첨 이벤트",
+        "tier": "VIP Only 찬스",
+        "summary": "무신사 랜덤 추첨 이벤트",
         "all": [
           {
             "category": "월간혜택",
-            "tier": "전체",
-            "summary": "이니스프리 100% 당첨 랜덤 추첨 이벤트"
+            "tier": "VIP Only 찬스",
+            "summary": "무신사 랜덤 추첨 이벤트"
           },
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "2027학년도 수능 응원 꽃다발+응원 메시지"
-          }
-        ]
-      },
-      "KT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "럭키찬스 런 with AI 게임",
-    "category_group": "",
-    "benefits": {
-      "SKT": {
-        "category": "월간혜택",
-        "tier": "전체",
-        "summary": "가민워치, 용감한 쿠키런 응모 이벤트",
-        "all": [
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "가민워치, 용감한 쿠키런 응모 이벤트"
+            "summary": "크리스마스 리스 추첨 이벤트"
           }
         ]
       },
@@ -4233,26 +4107,6 @@
         ]
       },
       "KT": null
-    }
-  },
-  {
-    "brand": "롯데월드 어드벤처 서울/부산",
-    "category_group": "",
-    "benefits": {
-      "SKT": {
-        "category": "월간혜택",
-        "tier": "전체",
-        "summary": "종합이용권 최대 55% 할인(본인+동반 3명)",
-        "all": [
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "종합이용권 최대 55% 할인(본인+동반 3명)"
-          }
-        ]
-      },
-      "KT": null,
-      "LGU": null
     }
   },
   {
@@ -5033,18 +4887,6 @@
     "brand": "밀리의서재",
     "category_group": "",
     "benefits": {
-      "SKT": {
-        "category": "월간혜택",
-        "tier": "전체",
-        "summary": "전자책 1개월 구독권 무료 증정",
-        "all": [
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "전자책 1개월 구독권 무료 증정"
-          }
-        ]
-      },
       "LGU": {
         "category": "월간혜택",
         "tier": "전체",
@@ -5088,7 +4930,8 @@
             "summary": "1개월 무료"
           }
         ]
-      }
+      },
+      "SKT": null
     }
   },
   {
@@ -5286,7 +5129,7 @@
     }
   },
   {
-    "brand": "배달의민족xbhc",
+    "brand": "배달의민족×60계치킨",
     "category_group": "",
     "benefits": {
       "SKT": {
@@ -5430,11 +5273,6 @@
             "category": "월간혜택",
             "tier": "전체",
             "summary": "아이스크림 1+1"
-          },
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "스페셜 아이스크림 1+1"
           }
         ]
       },
@@ -5479,41 +5317,9 @@
     }
   },
   {
-    "brand": "버거킹",
-    "category_group": "",
-    "benefits": {
-      "SKT": {
-        "category": "월간혜택",
-        "tier": "전체",
-        "summary": "와퍼 단품 40% 할인",
-        "all": [
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "와퍼 단품 40% 할인"
-          }
-        ]
-      },
-      "KT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "베베쿡",
     "category_group": "푸드",
     "benefits": {
-      "SKT": {
-        "category": "월간혜택",
-        "tier": "전체",
-        "summary": "이유식/키즈식 40% 할인 및 유아 식품 30% 할인",
-        "all": [
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "이유식/키즈식 40% 할인 및 유아 식품 30% 할인"
-          }
-        ]
-      },
       "LGU": {
         "category": "상시혜택",
         "tier": "VVIP/VIP/우수",
@@ -5526,6 +5332,7 @@
           }
         ]
       },
+      "SKT": null,
       "KT": null
     }
   },
@@ -5895,26 +5702,6 @@
     }
   },
   {
-    "brand": "빙동댕",
-    "category_group": "",
-    "benefits": {
-      "SKT": {
-        "category": "월간혜택",
-        "tier": "전체",
-        "summary": "15,000원 이상 구매 시 6,000원 할인",
-        "all": [
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "15,000원 이상 구매 시 6,000원 할인"
-          }
-        ]
-      },
-      "KT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "빛의 벙커",
     "category_group": "",
     "benefits": {
@@ -6063,6 +5850,26 @@
             "category": "상시혜택",
             "tier": "SILVER",
             "summary": "10% 할인(최대 10,000원 할인)"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
+    }
+  },
+  {
+    "brand": "사보텐/히바린",
+    "category_group": "",
+    "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "35,000원 이상 주문 시 30% 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "35,000원 이상 주문 시 30% 할인"
           }
         ]
       },
@@ -6542,12 +6349,12 @@
       "SKT": {
         "category": "월간혜택",
         "tier": "전체",
-        "summary": "모든 서비스 20,000원 할인",
+        "summary": "모든 서비스 20,000원 할인 쿠폰",
         "all": [
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "모든 서비스 20,000원 할인"
+            "summary": "모든 서비스 20,000원 할인 쿠폰"
           }
         ]
       },
@@ -6561,13 +6368,13 @@
     "benefits": {
       "SKT": {
         "category": "월간혜택",
-        "tier": "VIP 찬스",
-        "summary": "20% 할인",
+        "tier": "전체",
+        "summary": "30% 할인",
         "all": [
           {
             "category": "월간혜택",
-            "tier": "VIP 찬스",
-            "summary": "20% 할인"
+            "tier": "전체",
+            "summary": "30% 할인"
           }
         ]
       },
@@ -6626,15 +6433,10 @@
     "category_group": "",
     "benefits": {
       "SKT": {
-        "category": "월간혜택",
-        "tier": "전체",
-        "summary": "40,000원 이상 결제 시 20,000원 할인",
+        "category": "VIP특화혜택",
+        "tier": "VIP",
+        "summary": "(VIP PICK 횟수 미차감) 10,000원 할인 30,000원 이상 구매 시 사용 가능",
         "all": [
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "40,000원 이상 결제 시 20,000원 할인"
-          },
           {
             "category": "VIP특화혜택",
             "tier": "VIP",
@@ -7000,26 +6802,6 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
             "summary": "전화/화상 전 과정 40% 할인(12/24/48주 기간에 한함(4주 수업 제외)"
-          }
-        ]
-      },
-      "KT": null,
-      "LGU": null
-    }
-  },
-  {
-    "brand": "슬로우캘리",
-    "category_group": "",
-    "benefits": {
-      "SKT": {
-        "category": "월간혜택",
-        "tier": "VIP 찬스",
-        "summary": "대표 메뉴 4,000원 할인",
-        "all": [
-          {
-            "category": "월간혜택",
-            "tier": "VIP 찬스",
-            "summary": "대표 메뉴 4,000원 할인"
           }
         ]
       },
@@ -7495,11 +7277,6 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
             "summary": "① 모든 제품 10% 할인(3만 원 이상 구매 시 최대 5만 원 할인) ② 리필 제품 15% 할인(1만 원 이상 구매 시 최대 1만 원 할인)"
-          },
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "최대 25,000원 할인"
           }
         ]
       },
@@ -7585,11 +7362,6 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER/LITE",
             "summary": "포인트 사용가능 (100%, 10p 단위)"
-          },
-          {
-            "category": "월간혜택",
-            "tier": "VIP Only 찬스",
-            "summary": "25% 할인/적립"
           }
         ]
       },
@@ -7824,11 +7596,6 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
             "summary": "평일 입장권(찜질스파/워터파크) 본인 포함 최대 2명 30% 할인"
-          },
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "입장권 최대 45% 할인"
           }
         ]
       },
@@ -8008,6 +7775,26 @@
           }
         ]
       }
+    }
+  },
+  {
+    "brand": "얼라이브",
+    "category_group": "",
+    "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "40,000원 이상 구매 시 22,000원 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "40,000원 이상 구매 시 22,000원 할인"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
     }
   },
   {
@@ -8415,26 +8202,6 @@
     }
   },
   {
-    "brand": "예스24",
-    "category_group": "",
-    "benefits": {
-      "SKT": {
-        "category": "월간혜택",
-        "tier": "전체",
-        "summary": "크레마클럽 60일 이용권 무료",
-        "all": [
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "크레마클럽 60일 이용권 무료"
-          }
-        ]
-      },
-      "KT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "오가나셀 피부과의원 청담점",
     "category_group": "뷰티/건강",
     "benefits": {
@@ -8725,6 +8492,26 @@
       },
       "SKT": null,
       "KT": null
+    }
+  },
+  {
+    "brand": "요기요×노모어피자",
+    "category_group": "",
+    "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "배달/포장 주문 시 10,000원 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "배달/포장 주문 시 10,000원 할인"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
     }
   },
   {
@@ -10047,18 +9834,18 @@
     }
   },
   {
-    "brand": "착한소비×아로마빌커피",
+    "brand": "착한소비x라보페",
     "category_group": "",
     "benefits": {
       "SKT": {
         "category": "월간혜택",
         "tier": "전체",
-        "summary": "최대 55% 할인",
+        "summary": "최대 65% 할인",
         "all": [
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "최대 55% 할인"
+            "summary": "최대 65% 할인"
           }
         ]
       },
@@ -10530,6 +10317,26 @@
     }
   },
   {
+    "brand": "코토나",
+    "category_group": "",
+    "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "최대 50,000원 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "최대 50,000원 할인"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
+    }
+  },
+  {
     "brand": "쿠캣",
     "category_group": "",
     "benefits": {
@@ -10915,11 +10722,6 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
             "summary": "모든 제품 15% 할인 쿠폰"
-          },
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "최대 25,000원 할인"
           }
         ]
       },
@@ -10971,18 +10773,6 @@
     "brand": "투썸플레이스",
     "category_group": "",
     "benefits": {
-      "SKT": {
-        "category": "월간혜택",
-        "tier": "VIP Only 찬스",
-        "summary": "10,000원 이상 구매 시 35% 할인",
-        "all": [
-          {
-            "category": "월간혜택",
-            "tier": "VIP Only 찬스",
-            "summary": "10,000원 이상 구매 시 35% 할인"
-          }
-        ]
-      },
       "LGU": {
         "category": "월간혜택",
         "tier": "전체",
@@ -10995,6 +10785,7 @@
           }
         ]
       },
+      "SKT": null,
       "KT": null
     }
   },
@@ -11606,11 +11397,6 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER/LITE",
             "summary": "포인트 사용 가능(100%, 10P 단위)"
-          },
-          {
-            "category": "월간혜택",
-            "tier": "VIP 찬스",
-            "summary": "10,000원 이상 구매 시 20% 할인"
           }
         ]
       },
@@ -11925,26 +11711,6 @@
     }
   },
   {
-    "brand": "폴라리스 오피스",
-    "category_group": "",
-    "benefits": {
-      "SKT": {
-        "category": "월간혜택",
-        "tier": "전체",
-        "summary": "AI 요금제 1개월 이용권",
-        "all": [
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "AI 요금제 1개월 이용권"
-          }
-        ]
-      },
-      "KT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "푸드엠파이어",
     "category_group": "푸드",
     "benefits": {
@@ -12134,11 +11900,6 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER",
             "summary": "① 배달 주문 시 15% 적립 ② 포장 주문 시 20% 적립"
-          },
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "쉬림프&amp;핫치킨 골드피자(L) 방문 포장 40% 할인"
           }
         ]
       },
