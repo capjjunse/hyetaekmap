@@ -27,11 +27,6 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER/LITE",
             "summary": "포인트 사용가능 (100%, 1P 단위)"
-          },
-          {
-            "category": "VIP특화혜택",
-            "tier": "VIP",
-            "summary": "5,000원 할인 쿠폰 단일 상품 20,000원 이상 구매 시 사용 가능"
           }
         ]
       },
@@ -475,11 +470,6 @@
             "category": "월간혜택",
             "tier": "전체",
             "summary": "대여료 70% 할인"
-          },
-          {
-            "category": "VIP특화혜택",
-            "tier": "VIP",
-            "summary": "대여료 60%+보험료 5% 할인(2시간 이상 차량 대여 시)"
           }
         ]
       },
@@ -1832,26 +1822,6 @@
     }
   },
   {
-    "brand": "고반식당",
-    "category_group": "",
-    "benefits": {
-      "SKT": {
-        "category": "VIP특화혜택",
-        "tier": "VIP",
-        "summary": "(VIP PICK 횟수 미차감) 10,000원 할인 50,000원 이상 주문 시 사용 가능",
-        "all": [
-          {
-            "category": "VIP특화혜택",
-            "tier": "VIP",
-            "summary": "(VIP PICK 횟수 미차감) 10,000원 할인 50,000원 이상 주문 시 사용 가능"
-          }
-        ]
-      },
-      "KT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "곤지암리조트",
     "category_group": "생활/편의",
     "benefits": {
@@ -2476,6 +2446,26 @@
       },
       "SKT": null,
       "KT": null
+    }
+  },
+  {
+    "brand": "노브랜드 버거",
+    "category_group": "",
+    "benefits": {
+      "SKT": {
+        "category": "VIP특화혜택",
+        "tier": "VIP",
+        "summary": "어메이징 더블 업 세트 구매 시 어메이징 더블 업 콤보 증정 어메이징 더블 업 콤보: 어메이징 더블 업 버거+캔 콜라",
+        "all": [
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "어메이징 더블 업 세트 구매 시 어메이징 더블 업 콤보 증정 어메이징 더블 업 콤보: 어메이징 더블 업 버거+캔 콜라"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
     }
   },
   {
@@ -3292,6 +3282,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER/LITE",
             "summary": "포인트 사용가능 (100%, 10P 단위)"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "18,000원 이상 구매 시 9,000원 할인"
           }
         ]
       },
@@ -5089,26 +5084,6 @@
     }
   },
   {
-    "brand": "배달의민족(파리바게뜨)",
-    "category_group": "",
-    "benefits": {
-      "SKT": {
-        "category": "VIP특화혜택",
-        "tier": "VIP",
-        "summary": "배달의민족×파리바게뜨 10,000원 할인 17,000원 이상 주문 시 사용 가능",
-        "all": [
-          {
-            "category": "VIP특화혜택",
-            "tier": "VIP",
-            "summary": "배달의민족×파리바게뜨 10,000원 할인 17,000원 이상 주문 시 사용 가능"
-          }
-        ]
-      },
-      "KT": null,
-      "LGU": null
-    }
-  },
-  {
     "brand": "배달의민족X60계치킨",
     "category_group": "",
     "benefits": {
@@ -6375,6 +6350,11 @@
             "category": "월간혜택",
             "tier": "전체",
             "summary": "30% 할인"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "바닐라 쉐이크 1잔 2,000원에 드림"
           }
         ]
       },
@@ -8495,6 +8475,26 @@
     }
   },
   {
+    "brand": "요기요X자담치킨",
+    "category_group": "",
+    "benefits": {
+      "SKT": {
+        "category": "VIP특화혜택",
+        "tier": "VIP",
+        "summary": "요기요x자담치킨 배달/포장 주문 시 10,000원 할인 18,000원 이상 주문 시 사용 가능(주류 및 배달비 제외)",
+        "all": [
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "요기요x자담치킨 배달/포장 주문 시 10,000원 할인 18,000원 이상 주문 시 사용 가능(주류 및 배달비 제외)"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
+    }
+  },
+  {
     "brand": "요기요×노모어피자",
     "category_group": "",
     "benefits": {
@@ -9165,6 +9165,11 @@
             "category": "상시혜택",
             "tier": "GOLD/SILVER",
             "summary": "3% 적립 (구매한도 및 횟수 제한은 유의 사항 참고)"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "100,000원 이상 결제시 7,000원 할인"
           }
         ]
       },
@@ -10090,6 +10095,18 @@
     "brand": "카카오페이지",
     "category_group": "",
     "benefits": {
+      "SKT": {
+        "category": "VIP특화혜택",
+        "tier": "VIP",
+        "summary": "5,000캐시 쿠폰 1장 증정",
+        "all": [
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "5,000캐시 쿠폰 1장 증정"
+          }
+        ]
+      },
       "LGU": {
         "category": "월간혜택",
         "tier": "전체",
@@ -10102,7 +10119,6 @@
           }
         ]
       },
-      "SKT": null,
       "KT": null
     }
   },
@@ -10773,6 +10789,18 @@
     "brand": "투썸플레이스",
     "category_group": "",
     "benefits": {
+      "SKT": {
+        "category": "VIP특화혜택",
+        "tier": "VIP",
+        "summary": "7,000원 할인 15,000원 이상 구매 시 사용 가능",
+        "all": [
+          {
+            "category": "VIP특화혜택",
+            "tier": "VIP",
+            "summary": "7,000원 할인 15,000원 이상 구매 시 사용 가능"
+          }
+        ]
+      },
       "LGU": {
         "category": "월간혜택",
         "tier": "전체",
@@ -10785,7 +10813,6 @@
           }
         ]
       },
-      "SKT": null,
       "KT": null
     }
   },
