@@ -4356,6 +4356,26 @@
     }
   },
   {
+    "brand": "맥도날드",
+    "category_group": "",
+    "benefits": {
+      "KT": {
+        "category": "상시혜택",
+        "tier": "전등급",
+        "summary": "[달.달.혜택] 빅아치 버거＋탄산음료 M",
+        "all": [
+          {
+            "category": "상시혜택",
+            "tier": "전등급",
+            "summary": "[달.달.혜택] 빅아치 버거＋탄산음료 M"
+          }
+        ]
+      },
+      "SKT": null,
+      "LGU": null
+    }
+  },
+  {
     "brand": "멍타냥택시",
     "category_group": "",
     "benefits": {
@@ -4622,6 +4642,26 @@
         ]
       },
       "KT": null
+    }
+  },
+  {
+    "brand": "뮤지컬 겨울왕국",
+    "category_group": "",
+    "benefits": {
+      "KT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "최대 30% 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "최대 30% 할인"
+          }
+        ]
+      },
+      "SKT": null,
+      "LGU": null
     }
   },
   {
@@ -7307,28 +7347,33 @@
       },
       "KT": {
         "category": "상시혜택",
-        "tier": "VVIP",
-        "summary": "15% 할인",
+        "tier": "전등급",
+        "summary": "[달.달.혜택] 3만원 할인(7.5만원 이상 주문 시)",
         "all": [
           {
             "category": "상시혜택",
+            "tier": "전등급",
+            "summary": "[달.달.혜택] 3만원 할인(7.5만원 이상 주문 시)"
+          },
+          {
+            "category": "상시혜택",
             "tier": "VVIP",
-            "summary": "15% 할인"
+            "summary": "[상시]15% 할인"
           },
           {
             "category": "상시혜택",
             "tier": "VIP",
-            "summary": "15% 할인"
+            "summary": "[상시]15% 할인"
           },
           {
             "category": "상시혜택",
             "tier": "GOLD",
-            "summary": "5% 할인"
+            "summary": "[상시]5% 할인"
           },
           {
             "category": "상시혜택",
             "tier": "일반",
-            "summary": "5% 할인"
+            "summary": "[상시]5% 할인"
           }
         ]
       },
@@ -8133,6 +8178,26 @@
         ]
       },
       "KT": null,
+      "LGU": null
+    }
+  },
+  {
+    "brand": "연극 꽃의 비밀",
+    "category_group": "",
+    "benefits": {
+      "KT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "R/S석 30% 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "R/S석 30% 할인"
+          }
+        ]
+      },
+      "SKT": null,
       "LGU": null
     }
   },
@@ -9359,6 +9424,46 @@
         ]
       },
       "KT": null
+    }
+  },
+  {
+    "brand": "전시 아기상어 비밀 초대장:비커밍 샤크",
+    "category_group": "",
+    "benefits": {
+      "KT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "입장권 1인 50% 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "입장권 1인 50% 할인"
+          }
+        ]
+      },
+      "SKT": null,
+      "LGU": null
+    }
+  },
+  {
+    "brand": "전시 표기식 사진전",
+    "category_group": "",
+    "benefits": {
+      "KT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "입장권 1인 40% 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "입장권 1인 40% 할인"
+          }
+        ]
+      },
+      "SKT": null,
+      "LGU": null
     }
   },
   {
@@ -11434,28 +11539,33 @@
       },
       "KT": {
         "category": "상시혜택",
-        "tier": "VVIP",
-        "summary": "30% 할인",
+        "tier": "전등급",
+        "summary": "[달.달.혜택] 온라인 주문 방문 포장 50%할인",
         "all": [
           {
             "category": "상시혜택",
+            "tier": "전등급",
+            "summary": "[달.달.혜택] 온라인 주문 방문 포장 50%할인"
+          },
+          {
+            "category": "상시혜택",
             "tier": "VVIP",
-            "summary": "30% 할인"
+            "summary": "[상시]30% 할인"
           },
           {
             "category": "상시혜택",
             "tier": "VIP",
-            "summary": "30% 할인"
+            "summary": "[상시]30% 할인"
           },
           {
             "category": "상시혜택",
             "tier": "GOLD",
-            "summary": "15% 할인"
+            "summary": "[상시]15% 할인"
           },
           {
             "category": "상시혜택",
             "tier": "일반",
-            "summary": "15% 할인"
+            "summary": "[상시]15% 할인"
           }
         ]
       },
