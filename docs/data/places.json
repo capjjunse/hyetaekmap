@@ -1637,6 +1637,26 @@
     }
   },
   {
+    "brand": "W컨셉",
+    "category_group": "",
+    "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "W컨셉 50% 할인(최대 5,000원)",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "W컨셉 50% 할인(최대 5,000원)"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
+    }
+  },
+  {
     "brand": "YBM NET",
     "category_group": "교육",
     "benefits": {
@@ -2731,6 +2751,26 @@
     }
   },
   {
+    "brand": "대상웰라이프",
+    "category_group": "",
+    "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "최대 40% 할인",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "최대 40% 할인"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
+    }
+  },
+  {
     "brand": "더라운지",
     "category_group": "",
     "benefits": {
@@ -3451,6 +3491,11 @@
             "category": "월간혜택",
             "tier": "전체",
             "summary": "크리스마스 리스 추첨 이벤트"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "VIP Only 찬스",
+            "summary": "롯데시네마 영화관람권 2장 증정"
           }
         ]
       },
@@ -11315,6 +11360,11 @@
             "category": "월간혜택",
             "tier": "전체",
             "summary": "1,000원당 200원 할인 또는 200P 적립"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "수능 기획전 최대 40% 할인"
           }
         ]
       },
