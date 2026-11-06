@@ -3480,8 +3480,13 @@
       "SKT": {
         "category": "월간혜택",
         "tier": "VIP Only 찬스",
-        "summary": "무신사 랜덤 추첨 이벤트",
+        "summary": "롯데시네마 영화관람권 2장 증정",
         "all": [
+          {
+            "category": "월간혜택",
+            "tier": "VIP Only 찬스",
+            "summary": "롯데시네마 영화관람권 2장 증정"
+          },
           {
             "category": "월간혜택",
             "tier": "VIP Only 찬스",
@@ -3491,11 +3496,6 @@
             "category": "월간혜택",
             "tier": "전체",
             "summary": "크리스마스 리스 추첨 이벤트"
-          },
-          {
-            "category": "월간혜택",
-            "tier": "VIP Only 찬스",
-            "summary": "롯데시네마 영화관람권 2장 증정"
           }
         ]
       },
@@ -11359,12 +11359,12 @@
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "1,000원당 200원 할인 또는 200P 적립"
+            "summary": "수능 기획전 최대 40% 할인"
           },
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "수능 기획전 최대 40% 할인"
+            "summary": "1,000원당 200원 할인 또는 200P 적립"
           }
         ]
       },
