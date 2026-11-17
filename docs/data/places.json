@@ -2249,12 +2249,12 @@
           {
             "category": "VIP특화혜택",
             "tier": "VVIP",
-            "summary": "5천원 할인(3만원 이상 결제 시)"
+            "summary": "스크린골프 5천원 할인(3만원 이상 결제 시)"
           },
           {
             "category": "VIP특화혜택",
             "tier": "VIP",
-            "summary": "5천원 할인(3만원 이상 결제 시)"
+            "summary": "스크린골프 5천원 할인(3만원 이상 결제 시)"
           }
         ]
       },
@@ -3495,7 +3495,7 @@
           {
             "category": "월간혜택",
             "tier": "전체",
-            "summary": "다이소 지원금 추첨 이벤트"
+            "summary": "다이소 쇼핑 지원금 추첨 이벤트"
           },
           {
             "category": "월간혜택",
@@ -4972,12 +4972,17 @@
           {
             "category": "VIP특화혜택",
             "tier": "VVIP",
-            "summary": "3개월 무료"
+            "summary": "밀리의서재 구독권 (전자책/웹툰/웹소설) 3개월 무료"
+          },
+          {
+            "category": "VIP특화혜택",
+            "tier": "VVIP",
+            "summary": "밀리의서재 구독권 (전자책/웹툰/웹소설) 1개월 무료"
           },
           {
             "category": "VIP특화혜택",
             "tier": "VIP",
-            "summary": "1개월 무료"
+            "summary": "밀리의서재 구독권 (전자책/웹툰/웹소설) 1개월 무료"
           }
         ]
       },
@@ -9499,6 +9504,31 @@
         ]
       },
       "KT": null
+    }
+  },
+  {
+    "brand": "잠바",
+    "category_group": "",
+    "benefits": {
+      "SKT": {
+        "category": "상시혜택",
+        "tier": "VIP/GOLD/SILVER",
+        "summary": "전 메뉴 10% 할인(최대 2천 원 할인)",
+        "all": [
+          {
+            "category": "상시혜택",
+            "tier": "VIP/GOLD/SILVER",
+            "summary": "전 메뉴 10% 할인(최대 2천 원 할인)"
+          },
+          {
+            "category": "상시혜택",
+            "tier": "VIP/GOLD/SILVER",
+            "summary": "전 메뉴 10% 할인(최대 2천 원 할인)"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
     }
   },
   {
