@@ -3484,19 +3484,9 @@
     "benefits": {
       "SKT": {
         "category": "월간혜택",
-        "tier": "전체",
-        "summary": "포토이즘 2,000원 할인",
+        "tier": "VIP Only 찬스",
+        "summary": "무신사 랜덤 추첨 이벤트",
         "all": [
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "포토이즘 2,000원 할인"
-          },
-          {
-            "category": "월간혜택",
-            "tier": "전체",
-            "summary": "다이소 쇼핑 지원금 추첨 이벤트"
-          },
           {
             "category": "월간혜택",
             "tier": "VIP Only 찬스",
@@ -3511,6 +3501,36 @@
             "category": "월간혜택",
             "tier": "VIP Only 찬스",
             "summary": "롯데시네마 영화관람권 2장 증정"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "포토이즘 2,000원 할인"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "다이소 쇼핑 지원금 추첨 이벤트"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
+    }
+  },
+  {
+    "brand": "럭키찬스 천호엔케어",
+    "category_group": "",
+    "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "100% 당첨 랜덤 추첨 이벤트",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "100% 당첨 랜덤 추첨 이벤트"
           }
         ]
       },
@@ -4666,6 +4686,26 @@
       },
       "SKT": null,
       "KT": null
+    }
+  },
+  {
+    "brand": "무신사",
+    "category_group": "",
+    "benefits": {
+      "SKT": {
+        "category": "월간혜택",
+        "tier": "전체",
+        "summary": "15% 할인(최대 20,000원)",
+        "all": [
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "15% 할인(최대 20,000원)"
+          }
+        ]
+      },
+      "KT": null,
+      "LGU": null
     }
   },
   {
@@ -11579,6 +11619,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER/LITE",
             "summary": "포인트 사용 가능(100%, 10P 단위)"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "VIP 찬스",
+            "summary": "10,000원 이상 구매 시 20% 할인"
           }
         ]
       },
@@ -12123,6 +12168,11 @@
             "category": "상시혜택",
             "tier": "VIP/GOLD/SILVER/LITE",
             "summary": "포인트 사용가능 (100%, 10P 단위)"
+          },
+          {
+            "category": "월간혜택",
+            "tier": "전체",
+            "summary": "방문 포장 50% 할인/적립"
           },
           {
             "category": "VIP특화혜택",
